@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <sim>
+    <model>
+      <livery>
+        <variant type="string">Dark Grey</variant>
+
+	<material>
+         <fuselage>
+          <texture>Liveries/bf109k-1.rgb</texture>
+         </fuselage>
+         <leftwing>
+           <texture>Liveries/bf109k-2.rgb</texture>
+         </leftwing>
+         <rightwing>
+           <texture>Liveries/bf109k-3.rgb</texture>
+         </rightwing>
+	</material>
+   </livery>
+    </model>
+  </sim>
+</PropertyList>

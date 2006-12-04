@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <sim>
+    <model>
+      <livery>
+        <variant type="string">Default</variant>
+
+	<material>
+         <fuselage>
+           <texture>bf109-1.rgb</texture>
+         </fuselage>
+         <leftwing>
+           <texture>bf109-2.rgb</texture>
+         </leftwing>
+         <rightwing>
+           <texture>bf109-3.rgb</texture>
+         </rightwing>
+         <horstab>
+           <texture>bf109-4.rgb</texture>
+         </horstab>
+	</material>
+   </livery>
+    </model>
+  </sim>
+</PropertyList>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <sim>
+    <model>
+      <livery>
+        <variant type="string">Winter</variant>
+
+	<material>
+         <fuselage>
+          <texture>Liveries/bf109-1b.rgb</texture>
+         </fuselage>
+         <leftwing>
+           <texture>Liveries/bf109-2b.rgb</texture>
+         </leftwing>
+         <rightwing>
+           <texture>Liveries/bf109-3b.rgb</texture>
+         </rightwing>
+	</material>
+   </livery>
+    </model>
+  </sim>
+</PropertyList>

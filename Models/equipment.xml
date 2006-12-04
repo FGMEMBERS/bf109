@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	
+	<!--back-->
+	<!--right -->
+	<!--up -->
+	
+	<!-- Rocket Rails -->
+	<model>
+		<name>leftgun</name>
+		<path>Aircraft/bf109/Models/mg151-l.ac</path>
+		<offsets>
+			<x-m>2.8</x-m>
+			<y-m>-1.95</y-m>
+			<z-m>-0.4</z-m>
+			<pitch-deg>0.0</pitch-deg>
+		</offsets>
+	</model>	
+	<model>
+		<name>rightgun</name>
+		<path>Aircraft/bf109/Models/mg151-r.ac</path>
+		<offsets>
+			<x-m>2.8</x-m>
+			<y-m>1.95</y-m>
+			<z-m>-0.4</z-m>
+			<pitch-deg>0.0</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>leftwgr</name>
+		<path>Aircraft/bf109/Models/wgr21-launcher.ac</path>
+		<offsets>
+			<x-m>2.7</x-m>
+			<y-m>-2.2</y-m>
+			<z-m>-0.52</z-m>
+			<pitch-deg>8.0</pitch-deg>
+		</offsets>
+	</model>	
+	<model>
+		<name>leftrocket</name>
+		<path>Aircraft/bf109/Models/wgr21.ac</path>
+		<offsets>
+			<x-m>2.7</x-m>
+			<y-m>-2.2</y-m>
+			<z-m>-0.52</z-m>
+			<pitch-deg>8.0</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>rightwgr</name>
+		<path>Aircraft/bf109/Models/wgr21-launcher.ac</path>
+		<offsets>
+			<x-m>2.7</x-m>
+			<y-m>2.2</y-m>
+			<z-m>-0.52</z-m>
+			<pitch-deg>8.0</pitch-deg>
+		</offsets>
+	</model>	
+	<model>
+		<name>rightrocket</name>
+		<path>Aircraft/bf109/Models/wgr21.ac</path>
+		<offsets>
+			<x-m>2.7</x-m>
+			<y-m>2.2</y-m>
+			<z-m>-0.52</z-m>
+			<pitch-deg>8.0</pitch-deg>
+		</offsets>
+	</model>
+
+     <model>
+		<name>Droptank</name>
+		<path>Aircraft/bf109/Models/droptank.ac</path>
+		<offsets>
+			<x-m>2.7</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-0.47</z-m>
+			<pitch-deg>0.0</pitch-deg>
+		</offsets>
+	</model>	
+
+     <model>
+		<name>etc</name>
+		<path>Aircraft/bf109/Models/etc.ac</path>
+		<offsets>
+			<x-m>2.7</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-0.47</z-m>
+			<pitch-deg>0.0</pitch-deg>
+		</offsets>
+	</model>	
+
+     <model>
+		<name>sc250</name>
+		<path>Aircraft/bf109/Models/sc250.ac</path>
+		<offsets>
+			<x-m>2.7</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-0.47</z-m>
+			<pitch-deg>0.0</pitch-deg>
+		</offsets>
+	</model>	
+
+	<!--+++++++++++++++++++++++++++++++++++++++++++++-->
+	<!--++++++++++++  ANIMATIONS  +++++++++++++++++++-->
+	<!--+++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- WGR 21 Nebelwerfer -->
+
+	<animation>
+		<type>select</type>
+		<object-name>leftwgr</object-name>
+		<condition>   
+			<equals>
+				<property>sim/weight[1]/selected</property>
+				<value>WGr 21 Rocket</value>
+			</equals>
+		</condition>
+ 	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>leftrocket</object-name>
+		<condition>   
+			<equals>
+				<property>sim/weight[1]/weight-lb</property>
+				<value>270.0</value>
+			</equals>
+		</condition>
+ 	</animation>	
+
+	<animation>
+		<type>select</type>
+		<object-name>rightwgr</object-name>
+		<condition>   
+			<equals>
+				<property>sim/weight[2]/selected</property>
+				<value>WGr 21 Rocket</value>
+			</equals>
+		</condition>
+ 	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>rightrocket</object-name>
+		<condition>   
+			<equals>
+				<property>sim/weight[2]/weight-lb</property>
+				<value>270.0</value>
+			</equals>
+		</condition>
+ 	</animation>	
+
+<!--Droptank -->
+
+ <animation>
+  <type>select</type>
+  <object-name>Droptank</object-name>
+  <condition>
+   <equals>
+    <property>sim/weight[0]/weight-lb</property>
+    <value>50.0</value>
+   </equals>
+  </condition>
+ </animation>
+
+<!--SC 250 Bomb -->
+
+ <animation>
+  <type>select</type>
+  <object-name>sc250</object-name>
+  <condition>
+   <equals>
+    <property>sim/weight[0]/weight-lb</property>
+    <value>552.0</value>
+   </equals>
+  </condition>
+ </animation>
+
+<!-- MG 151 gun pods -->
+
+ <animation>
+  <type>select</type>
+  <object-name>leftgun</object-name>
+  <condition>
+   <equals>
+    <property>sim/weight[1]/weight-lb</property>
+    <value>110.0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>rightgun</object-name>
+  <condition>
+   <equals>
+    <property>sim/weight[2]/weight-lb</property>
+    <value>110.0</value>
+   </equals>
+  </condition>
+ </animation>
+
+
+</PropertyList>

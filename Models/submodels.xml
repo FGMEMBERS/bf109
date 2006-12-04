@@ -1,0 +1,320 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <!-- left-up -->
+  <submodel>
+    <name>left-up-tracer</name>
+    <model>Aircraft/bf109/Models/tracer.xml</model>
+    <trigger>controls/armament/trigger</trigger>
+    <speed>3116.0</speed>
+    <repeat>true</repeat>
+    <delay>0.27</delay>
+    <count>-1</count>
+    <x-offset>-4.686</x-offset>
+    <y-offset>-0.748</y-offset>
+    <z-offset>1.491</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>3.2</pitch-offset>
+    <life>2.0</life>
+    <wind>false</wind>
+    <weight>0.1069</weight>
+    <cd>0.193</cd>
+    <eda>0.00192674</eda> 
+  </submodel>
+<!-- termporarly disabled
+	<submodel> 
+      <name>left-up-smoke</name>
+      <model>Aircraft/bf109/Models/smoke.xml</model>
+      <trigger>controls/armament/trigger</trigger>
+      <speed>10</speed>
+      <repeat>true</repeat>
+      <delay>0.25</delay>
+      <count>-1</count>
+    <x-offset>-30.0</x-offset>
+    <y-offset>-2.448</y-offset>
+    <z-offset>-0.91</z-offset>
+      <yaw-offset>1.5</yaw-offset>
+      <pitch-offset>1.8</pitch-offset>
+	  <eda>10</eda>
+      <wind>true</wind>
+	  <buoyancy>33</buoyancy>
+	  <life>1</life>
+    </submodel>
+-->
+<!--right up-->
+  <submodel>
+    <name>right-tracer</name>
+    <model>Aircraft/bf109/Models/tracer.xml</model>
+    <trigger>controls/armament/trigger</trigger>
+    <speed>3116.0</speed>
+    <repeat>true</repeat>
+    <delay>0.3</delay>
+    <count>-1</count>
+    <x-offset>-4.686</x-offset>
+    <y-offset>0.748</y-offset>
+    <z-offset>1.491</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+
+    <pitch-offset>3.2</pitch-offset>
+
+    <life>2.0</life>
+    <wind>false</wind>
+    <weight>0.1069</weight>
+    <cd>0.193</cd>
+    <eda>0.00192674</eda>  
+  </submodel>
+<!--
+	<submodel> 
+      <name>right-smoke</name>
+      <model>Aircraft/bf109/Models/smoke.xml</model>
+      <trigger>controls/armament/trigger</trigger>
+      <speed>10</speed>
+      <repeat>true</repeat>
+      <delay>0.22</delay>
+      <count>-1</count>
+    <x-offset>-30.0</x-offset>
+    <y-offset>2.448</y-offset>
+    <z-offset>-0.91</z-offset>
+      <yaw-offset>1.5</yaw-offset>
+      <pitch-offset>1.8</pitch-offset>
+	  <eda>10</eda>
+      <wind>true</wind>
+	  <buoyancy>33</buoyancy>
+	  <life>1</life>
+    </submodel>
+-->
+  <!-- engine-mg151 -->
+  <submodel>
+    <name>engine-tracer</name>
+    <model>Aircraft/bf109/Models/tracer.xml</model>
+    <trigger>controls/armament/trigger1</trigger>
+    <speed>3116.0</speed>
+    <repeat>true</repeat>
+    <delay>0.33</delay>
+    <count>-1</count>
+    <x-offset>-3.686</x-offset>
+    <y-offset>0.0</y-offset>
+    <z-offset>0.0</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>3.2</pitch-offset>
+    <life>2.0</life>
+    <wind>false</wind>
+    <weight>0.1069</weight>
+    <cd>0.193</cd>
+    <eda>0.00136354</eda> 
+  </submodel>
+
+
+   <submodel>
+    <name>wgr_l</name>
+    <model>Aircraft/bf109/Models/wgr21.ac</model>
+    <trigger>controls/armament/wgr</trigger>
+    <speed>1200</speed>
+    <repeat>false</repeat>
+    <count>1</count>
+    <x-offset>-9.9</x-offset>
+    <y-offset>-6.75</y-offset>
+    <z-offset>-0.6</z-offset>
+    <pitch-offset>8.0</pitch-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <life>50</life>
+    <aero-stabilised>true</aero-stabilised>
+    <wind>false</wind>
+    <weight>250.0</weight>
+    <eda>3.2</eda>
+    <cd>0.5</cd>
+    <buoyancy>12</buoyancy>
+  </submodel>
+
+  <submodel>
+    <name>wgr_sl</name>
+    <model>Aircraft/bf109/Models/rocketsmoke.xml</model>
+    <trigger>controls/armament/wgr</trigger>
+    <speed>1200</speed>
+    <repeat>false</repeat>
+    <count>1</count>
+    <x-offset>-10.4</x-offset>
+    <y-offset>-6.75</y-offset>
+    <z-offset>-0.6</z-offset>
+    <pitch-offset>8.0</pitch-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <life>50</life>
+    <aero-stabilised>true</aero-stabilised>
+    <wind>false</wind>
+    <weight>250.0</weight>
+    <eda>3.2</eda>
+    <cd>0.5</cd>
+    <buoyancy>12</buoyancy>
+  </submodel>
+
+   <submodel>
+    <name>wgr_r</name>
+    <model>Aircraft/bf109/Models/wgr21.ac</model>
+    <trigger>controls/armament/wgr</trigger>
+    <speed>1200</speed>
+    <repeat>false</repeat>
+    <count>1</count>
+    <x-offset>-9.9</x-offset>
+    <y-offset>6.75</y-offset>
+    <z-offset>-0.6</z-offset>
+    <pitch-offset>8.0</pitch-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <life>50</life>
+    <aero-stabilised>true</aero-stabilised>
+    <wind>false</wind>
+    <weight>250.0</weight>
+    <eda>3.2</eda>
+    <cd>0.5</cd>
+    <buoyancy>12</buoyancy>
+  </submodel>
+
+  <submodel>
+    <name>wgr_sr</name>
+    <model>Aircraft/bf109/Models/rocketsmoke.xml</model>
+    <trigger>controls/armament/wgr</trigger>
+    <speed>1200</speed>
+    <repeat>false</repeat>
+    <count>1</count>
+    <x-offset>-10.4</x-offset>
+    <y-offset>6.75</y-offset>
+    <z-offset>-0.6</z-offset>
+    <pitch-offset>8.0</pitch-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <life>50</life>
+    <aero-stabilised>true</aero-stabilised>
+    <wind>false</wind>
+    <weight>250.0</weight>
+    <eda>3.2</eda>
+    <cd>0.5</cd>
+    <buoyancy>12</buoyancy>
+  </submodel>
+
+  <submodel>
+    <name>droptank</name>
+    <model>Aircraft/bf109/Models/droptank.ac</model>
+    <trigger>controls/armament/station/release-tank</trigger>
+    <speed alias="/velocities/airspeed-kt"/>
+    <repeat>false</repeat>
+    <count>1</count>
+    <x-offset>-8.86</x-offset>
+    <y-offset>0.0</y-offset>
+    <z-offset>-1.71</z-offset>
+    <pitch-offset>0.0</pitch-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <life>50</life>
+    <contents>sim/weight[0]/weight-lb</contents>
+    <aero-stabilised>false</aero-stabilised>
+    <wind>false</wind>
+    <weight>sim/weight[0]/weight-lb</weight>
+    <eda>2.8</eda>
+    <cd>1.7</cd>
+  </submodel>
+
+  <submodel>
+    <name>bomb</name>
+    <model>Aircraft/bf109/Models/sc250.ac</model>
+    <trigger>controls/armament/station/release-all</trigger>
+    <speed alias="/velocities/airspeed-kt"/>
+    <repeat>false</repeat>
+    <count>1</count>
+    <x-offset>-8.86</x-offset>
+    <y-offset>0.0</y-offset>
+    <z-offset>-1.71</z-offset>
+    <pitch-offset>0.0</pitch-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <life>50</life>
+    <contents>sim/weight[0]/weight-lb</contents>
+    <aero-stabilised>true</aero-stabilised>
+    <wind>false</wind>
+    <weight>sim/weight[0]/weight-lb</weight>
+    <eda>1.7</eda>
+    <cd>1.7</cd>
+  </submodel>
+
+
+
+  <!-- left-mg151 -->
+  <submodel>
+    <name>left-tracer</name>
+    <model>Aircraft/bf109/Models/tracer.xml</model>
+    <trigger>controls/armament/trigger2</trigger>
+    <speed>2840.0</speed>
+    <repeat>true</repeat>
+    <delay>0.25</delay>
+    <count>-1</count>
+    <x-offset>-4.686</x-offset>
+    <y-offset>-6.4</y-offset>
+    <z-offset>-1.7</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>3.2</pitch-offset>
+    <life>2.0</life>
+    <wind>false</wind>
+    <weight>0.1069</weight>
+    <cd>0.193</cd>
+    <eda>0.00136354</eda> 
+  </submodel>
+<!--
+	<submodel> 
+      <name>left-smoke</name>
+      <model>Aircraft/bf109/Models/smoke.xml</model>
+      <trigger>controls/armament/trigger2</trigger>
+      <speed>10</speed>
+      <repeat>true</repeat>
+      <delay>0.25</delay>
+      <count>-1</count>
+    <x-offset>-30.0</x-offset>
+    <y-offset>-6.448</y-offset>
+    <z-offset>-1.8</z-offset>
+      <yaw-offset>1.5</yaw-offset>
+      <pitch-offset>1.8</pitch-offset>
+	  <eda>10</eda>
+      <wind>true</wind>
+	  <buoyancy>33</buoyancy>
+	  <life>1</life>
+    </submodel>
+-->
+  <!-- right-mg151 -->
+  <submodel>
+    <name>right-tracer</name>
+    <model>Aircraft/bf109/Models/tracer.xml</model>
+    <trigger>controls/armament/trigger2</trigger>
+    <speed>2840.0</speed>
+    <repeat>true</repeat>
+    <delay>0.25</delay>
+    <count>-1</count>
+    <x-offset>-4.686</x-offset>
+    <y-offset>6.4</y-offset>
+    <z-offset>-1.7</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>3.2</pitch-offset>
+    <life>2.0</life>
+    <wind>false</wind>
+    <weight>0.1069</weight>
+    <cd>0.193</cd>
+    <eda>0.00136354</eda> 
+  </submodel>
+<!--
+	<submodel> 
+      <name>right-smoke</name>
+      <model>Aircraft/bf109/Models/smoke.xml</model>
+      <trigger>controls/armament/trigger2</trigger>
+      <speed>10</speed>
+      <repeat>true</repeat>
+      <delay>0.25</delay>
+      <count>-1</count>
+    <x-offset>-30.0</x-offset>
+    <y-offset>6.448</y-offset>
+    <z-offset>-1.8</z-offset>
+      <yaw-offset>1.5</yaw-offset>
+      <pitch-offset>1.8</pitch-offset>
+	  <eda>10</eda>
+      <wind>true</wind>
+	  <buoyancy>33</buoyancy>
+	  <life>1</life>
+    </submodel>
+
+
+-->
+
+</PropertyList>

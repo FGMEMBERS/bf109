@@ -94,8 +94,8 @@ if( starter_power > 5.0){ setprop("/controls/engines/engine[0]/starter",1);}
 }
 
 var flash_trigger = props.globals.getNode("controls/armament/trigger", 0);
-aircraft.light.new("sim/model/bf109/lighting/flash-l", 0.05, 0.052, flash_trigger);
-aircraft.light.new("sim/model/bf109/lighting/flash-r", 0.052, 0.05, flash_trigger);
+aircraft.light.new("sim/model/bf109/lighting/flash-l", [0.05, 0.052], flash_trigger);
+aircraft.light.new("sim/model/bf109/lighting/flash-r", [0.052, 0.05], flash_trigger);
 
 var flash1_trigger = props.globals.getNode("controls/armament/trigger1", 0);
-aircraft.light.new("sim/model/bf109/lighting/flash-f", 0.05, 0.052, flash1_trigger);
+aircraft.light.new("sim/model/bf109/lighting/flash-f", [0.05, 0.052], flash1_trigger);

@@ -33,14 +33,14 @@ YASim aerodynamic model for a Messerschmitt Bf 109
 <cockpit x="-3.895" y="0" z="0.6"/>
 
 <fuselage ax="0.0" ay="0.0" az="-0.2" bx="-8.9" by="0.0" bz="0.4"
-          width="1.7" taper="0.7" midpoint="0.4"/>
+          width="1.7" taper="0.7" midpoint="0.4"  cy="2" cx="2"/>
 
 <!--Main wing-->
 <wing x="-3.25" y="0.42" z="-0.3" taper="0.65" incidence="-1.0"
       length="3.8" chord="2.245" sweep="-1.8" dihedral="6" camber="0.1">
   <stall aoa="10" width="8" peak="1.5"/>
   <flap0 start="0.04" end="0.59" lift="1.7" drag="2.9"/>
-  <flap1 start="0.59" end="1.0" lift="1.5" drag="1.2"/>
+  <flap1 start="0.59" end="1.0" lift="1.4" drag="1.2"/>
   <slat aoa="2" start="0.455" end="0.9" lift="0.2" drag="0.8"/>
   <spoiler start="0.04" end="0.25" lift="0.0" drag="1.2"/>
   <control-input axis="/controls/flight/flaps" control="FLAP0"/>
@@ -59,6 +59,11 @@ YASim aerodynamic model for a Messerschmitt Bf 109
 <!--Wing tip -->
 
 <vstab x="-3.1" y="4.2" z="-0.087 " chord="1.18" length="0.651" taper="0.85"
+         dihedral="6">
+   <stall aoa="12" width="15" peak="1.5"/>
+</vstab>
+
+<vstab x="-3.1" y="-4.2" z="-0.087 " chord="1.18" length="0.651" taper="0.85"
          dihedral="6">
    <stall aoa="12" width="15" peak="1.5"/>
 </vstab>
@@ -88,7 +93,7 @@ YASim aerodynamic model for a Messerschmitt Bf 109
 
 <propeller   x="-1.5" y="0" z="0"
            radius="1.75" 
-           mass="1690" moment="94.5"
+           mass="1690" moment="84.5"
            cruise-alt="5000" cruise-power="1350"
            cruise-speed="240" cruise-rpm="1157"
            gear-ratio="0.479"
@@ -111,8 +116,8 @@ YASim aerodynamic model for a Messerschmitt Bf 109
 
 
  <!-- left main -->
-<gear x="-2.03" y="0.97" z="-1.62" compression="0.3" spring="0.7" damp="3.2"
-   dfric="0.05" sfric ="0.10">
+<gear x="-2.03" y="1.05" z="-1.62" compression="0.1" spring="0.7" damp="4.2"
+   dfric="0.9" sfric ="0.5">
   <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
   <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
   <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -121,8 +126,8 @@ YASim aerodynamic model for a Messerschmitt Bf 109
 </gear>
 
  <!-- right main -->
-<gear x="-2.03" y="-0.97" z="-1.62" compression="0.3" spring="0.7" damp="3.2"
-   dfric="0.05" sfric ="0.10">
+<gear x="-2.03" y="-1.05" z="-1.62" compression="0.1" spring="0.7" damp="4.2"
+   dfric="0.9" sfric ="0.5">
   <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
   <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
   <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -131,8 +136,8 @@ YASim aerodynamic model for a Messerschmitt Bf 109
 </gear>
 
 <!-- Tail wheel -->
-<gear x="-7.80" y="0" z="-0.37" compression="0.2" castering="1"
-  dfric="0.1" sfric ="0.20">
+<gear x="-7.80" y="0" z="-0.37" compression="0.1" castering="1"
+  dfric="0.5" sfric ="0.40">
   <control-input axis="/controls/gear/tailwheel-lock" control="CASTERING" 
                  src0="0" src1="1"
                  dst0="1" dst1="0"/>

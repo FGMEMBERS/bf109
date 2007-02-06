@@ -909,7 +909,7 @@
      <z-m>0.606</z-m>
     </offsets>
   </model>
-<!--
+
   <model> 
    <path>Aircraft/bf109/Models/blaze-l.xml</path>
    <name>Blaze-l</name>
@@ -938,32 +938,28 @@
      <z-m>0.0</z-m>
     </offsets>
   </model>
--->
+
 <!--Material -->
   <animation>
     <type>material</type>
-    <global type="bool">true</global>
     <object-name>Fuselage</object-name>
     <property-base>sim/model/livery/material/fuselage</property-base>
     <texture-prop>texture</texture-prop>
   </animation>
   <animation>
     <type>material</type>
-    <global type="bool">true</global>
     <object-name>leftwing</object-name>
     <property-base>sim/model/livery/material/leftwing</property-base>
     <texture-prop>texture</texture-prop>
   </animation>
   <animation>
     <type>material</type>
-    <global type="bool">true</global>
     <object-name>LeftAileron</object-name>
     <property-base>sim/model/livery/material/leftwing</property-base>
     <texture-prop>texture</texture-prop>
   </animation>
   <animation>
     <type>material</type>
-    <global type="bool">true</global>
     <object-name>leftoutflap</object-name>
     <property-base>sim/model/livery/material/leftwing</property-base>
     <texture-prop>texture</texture-prop>
@@ -971,7 +967,6 @@
 
   <animation>
     <type>material</type>
-    <global type="bool">true</global>
     <object-name>leftflap</object-name>
     <property-base>sim/model/livery/material/leftwing</property-base>
     <texture-prop>texture</texture-prop>
@@ -979,28 +974,24 @@
 
   <animation>
     <type>material</type>
-    <global type="bool">true</global>
     <object-name>rightwing</object-name>
     <property-base>sim/model/livery/material/rightwing</property-base>
     <texture-prop>texture</texture-prop>
   </animation>
   <animation>
     <type>material</type>
-    <global type="bool">true</global>
     <object-name>rightaileron</object-name>
     <property-base>sim/model/livery/material/rightwing</property-base>
     <texture-prop>texture</texture-prop>
   </animation>
   <animation>
     <type>material</type>
-    <global type="bool">true</global>
     <object-name>rightoutflap</object-name>
     <property-base>sim/model/livery/material/rightwing</property-base>
     <texture-prop>texture</texture-prop>
   </animation>
   <animation>
     <type>material</type>
-    <global type="bool">true</global>
     <object-name>rightflap</object-name>
     <property-base>sim/model/livery/material/rightwing</property-base>
     <texture-prop>texture</texture-prop>
@@ -1008,7 +999,6 @@
 
   <animation>
     <type>material</type>
-    <global type="bool">true</global>
     <object-name>horstab</object-name>
     <property-base>sim/model/livery/material/horstab</property-base>
     <texture-prop>texture</texture-prop>

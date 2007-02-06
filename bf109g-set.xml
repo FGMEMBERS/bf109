@@ -310,29 +310,6 @@ Don't forget to release Tailwheel lock (Ctrl-l) before taxiing off the Runway.</
         </binding>
       </key>
 
-<!-- map keys for Propeller Control -->
-      <key n="78"> 
-        <name>N</name>
-        <desc>Propeller Coarse</desc>
-        <binding> 
-          <command>property-adjust</command>
-          <property>/controls/engines/engine/propeller-pitch</property>
-          <step type="double">0.1</step>
-          <min type="double">-1</min>
-          <max type="double">1</max>
-        </binding>
-      </key>
-      <key n="110"> 
-        <name>n</name>
-        <desc>Propeller Fine.</desc>
-        <binding> 
-          <command>property-adjust</command>
-          <property>/controls/engines/engine/propeller-pitch</property>
-          <step type="double">-0.1</step>
-          <min type="double">-1</min>
-          <max type="double">1</max>
-        </binding>
-      </key>
       <key n="4">
         <name>Ctrl-d</name>
         <desc>drop Tank</desc>

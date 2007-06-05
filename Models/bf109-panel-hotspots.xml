@@ -30,6 +30,7 @@
      <path>Aircraft/p51d/Models/hotspotgrid.rgb</path>
 -->
      <path>Aircraft/bf109/Models/transparent-bg.rgb</path>
+
      <x1>0.0</x1>
      <y1>0.0</y1>
      <x2>1.0</x2>
@@ -334,42 +335,22 @@
    </binding>
   </action>
 
-  <!-- flaps control -->
-<!--
   <action>
-   <name>extend</name>
+   <name>fuel dump</name>
    <button>0</button>
-   <x>-384</x>
-   <y>-384</y>
-   <w>30</w>
-   <h>96</h>
+   <x>480</x>
+   <y>-450</y>
+   <w>50</w>
+   <h>70</h>
    <binding>
-    <command>property-adjust</command>
-    <property>/controls/flight/flaps</property>
-    <step>-0.34</step>
-    <min>0.0</min>
-    <max>1.0</max>
-    <wrap>false</wrap>
+      <command>nasal</command>
+       <script>bf109.fuel_jettison()</script>
    </binding>
   </action>
 
-  <action>
-   <name>retract</name>
-   <button>0</button>
-   <x>-320</x>
-   <y>-384</y>
-   <w>30</w>
-   <h>96</h>
-   <binding>
-    <command>property-adjust</command>
-    <property>/controls/flight/flaps</property>
-    <step>0.34</step>
-    <min>0.0</min>
-    <max>1.0</max>
-    <wrap>false</wrap>
-   </binding>
-  </action>
--->
+
+
+
  </actions>
 
   </instrument>

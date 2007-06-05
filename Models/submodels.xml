@@ -15,7 +15,7 @@
     <y-offset>-0.748</y-offset>
     <z-offset>1.491</z-offset>
     <yaw-offset>0.0</yaw-offset>
-    <pitch-offset>3.2</pitch-offset>
+    <pitch-offset>2.2</pitch-offset>
     <life>2.0</life>
     <wind>false</wind>
     <weight>0.1069</weight>
@@ -56,7 +56,7 @@
     <z-offset>1.491</z-offset>
     <yaw-offset>0.0</yaw-offset>
 
-    <pitch-offset>3.2</pitch-offset>
+    <pitch-offset>2.2</pitch-offset>
 
     <life>2.0</life>
     <wind>false</wind>

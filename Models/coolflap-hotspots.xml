@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!DOCTYPE PropertyList SYSTEM "panel.dtd">
+
+<!-- This part should be the same for any 3D panel.  Customize the actions section -->
+<PropertyList>
+
+ <name>Bf109 primer Hotspot</name>
+ <background>Aircraft/bf109/Models/transparent-bg.rgb</background>
+ <w>128</w>
+ <h>128</h>
+ <y-offset>0</y-offset>
+
+ <instruments>
+   <instrument>
+   <name>left</name>
+   <x>0</x>
+   <y>0</y>
+   <w>128</w>
+   <h>128</h>
+   <w-base>128</w-base>
+   <h-base>128</h-base>
+
+ <layers>
+  <layer>
+   <name>background</name>
+   <texture>
+<!--
+     <path>Aircraft/p51d/Models/hotspotgrid.rgb</path>
+-->
+     <path>Aircraft/bf109/Models/transparent-bg.rgb</path>
+
+     <x1>0.0</x1>
+     <y1>0.0</y1>
+     <x2>1.0</x2>
+     <y2>1.0</y2>
+   </texture>
+  </layer>
+ </layers>
+
+<!-- define hotspot actions below -->
+
+ <actions>
+
+  <action>
+   <name>radiator close</name>
+   <button>0</button>
+   <x>-32</x>
+   <y>32</y>
+   <w>25</w>
+   <h>50</h>
+    <binding>
+     <command>nasal</command>
+     <script>bf109.close_coolflaps()</script>
+    </binding>
+  </action>
+
+  <action>
+   <name>radiator open</name>
+   <button>0</button>
+   <x>32</x>
+   <y>32</y>
+   <w>25</w>
+   <h>50</h>
+    <binding>
+     <command>nasal</command>
+     <script>bf109.open_coolflaps()</script>
+    </binding>
+  </action>
+  <action>
+   <name>radiator auto</name>
+   <button>0</button>
+   <x>-10</x>
+   <y>-22</y>
+   <w>50</w>
+   <h>40</h>
+    <binding>
+     <command>nasal</command>
+     <script>bf109.open_coolflaps()</script>
+    </binding>
+  </action>
+
+</actions>
+  </instrument>
+ </instruments>
+
+</PropertyList>
+
+
+

@@ -34,22 +34,129 @@
  <panel>
   <path>Aircraft/bf109/Models/bf109-left-hotspots.xml</path>
   <bottom-left>
-   <x-m>3.5</x-m>
-   <y-m>-0.31</y-m>
-   <z-m>0.12</z-m>
+   <x-m>3.49</x-m>
+   <y-m>-0.33</y-m>
+   <z-m>0.08</z-m>
   </bottom-left>
   <bottom-right>
-   <x-m>3.5</x-m>
-   <y-m>-0.19</y-m>
-   <z-m>0.12</z-m>
+   <x-m>3.49</x-m>
+   <y-m>-0.22</y-m>
+   <z-m>0.08</z-m>
   </bottom-right>
   <top-left>
-   <x-m>3.25</x-m>
-   <y-m>-0.31</y-m>
-   <z-m>0.12</z-m>
+   <x-m>3.19</x-m>
+   <y-m>-0.33</y-m>
+   <z-m>0.08</z-m>
   </top-left>
  </panel>
-
+ <panel>
+  <path>Aircraft/bf109/Models/bf109-left-hotspots2.xml</path>
+  <bottom-left>
+   <x-m>3.25</x-m>
+   <y-m>-0.31</y-m>
+   <z-m>0.28</z-m>
+  </bottom-left>
+  <bottom-right>
+   <x-m>3.25</x-m>
+   <y-m>-0.19</y-m>
+   <z-m>0.28</z-m>
+  </bottom-right>
+  <top-left>
+   <x-m>2.95</x-m>
+   <y-m>-0.31</y-m>
+   <z-m>0.28</z-m>
+  </top-left>
+ </panel>
+ <panel>
+  <path>Aircraft/bf109/Models/primer-hotspot.xml</path>
+  <bottom-left>
+   <x-m>3.33</x-m>
+   <y-m>-0.21</y-m>
+   <z-m>0.16</z-m>
+  </bottom-left>
+  <bottom-right>
+   <x-m>3.33</x-m>
+   <y-m>-0.16</y-m>
+   <z-m>0.16</z-m>
+  </bottom-right>
+  <top-left>
+   <x-m>3.28</x-m>
+   <y-m>-0.21</y-m>
+   <z-m>0.16</z-m>
+  </top-left>
+ </panel>
+ <panel>
+  <path>Aircraft/bf109/Models/propadj-hotspot.xml</path>
+  <bottom-left>
+   <x-m>3.12</x-m>
+   <y-m>-0.24</y-m>
+   <z-m>0.19</z-m>
+  </bottom-left>
+  <bottom-right>
+   <x-m>3.12</x-m>
+   <y-m>-0.24</y-m>
+   <z-m>0.13</z-m>
+  </bottom-right>
+  <top-left>
+   <x-m>3.02</x-m>
+   <y-m>-0.24</y-m>
+   <z-m>0.19</z-m>
+  </top-left>
+ </panel>
+ <panel>
+  <path>Aircraft/bf109/Models/taillock-hotspot.xml</path>
+  <bottom-left>
+   <x-m>3.47</x-m>
+   <y-m>-0.26</y-m>
+   <z-m>0.28</z-m>
+  </bottom-left>
+  <bottom-right>
+   <x-m>3.47</x-m>
+   <y-m>-0.26</y-m>
+   <z-m>0.13</z-m>
+  </bottom-right>
+  <top-left>
+   <x-m>3.38</x-m>
+   <y-m>-0.26</y-m>
+   <z-m>0.28</z-m>
+  </top-left>
+ </panel>
+ <panel>
+  <path>Aircraft/bf109/Models/taillock-hotspot.xml</path>
+  <bottom-left>
+   <x-m>3.47</x-m>
+   <y-m>-0.26</y-m>
+   <z-m>0.28</z-m>
+  </bottom-left>
+  <bottom-right>
+   <x-m>3.47</x-m>
+   <y-m>-0.26</y-m>
+   <z-m>0.13</z-m>
+  </bottom-right>
+  <top-left>
+   <x-m>3.38</x-m>
+   <y-m>-0.26</y-m>
+   <z-m>0.28</z-m>
+  </top-left>
+ </panel>
+<panel>
+  <path>Aircraft/bf109/Models/coolflap-hotspots.xml</path>
+  <bottom-left>
+   <x-m>3.0</x-m>
+   <y-m>0.2</y-m>
+   <z-m>0.06</z-m>
+  </bottom-left>
+  <bottom-right>
+   <x-m>3.0</x-m>
+   <y-m>0.32</y-m>
+   <z-m>0.06</z-m>
+  </bottom-right>
+  <top-left>
+   <x-m>3.0</x-m>
+   <y-m>0.2</y-m>
+   <z-m>0.15</z-m>
+  </top-left>
+ </panel>
  <!-- panel models -->
  <model>
   <path>Aircraft/bf109/Models/alt-ger.xml</path>
@@ -59,26 +166,39 @@
    <z-m>0.351</z-m>
   </offsets>
  </model>
-
- 
-
  <model>
-  <path>Aircraft/p51d/Models/p51d-jw-carbtemp.xml</path>
+  <path>Aircraft/bf109/Models/oiltemp.xml</path>
   <offsets>
    <x-m>2.98</x-m>
-   <y-m>0.21</y-m>
-   <z-m>0.355</z-m>
+   <y-m>0.18</y-m>
+   <z-m>0.415</z-m>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/bf109/Models/oiltemp.xml</path>
+  <offsets>
+   <x-m>2.98</x-m>
+   <y-m>0.2</y-m>
+   <z-m>0.363</z-m>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/bf109/Models/pitchindicator.xml</path>
+  <offsets>
+   <x-m>2.98</x-m>
+   <y-m>0.2</y-m>
+   <z-m>0.305</z-m>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/bf109/Models/fuelgauge.xml</path>
+  <offsets>
+   <x-m>2.98</x-m>
+   <y-m>0.2</y-m>
+   <z-m>0.24</z-m>
   </offsets>
  </model>
 
- <model>
-  <path>Aircraft/p51d/Models/p51d-jw-cooltemp.xml</path>
-  <offsets>
-   <x-m>2.98</x-m>
-   <y-m>0.21</y-m>
-   <z-m>0.285</z-m>
-  </offsets>
- </model>
 
 
 <model>
@@ -94,8 +214,8 @@
   <path>Aircraft/bf109/Models/tach-ger.xml</path>
   <offsets>
    <x-m>2.98</x-m>
-   <y-m>0.138</y-m>
-   <z-m>0.367</z-m>
+   <y-m>0.118</y-m>
+   <z-m>0.355</z-m>
   </offsets>
  </model>
 
@@ -103,8 +223,8 @@
   <path>Aircraft/bf109/Models/engine-ger.xml</path>
   <offsets>
    <x-m>2.98</x-m>
-   <y-m>0.137</y-m>
-   <z-m>0.445</z-m>
+   <y-m>0.12</y-m>
+   <z-m>0.435</z-m>
   </offsets>
  </model>
 
@@ -112,8 +232,8 @@
   <path>Aircraft/bf109/Models/vario-ger.xml</path>
   <offsets>
    <x-m>2.985</x-m>
-   <y-m>0.05</y-m>
-   <z-m>0.434</z-m>
+   <y-m>0.04</y-m>
+   <z-m>0.432</z-m>
   </offsets>
  </model>
 
@@ -121,7 +241,7 @@
   <path>Aircraft/bf109/Models/afn2.xml</path>
   <offsets>
    <x-m>2.985</x-m>
-   <y-m>0.04</y-m>
+   <y-m>0.035</y-m>
    <z-m>0.345</z-m>
   </offsets>
  </model>
@@ -139,8 +259,8 @@
   <path>Aircraft/bf109/Models/man-ger.xml</path>
   <offsets>
    <x-m>2.98</x-m>
-   <y-m>0.135</y-m>
-   <z-m>0.285</z-m>
+   <y-m>0.125</y-m>
+   <z-m>0.267</z-m>
   </offsets>
  </model>
 
@@ -202,7 +322,7 @@
   <offsets>
    <x-m>3.04</x-m>
    <y-m>0.04</y-m>
-   <z-m>0.555</z-m>
+   <z-m>0.543</z-m>
   </offsets>
  </model>
 
@@ -214,6 +334,7 @@
    <z-m>0.51</z-m>
   </offsets>
  </model>
+
 <model>
   <path>Aircraft/bf109/Models/fueldump-ger.ac</path>
   <offsets>
@@ -223,7 +344,7 @@
   </offsets>
  </model>
 <model>
-  <path>Aircraft/bf109/Models/coolflap-ger.ac</path>
+  <path>Aircraft/bf109/Models/coolflap-ger.xml</path>
   <offsets>
    <x-m>2.97</x-m>
    <y-m>0.22</y-m>
@@ -243,7 +364,7 @@
  </model>
 
 <model>
-  <path>Aircraft/bf109/Models/taillock-ger.ac</path>
+  <path>Aircraft/bf109/Models/taillock.xml</path>
   <offsets>
    <x-m>3.495</x-m>
    <y-m>-0.27</y-m>
@@ -252,7 +373,7 @@
  </model>
 
 <model>
-  <path>Aircraft/bf109/Models/flapwheel.ac</path>
+  <path>Aircraft/bf109/Models/flapwheel.xml</path>
   <offsets>
    <x-m>3.395</x-m>
    <y-m>-0.3</y-m>
@@ -261,7 +382,7 @@
  </model>
 
 <model>
-  <path>Aircraft/bf109/Models/trimwheel.ac</path>
+  <path>Aircraft/bf109/Models/trimwheel.xml</path>
   <offsets>
    <x-m>3.395</x-m>
    <y-m>-0.25</y-m>
@@ -274,6 +395,14 @@
    <x-m>3.33</x-m>
    <y-m>-0.21</y-m>
    <z-m>0.05</z-m>
+  </offsets>
+ </model>
+<model>
+  <path>Aircraft/bf109/Models/breaker.ac</path>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
   </offsets>
  </model>
  <animation>
@@ -337,36 +466,8 @@
  </animation>
 
 <animation>
-  <type>select</type>
-  <object-name>noshadow.propdisk</object-name>
-  <condition>
-   <greater-than>
-    <property>/engines/engine[0]/rpm</property>
-    <value>1000</value>
-   </greater-than>
-  </condition>
- </animation>
-
-<animation>
   <type>spin</type>
   <object-name>Propturn</object-name>
-    <property>/engines/engine[0]/rpm</property>
-    <factor>-0.01</factor>
-  <center>
-   <x-m>3.40</x-m>
-   <y-m>0.0</y-m>
-   <z-m>0.0</z-m>
-  </center>
-  <axis>
-   <x>1.0</x>
-   <y>0.0</y>
-   <z>0.0</z>
-  </axis>
- </animation>
-
-<animation>
-  <type>spin</type>
-  <object-name>noshadow.propdisk</object-name>
     <property>/engines/engine[0]/rpm</property>
     <factor>-0.01</factor>
   <center>
@@ -514,7 +615,7 @@
  <animation>
   <type>rotate</type>
   <object-name>canopy</object-name>
-  <object-name>canopyglass</object-name>
+  <object-name>noshadow.canopyglass</object-name>
   <property>controls/canopy/position-norm</property>
   <interpolation>
    <entry>
@@ -604,10 +705,52 @@
   </axis>
  </animation>
 
+<animation>
+  <type>rotate</type>
+  <object-name>leftflap</object-name>
+  <property>/controls/engines/engine[0]cowl-flaps-norm</property>
+  <factor>-20.0</factor>
+
+   <center>
+    <x-m>3.681</x-m>
+    <y-m>-1.137</y-m>
+    <z-m>-0.275</z-m>
+  </center>
+
+  <axis>
+   <x1-m>3.642</x1-m>
+   <y1-m>-1.407</y1-m>
+   <z1-m>-0.256</z1-m>
+   <x2-m>3.759</x2-m>
+   <y2-m>-0.596</y2-m>
+   <z2-m>-0.313</z2-m>
+  </axis>
+ </animation>
+<animation>
+  <type>rotate</type>
+  <object-name>rightflap</object-name>
+  <property>/controls/engines/engine[0]cowl-flaps-norm</property>
+  <factor>20.0</factor>
+
+   <center>
+    <x-m>3.681</x-m>
+    <y-m>1.137</y-m>
+    <z-m>-0.275</z-m>
+  </center>
+
+  <axis>
+   <x1-m>3.642</x1-m>
+   <y1-m>1.407</y1-m>
+   <z1-m>-0.256</z1-m>
+   <x2-m>3.759</x2-m>
+   <y2-m>0.596</y2-m>
+   <z2-m>-0.313</z2-m>
+  </axis>
+ </animation>
  <animation>
   <type>rotate</type>
   <object-name>rightoutflap</object-name>
-  <property>/surface-positions/flap-pos-norm</property>
+  <property>surface-positions/flap-pos-norm</property>
   <factor>47.0</factor>
 
    <center>
@@ -934,6 +1077,15 @@
    <name>Blaze-f</name>
     <offsets> 
      <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>0.0</z-m>
+    </offsets>
+  </model>
+  <model> 
+   <path>Aircraft/bf109/Models/pdisk.xml</path>
+   <name>Blaze-f</name>
+    <offsets> 
+     <x-m>-1.1</x-m>
      <y-m>0.0</y-m>
      <z-m>0.0</z-m>
     </offsets>

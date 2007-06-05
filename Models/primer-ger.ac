@@ -628,7 +628,7 @@ refs 3
 80 0.561214208603 0.379037559032
 kids 0
 OBJECT poly
-name "Cube.001"
+name "button"
 data 8
 Cube.001
 texture "bf109-5.rgb"

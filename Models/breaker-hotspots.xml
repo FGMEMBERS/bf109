@@ -28,6 +28,7 @@
      <path>Aircraft/p51d/Models/hotspotgrid.rgb</path>
 -->
      <path>Aircraft/bf109/Models/transparent-bg.rgb</path>
+
      <x1>0.0</x1>
      <y1>0.0</y1>
      <x2>1.0</x2>
@@ -40,73 +41,72 @@
 
  <actions>
 
-  <!-- flap down -->
   <action>
-   <name>flap down</name>
+   <name>throttle back</name>
    <button>0</button>
-   <x>40</x>
-   <y>55</y>
-   <w>70</w>
-   <h>100</h>
+   <x>70</x>
+   <y>140</y>
+   <w>50</w>
+   <h>110</h>
    <binding>
     <command>property-adjust</command>
-    <property>/controls/flight/flaps</property>
-    <step>0.1</step>
-    <min>0</min>
-    <max>1.0</max>
-    <wrap>false</wrap>
-   </binding>
-  </action>
-  <!-- flap up -->
-  <action>
-   <name>flap up</name>
-   <button>0</button>
-   <x>40</x>
-   <y>155</y>
-   <w>70</w>
-   <h>100</h>
-   <binding>
-    <command>property-adjust</command>
-    <property>/controls/flight/flaps</property>
+    <property>controls/engines/engine[0]/throttle</property>
     <step>-0.1</step>
     <min>0</min>
     <max>1.0</max>
     <wrap>false</wrap>
    </binding>
   </action>
-    <!-- trim down >
   <action>
-   <name>elevator trim down</name>
+   <name>throttle back</name>
    <button>0</button>
-   <x>150</x>
-   <y>55</y>
-   <w>70</w>
-   <h>100</h>
+   <x>70</x>
+   <y>30</y>
+   <w>50</w>
+   <h>110</h>
    <binding>
     <command>property-adjust</command>
-    <property>/controls/flight/elevator-trim</property>
-    <step>0.1</step>
-    <min>-1.0</min>
+    <property>controls/engines/engine[0]/throttle</property>
+    <step>-0.1</step>
+    <min>0</min>
     <max>1.0</max>
     <wrap>false</wrap>
    </binding>
   </action>
- <! trim up  >
   <action>
-   <name>elevator trim down</name>
+   <name>throttle back</name>
    <button>0</button>
-   <x>150</x>
-   <y>155</y>
-   <w>70</w>
-   <h>100</h>
-  <binding>
-   <command>property-adjust</command>
-   <property>/controls/flight/elevator-trim</property>
-   <step type="double">-0.001</step>
-  </binding>>
+   <x>70</x>
+   <y>-80</y>
+   <w>50</w>
+   <h>110</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>controls/engines/engine[0]/throttle</property>
+    <step>-0.1</step>
+    <min>0</min>
+    <max>1.0</max>
+    <wrap>false</wrap>
+   </binding>
   </action>
--->
+  <action>
+   <name>throttle back</name>
+   <button>0</button>
+   <x>70</x>
+   <y>-190</y>
+   <w>50</w>
+   <h>110</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>controls/engines/engine[0]/throttle</property>
+    <step>-0.1</step>
+    <min>0</min>
+    <max>1.0</max>
+    <wrap>false</wrap>
+   </binding>
+  </action>
 </actions>
+
   </instrument>
  </instruments>
 

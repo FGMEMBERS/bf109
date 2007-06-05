@@ -20,7 +20,6 @@ February 2006,  Detlef Faber
   
   <flight-model>yasim</flight-model>
   <aero>bf109g-yasim</aero>
-  <fuel-fraction>0.75</fuel-fraction>
 
   <systems>
    <electrical>
@@ -48,7 +47,7 @@ February 2006,  Detlef Faber
   <model>
    <path>Aircraft/bf109/Models/bf109g-model.xml</path>
    <livery>
-     <variant type="string">Default</variant>
+     <variant type="string">default </variant>
      <material>
        <fuselage>
          <texture>bf109-1.rgb</texture>
@@ -139,6 +138,10 @@ February 2006,  Detlef Faber
       <desc>toggle Canopy</desc>
     </key>
    <key>
+      <name>Ctrl-p</name>
+      <desc>Toggle automatic Propeller Adjustment</desc>
+    </key>
+   <key>
       <name>N</name>
       <desc>Propeller Coarse</desc>
     </key>
@@ -174,14 +177,17 @@ February 2006,  Detlef Faber
       <name>H</name>
       <desc>Fire WGR 21</desc>
     </key>
-    <text>Use the Equipment-Fuel and Payload Dialog to select external Stores. l toggles the Livery select Dialog
+<text>Use the Equipment-Fuel and Payload Dialog to select external Stores. l toggles the Livery select Dialog
 
+---Start up---
+Ensure propeller adjust automatic is set to manual, and the pitch is set to 11.00. Set cutoff lever to open, operate primer 5-6 times. Switch ignition to M1+2. Open throttle a bit and pull the starter Handle. Be sure to open the radiator flaps.
 ---Take Off---
-Flaps down 20 degrees, Take off at 1.1 ata Manifold Pressure. Lift Tailwheel at 120-150 km/h. Be prepared to use Aileron against Torque and Rudder to counteract Swing. Lift Off at 190-200 km/h.
-Climb with 1.1 ata (Max Continous Power) 1.3 ata is limited to 30 min.
+Flaps down 10 degrees, Take off at 1.1 ata Manifold Pressure. When advancing the throttle past 75%  propeller pitch adjustment will engage automatically. Lift Tailwheel at 120-150 km/h. Be prepared to use Aileron against Torque and Rudder to counteract Swing. Lift Off at 190-200 km/h.
+Climb with 1.1 ata (Max Continous Power) 1.3 ata is limited to 30 min. Radiator flaps can be set to automatic.
 
 ---Landing---
-lower Flaps and Gear under 300 km/h. Approach Speed is 200 km/h. A curved Approach is recommended, because visibility on Final is bad. Speed at Treshold should be 175 km/h. Flare to Threepoint attitude before touchdown. After Touchdown use Rudder to keep the Aircraft straight.
+Beware: While engine runs on low rpm, switch automatic propeller adjustment off or else the propeller pitch will run too course. Set propeller pitch to 10.30.
+Lower Flaps and Gear under 300 km/h. Open radiator flaps. Approach Speed is 200 km/h. A curved Approach is recommended, because visibility on Final is bad. Speed at Treshold should be 175 km/h. Flare to Threepoint attitude before touchdown. After Touchdown use Rudder to keep the Aircraft straight.
 Don't forget to release Tailwheel lock (Ctrl-l) before taxiing off the Runway.</text>
   </help>
 
@@ -231,10 +237,7 @@ Don't forget to release Tailwheel lock (Ctrl-l) before taxiing off the Runway.</
 
  <engines>
   <engine>
-   <rpm type="double">700</rpm>
-   <!-- fake unimplemented settings -->
-   <fuel-pump-psi type="double">18</fuel-pump-psi>
-   <oil-pressure-psi type="double">75</oil-pressure-psi>
+   <mp-osi>3.0</mp-osi>
   </engine>
  </engines>
 
@@ -242,6 +245,7 @@ Don't forget to release Tailwheel lock (Ctrl-l) before taxiing off the Runway.</
   <fuel>
    <tank n="0">
     <name>Internal</name>
+    <selected type="bool">false</selected>
    </tank>
    <tank n="1">
     <name>Droptank</name>
@@ -261,10 +265,14 @@ Don't forget to release Tailwheel lock (Ctrl-l) before taxiing off the Runway.</
  <controls>
    <engines>
       <engine n="0">
-        <magnetos>3</magnetos>
+        <magnetos>0</magnetos>
         <boost type="double">0.0</boost>
+        <prop-auto type="bool">false</prop-auto>
+        <primer type="double">0.0</primer>
+        <radlever type="double">0.0</radlever>
       </engine>
    </engines>
+
    <gear>
       <tailwheel-lock>true</tailwheel-lock>
       <bellybrake type="float">1.0</bellybrake>
@@ -281,7 +289,8 @@ Don't forget to release Tailwheel lock (Ctrl-l) before taxiing off the Runway.</
 
 
    <fuel>
-     <switch-position type = "int">0</switch-position>
+     <jett type="int">0</jett>
+     <switch-position type = "int">-1</switch-position>
      <tank n="0">
        <fuel_selector>true</fuel_selector>
      </tank>
@@ -303,7 +312,14 @@ Don't forget to release Tailwheel lock (Ctrl-l) before taxiing off the Runway.</
             <property>controls/gear/tailwheel-lock</property>
           </binding>
       </key>
-
+      <key n="16"> 
+          <name>Ctrl-P</name>
+          <desc>Toggle automatic Propeller adjustment.</desc>
+          <binding> 
+            <command>property-toggle</command>
+            <property>/controls/engines/engine[0]/prop-auto</property>
+          </binding>
+      </key>
       <key n="67">
         <name>C</name>
         <desc>Toggle Canopy</desc>
@@ -436,7 +452,7 @@ Don't forget to release Tailwheel lock (Ctrl-l) before taxiing off the Runway.</
   <nasal>
     <bf109>
       <file>Aircraft/bf109/bf109.nas</file>
-      <script>ext_slats();</script>
+      <script>init();</script>
     </bf109>
 
     <pilot-g>

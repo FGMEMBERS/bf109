@@ -11,7 +11,7 @@ init = func {
    },1);
     setlistener("/controls/engines/engine[0]/primer", func {
 	pos2=cmdarg().getValue();
-        if(pos2 = 1.0){
+        if(pos2 > 0.9){
            setprop("/engines/engine[0]/out-of-fuel",0);
     };
    },1);
@@ -147,3 +147,5 @@ aircraft.light.new("sim/model/bf109/lighting/flash-r", [0.052, 0.05], flash_trig
 
 var flash1_trigger = props.globals.getNode("controls/armament/trigger1", 0);
 aircraft.light.new("sim/model/bf109/lighting/flash-f", [0.05, 0.052], flash1_trigger);
+
+aircraft.livery.init("Aircraft/bf109/Models/Liveries", "sim/model/livery/variant");

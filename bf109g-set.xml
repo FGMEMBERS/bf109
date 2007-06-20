@@ -179,16 +179,24 @@ February 2006,  Detlef Faber
     </key>
 <text>Use the Equipment-Fuel and Payload Dialog to select external Stores. l toggles the Livery select Dialog
 
+Some notes on the propeller adjust mechanism:
+
+This is no constant speed unit!
+
+Propeller pitch advance is gouverned by a running line dependent on the engine rpm/manifold pressure relation. There is a lever beneath the throttle quadrant to switch between automatic/manual adjust. Manual is the rear rest of the switch and should be used for startup and taxi.
+
+The actual amount of propeller pitch is displayed on the clock shaped Instrument on the right side of the panel. The range counts counter clockwise starting at 12.30 (full fine) to 8.30 (full course).
+
 ---Start up---
-Ensure propeller adjust automatic is set to manual, and the pitch is set to 11.00. Set cutoff lever to open, operate primer 5-6 times. Switch ignition to M1+2. Open throttle a bit and pull the starter Handle. Be sure to open the radiator flaps.
+Ensure propeller adjust automatic is set to manual, and the pitch is set to 11.00. Set cutoff lever (right of throttle lever) to open, operate primer (left of seat) 5-6 times. Switch ignition (left side of the panel) to M1+2. Open throttle a bit and pull the starter Handle (beneath Mag-Switch). Be sure to open(offen) the radiator flaps (lever right beneath the panel).
 ---Take Off---
-Flaps down 10 degrees, Take off at 1.1 ata Manifold Pressure. When advancing the throttle past 75%  propeller pitch adjustment will engage automatically. Lift Tailwheel at 120-150 km/h. Be prepared to use Aileron against Torque and Rudder to counteract Swing. Lift Off at 190-200 km/h.
-Climb with 1.1 ata (Max Continous Power) 1.3 ata is limited to 30 min. Radiator flaps can be set to automatic.
+Flaps (the left wheel on the left side of the seat) down 10 degrees, Take off at 1.1 ata Manifold Pressure. When advancing the throttle past 75%  propeller pitch adjustment will engage automatically. Lift Tailwheel at 120-150 km/h. Be prepared to use Aileron against Torque and Rudder to counteract Swing. Lift Off at 190-200 km/h.
+Climb with 1.1 ata (Max Continous Power) 1.3 ata is limited to 30 min. 1.4 ata is limited to 5 min. Radiator flaps can be set to automatic.
 
 ---Landing---
-Beware: While engine runs on low rpm, switch automatic propeller adjustment off or else the propeller pitch will run too course. Set propeller pitch to 10.30.
+Beware: While engine runs on low rpm (or beneath 0.9 ata manifold pressure), switch automatic propeller adjustment off (Ctrl-p) or else the propeller pitch will run too course. Set propeller pitch to 10.30.
 Lower Flaps and Gear under 300 km/h. Open radiator flaps. Approach Speed is 200 km/h. A curved Approach is recommended, because visibility on Final is bad. Speed at Treshold should be 175 km/h. Flare to Threepoint attitude before touchdown. After Touchdown use Rudder to keep the Aircraft straight.
-Don't forget to release Tailwheel lock (Ctrl-l) before taxiing off the Runway.</text>
+Don't forget to release Tailwheel lock (lever on the left cockpitwall) before taxiing off the Runway.</text>
   </help>
 
 
@@ -442,7 +450,7 @@ Don't forget to release Tailwheel lock (Ctrl-l) before taxiing off the Runway.</
             <desc>Show livery select dialog</desc>
               <binding>
                 <command>nasal</command>
-                <script>livery.showModelSelectDialog()</script>
+                <script>aircraft.livery.dialog.toggle()</script>
               </binding>
          </key>
      </keyboard>
@@ -459,9 +467,6 @@ Don't forget to release Tailwheel lock (Ctrl-l) before taxiing off the Runway.</
      <file>Aircraft/bf109/pilot-g.nas</file>
     </pilot-g>
 
-    <livery>
-      <file>Aircraft/bf109/Models/livery.nas</file>
-    </livery>
   </nasal>
 
 

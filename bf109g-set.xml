@@ -246,8 +246,18 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
  <engines>
   <engine>
    <mp-osi>3.0</mp-osi>
+   <coolant-temp-degc type="float">15.0</coolant-temp-degc>
+   <oil-temp-degc type = "float">15.0</oil-temp-degc>
+   <oil-visc type = "float">0.1</oil-visc>
+   <rev-strain type="int">0</rev-strain>
+   <overrev type="int">0</overrev>
+   <overheat type="int">0</overheat>
+   <rpm type="float">0.0</rpm>
   </engine>
  </engines>
+ <velocities>
+   <airspeed-kt type="float">0.0</airspeed-kt>
+ </velocities>
 
  <consumables>
   <fuel>
@@ -278,6 +288,8 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
         <prop-auto type="bool">false</prop-auto>
         <primer type="double">0.0</primer>
         <radlever type="double">0.0</radlever>
+        <cowl-flaps-norm type="float">0.0</cowl-flaps-norm>
+        <coolflap-auto type ="int">0</coolflap-auto>
       </engine>
    </engines>
 

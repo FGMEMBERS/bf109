@@ -6,13 +6,19 @@ init = func {
     setprop("/consumables/fuel/tank[0]/selected",0);
     setprop("/consumables/fuel/tank[1]/selected",0);
         if(position >= 0.0){
-           setprop("/consumables/fuel/tank[" ~ position ~ "]/selected",1);
+           if(getprop("/engines/engine[0]/overrev") == 0){
+             if(getprop("/engines/engine[0]/overheat") == 0){
+               setprop("/consumables/fuel/tank[" ~ position ~ "]/selected",1);
+  }
+      };
     };
    },1);
     setlistener("/controls/engines/engine[0]/primer", func {
 	pos2=cmdarg().getValue();
         if(pos2 > 0.9){
-           setprop("/engines/engine[0]/out-of-fuel",0);
+
+               setprop("/engines/engine[0]/out-of-fuel",0);
+      
     };
    },1);
     setlistener("/controls/engines/engine[0]/throttle", func {
@@ -32,8 +38,6 @@ main_loop = func {
      }
 #### prop-adjust  
 
-
-
   if (getprop("/controls/engines/engine[0]/prop-auto") == 1) {  
   revs = getprop("/engines/engine[0]/rpm");
     ppitch = getprop("/controls/engines/engine[0]/propeller-pitch");
@@ -45,8 +49,82 @@ main_loop = func {
       if (revs / mpress > 68.0)  {
           setprop("/controls/engines/engine[0]/propeller-pitch", ppitch - 0.003);
           }
-    } 
-    settimer(main_loop, 0.2)
+    
+### kill engine when overreved
+  }
+  rev2 = getprop("/engines/engine[0]/rpm");
+  rstrain = getprop("/engines/engine[0]/rev-strain");
+  if (rstrain > 350000) {
+    setprop("/engines/engine[0]/overrev", 1);
+    setprop("/engines/engine[0]/running", 0);
+    setprop("/engines/engine[0]/out-of-fuel", 1);
+    setprop("/consumables/fuel/tank[0]/selected",0);
+    }
+  if (rev2 > 2600) {
+    strain = rev2 - 2600;
+    setprop("/engines/engine[0]/rev-strain", rstrain + strain);
+  }
+  
+
+### coolant temp
+  if (getprop("/engines/engine[0]/running") == 1) {
+
+    thrust = getprop("/engines/engine[0]/prop-thrust");
+#    print ("#");
+#    print ( thrust );
+    ctemp = getprop("/engines/engine[0]/coolant-temp-degc");
+#    print ( ctemp );
+    cpos = getprop("/controls/engines/engine[0]/cowl-flaps-norm");
+#    print ( cpos );
+    airspeed = getprop("/velocities/airspeed-kt");
+#    print ( airspeed );
+    temp = getprop("/environment/temperature-degc");
+#    print ( temp );
+    dtemp = 0.008*((0.007*thrust+temp)-0.2*(1.5*(airspeed*cpos+55)));
+#    print ( dtemp );
+    newtemp = (ctemp + dtemp);
+#    print (newtemp);
+    setprop ("/engines/engine[0]/coolant-temp-degc" , newtemp);
+
+### oil temp and viscosity
+
+
+    otemp = getprop("/engines/engine[0]/oil-temp-degc");
+    visc = getprop("/engines/engine[0]/oil-visc");
+
+    if (visc < 1.0 ) {
+      setprop("/engines/engine[0]/oil-visc", visc + 0.003);
+      if (rev2 > 1000) {
+           setprop("/engines/engine[0]/rev-strain", rstrain + (600/visc));
+      }
+    }     
+### kill engine when overheated
+
+    if (newtemp > 135) {
+      setprop("/engines/engine[0]/overheat", 1);
+      setprop("/engines/engine[0]/running", 0);
+      setprop("/engines/engine[0]/out-of-fuel", 1);
+    setprop("/consumables/fuel/tank[0]/selected",0);
+    }
+  }
+### automatic coolflap adjustment
+
+  if (getprop("/controls/engines/engine[0]/coolflap-auto") == 1) {
+    ctemp = getprop("/engines/engine[0]/coolant-temp-degc");
+    cpos = getprop("/controls/engines/engine[0]/cowl-flaps-norm");
+    npos = cpos;
+    if (ctemp < 65) {
+      npos = cpos - 0.05;
+      } 
+      if (ctemp > 85) {
+      npos = cpos + 0.05;
+      }
+    
+    interpolate ("/controls/engines/engine[0]/cowl-flaps-norm" , npos, 0.5 );
+  }
+  
+  settimer(main_loop, 0.2)
+  
 } 
 
 
@@ -134,12 +212,18 @@ fuel_jettison = func {
 }
 
 open_coolflaps = func {
-      interpolate("controls/engines/engine[0]/cowl-flaps-norm",1,3);
+      setprop("/controls/engines/engine[0]/coolflap-auto",0);
+      interpolate("controls/engines/engine[0]/cowl-flaps-norm",1,4);
       setprop("/controls/engines/engine[0]/radlever",2);
 }
 close_coolflaps = func {
-      interpolate("controls/engines/engine[0]/cowl-flaps-norm",0,3);
+      setprop("/controls/engines/engine[0]/coolflap-auto",0);
+      interpolate("controls/engines/engine[0]/cowl-flaps-norm",0,4);
       setprop("/controls/engines/engine[0]/radlever",0);
+}
+auto_coolflaps = func {
+      setprop("/controls/engines/engine[0]/radlever",1);
+      setprop("/controls/engines/engine[0]/coolflap-auto",1);
 }
 var flash_trigger = props.globals.getNode("controls/armament/trigger", 0);
 aircraft.light.new("sim/model/bf109/lighting/flash-l", [0.05, 0.052], flash_trigger);

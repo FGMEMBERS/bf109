@@ -75,7 +75,7 @@
    <h>40</h>
     <binding>
      <command>nasal</command>
-     <script>bf109.open_coolflaps()</script>
+     <script>bf109.auto_coolflaps()</script>
     </binding>
   </action>
 

@@ -167,7 +167,7 @@
   </offsets>
  </model>
  <model>
-  <path>Aircraft/bf109/Models/oiltemp.xml</path>
+  <path>Aircraft/bf109/Models/cooltemp.xml</path>
   <offsets>
    <x-m>2.98</x-m>
    <y-m>0.18</y-m>
@@ -708,7 +708,7 @@
 <animation>
   <type>rotate</type>
   <object-name>leftflap</object-name>
-  <property>/controls/engines/engine[0]cowl-flaps-norm</property>
+  <property>/controls/engines/engine[0]/cowl-flaps-norm</property>
   <factor>-20.0</factor>
 
    <center>
@@ -729,7 +729,7 @@
 <animation>
   <type>rotate</type>
   <object-name>rightflap</object-name>
-  <property>/controls/engines/engine[0]cowl-flaps-norm</property>
+  <property>/controls/engines/engine[0]/cowl-flaps-norm</property>
   <factor>20.0</factor>
 
    <center>

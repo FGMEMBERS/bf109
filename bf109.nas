@@ -1,4 +1,16 @@
 init = func {
+
+  if (getprop("/controls/engines/engine[0]/on-startup-running") == 1) {
+    setprop("/consumables/fuel/tank[0]/selected",1);
+    setprop("/controls/engines/engine[0]/magnetos",3);
+    setprop("/controls/engines/engine[0]/coolflap-auto",1);
+    setprop("/controls/engines/engine[0]/radlever",1);
+    setprop("/engines/engine[0]/oil-visc",1);
+    setprop("/engines/engine[0]/rpm",800);
+    setprop("/engines/engine[0]/engine-running",1);
+      setprop("/engines/engine[0]/coolant-temp-degc",40);
+
+  }  
    main_loop();
    }
     setlistener("/controls/fuel/switch-position", func {
@@ -195,6 +207,10 @@ drop_tank = func {
   if(rcount > 49){
      setprop("/controls/armament/station/release-tank", 1);
      setprop("/sim/weight[0]/selected","none");
+     setprop("/consumables/fuel/tank[1]/selected",0);
+    setprop("/consumables/fuel/tank[1]/level-gal_us",0);
+    setprop("/consumables/fuel/tank[1]/level-lbs",0);
+    setprop("/consumables/fuel/tank[1]/capacity-gal_us",0);
      } 
  }
 

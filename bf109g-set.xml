@@ -290,6 +290,7 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
         <radlever type="double">0.0</radlever>
         <cowl-flaps-norm type="float">0.0</cowl-flaps-norm>
         <coolflap-auto type ="int">0</coolflap-auto>
+				<on-startup-running type="bool">true</on-startup-running>
       </engine>
    </engines>
 

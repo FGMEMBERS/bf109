@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	
+	<!--back-->
+	<!--right -->
+	<!--up -->
+		
+    <path>transparent.ac</path>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>noshadow.canopyglas</object-name>
+  <property>controls/canopy/position-norm</property>
+  <interpolation>
+   <entry>
+    <ind>0.0</ind>
+    <dep>0.0</dep>
+   </entry>
+   <entry>
+    <ind>1.00</ind>
+    <dep>95.0</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m>3.10</x-m>
+   <y-m>0.30</y-m>
+   <z-m>0.37</z-m>
+  </center>
+  <axis>
+   <x>-1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+</PropertyList>

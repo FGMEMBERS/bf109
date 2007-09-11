@@ -1,15 +1,7 @@
 init = func {
 
   if (getprop("/controls/engines/engine[0]/on-startup-running") == 1) {
-    setprop("/consumables/fuel/tank[0]/selected",1);
-    setprop("/controls/engines/engine[0]/magnetos",3);
-    setprop("/controls/engines/engine[0]/coolflap-auto",1);
-    setprop("/controls/engines/engine[0]/radlever",1);
-    setprop("/engines/engine[0]/oil-visc",1);
-    setprop("/engines/engine[0]/rpm",800);
-    setprop("/engines/engine[0]/engine-running",1);
-      setprop("/engines/engine[0]/coolant-temp-degc",40);
-
+		magicstart();
   }  
    main_loop();
    }
@@ -98,16 +90,18 @@ main_loop = func {
 #    print (newtemp);
     setprop ("/engines/engine[0]/coolant-temp-degc" , newtemp);
 
-### oil temp and viscosity
+### oil and viscosity
 
 
-    otemp = getprop("/engines/engine[0]/oil-temp-degc");
+    otemp = getprop("/engines/engine[0]/oil-temperature-degf");
     visc = getprop("/engines/engine[0]/oil-visc");
 
     if (visc < 1.0 ) {
-      setprop("/engines/engine[0]/oil-visc", visc + 0.003);
+      setprop("/engines/engine[0]/oil-visc", visc + 0.002);
+			setprop("/engines/engine[0]/oiltempc", otemp *visc);
+
       if (rev2 > 1000) {
-           setprop("/engines/engine[0]/rev-strain", rstrain + (600/visc));
+           setprop("/engines/engine[0]/rev-strain", rstrain + (100/visc));
       }
     }     
 ### kill engine when overheated
@@ -116,7 +110,8 @@ main_loop = func {
       setprop("/engines/engine[0]/overheat", 1);
       setprop("/engines/engine[0]/running", 0);
       setprop("/engines/engine[0]/out-of-fuel", 1);
-    setprop("/consumables/fuel/tank[0]/selected",0);
+   		setprop("/consumables/fuel/tank[0]/selected",0);
+
     }
   }
 ### automatic coolflap adjustment
@@ -163,10 +158,14 @@ toggle_revi = func {
 fire_MG = func {
  if (getprop("/controls/armament/master-arm") == 1)  {
      setprop("/controls/armament/trigger", 1);
+		if (getprop("/sim/weight[1]/weight-lb") == 110)  {
+    	 setprop("/controls/armament/trigger2", 1);
+		}
      } 
 }
 stop_MG = func {
      setprop("/controls/armament/trigger", 0); 
+     setprop("/controls/armament/trigger2", 0);
 }
 
 fire_cannon = func {
@@ -176,6 +175,7 @@ fire_cannon = func {
 }
 stop_cannon = func {
      setprop("/controls/armament/trigger1", 0); 
+
 }
 
 fire_wgr = func {
@@ -215,12 +215,16 @@ drop_tank = func {
  }
 
 starter = func {
-starter_power = getprop("/systems/electrical/volts");
-if(starter_power == nil){starter_power = 0;}
-if (arg[0] == 1){
-if( starter_power > 5.0){ setprop("/controls/engines/engine[0]/starter",1);}
-}else{ setprop("/controls/engines/engine[0]/starter",0);}
-}
+	starter_power = getprop("/systems/electrical/volts");
+	if(starter_power == nil)
+		{starter_power = 0;}
+	if (arg[0] == 1){
+		if( starter_power > 5.0){ 
+			setprop("/controls/engines/engine[0]/starter",1);
+		}
+		}else{
+			setprop("/controls/engines/engine[0]/starter",0);}	
+	}
 
 fuel_jettison = func {
   remaining = getprop("consumables/fuel/tank[0]/level-gal_us");
@@ -240,6 +244,19 @@ close_coolflaps = func {
 auto_coolflaps = func {
       setprop("/controls/engines/engine[0]/radlever",1);
       setprop("/controls/engines/engine[0]/coolflap-auto",1);
+}
+
+magicstart = func {
+    setprop("/consumables/fuel/tank[0]/selected",1);
+    setprop("/controls/engines/engine[0]/magnetos",3);
+    setprop("/controls/engines/engine[0]/coolflap-auto",1);
+    setprop("/controls/engines/engine[0]/radlever",1);
+    setprop("/controls/engines/engine[0]/propeller-pitch",0.5);
+    setprop("/engines/engine[0]/oil-visc",1);
+    setprop("/engines/engine[0]/rpm",800);
+    setprop("/engines/engine[0]/engine-running",1);
+    setprop("/engines/engine[0]/out-of-fuel",0);
+    setprop("/engines/engine[0]/coolant-temp-degc",40);
 }
 var flash_trigger = props.globals.getNode("controls/armament/trigger", 0);
 aircraft.light.new("sim/model/bf109/lighting/flash-l", [0.05, 0.052], flash_trigger);

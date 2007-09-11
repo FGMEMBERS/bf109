@@ -10,10 +10,8 @@
   <type>rotate</type>
   <object-name>fixture</object-name>
   <object-name>casing</object-name>
-
-
-
-  <object-name>lens1</object-name>
+  <object-name>shadeholder</object-name>
+  <object-name>sunshade</object-name>
   <object-name>lens2</object-name>
   <object-name>crosshair</object-name>
   <property>/controls/armament/revi/position-norm</property>
@@ -35,10 +33,8 @@
 <animation>
   <type>rotate</type>
   <object-name>casing</object-name>
-
-
-
-  <object-name>lens1</object-name>
+  <object-name>shadeholder</object-name>
+  <object-name>sunshade</object-name>
   <object-name>lens2</object-name>
   <object-name>crosshair</object-name>
   <property>/controls/armament/revi/position-norm</property>
@@ -60,10 +56,8 @@
  <animation>
   <type>translate</type>
   <object-name>casing</object-name>
-
-
-
-  <object-name>lens1</object-name>
+  <object-name>shadeholder</object-name>
+  <object-name>sunshade</object-name>
   <object-name>lens2</object-name>
   <object-name>crosshair</object-name>
   <property>/controls/armament/revi/position-norm</property>
@@ -81,6 +75,25 @@
    <x>0.0</x>
    <y>2.0</y>
    <z>2.0</z>
+  </axis>
+ </animation>
+<animation>
+  <type>rotate</type>
+  <object-name>shadeholder</object-name>
+  <object-name>sunshade</object-name>
+  <property>/controls/armament/revi/shadeup</property>
+  <factor>65.0</factor>
+
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>0.005</y-m>
+   <z-m>-0.004</z-m>
+  </center>
+
+  <axis>
+   <x>0.000000</x>
+   <y>1.000000</y>
+   <z>0.000000</z>
   </axis>
  </animation>
 

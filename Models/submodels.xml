@@ -7,21 +7,27 @@
     <name>left-up-tracer</name>
     <model>Aircraft/bf109/Models/tracer.xml</model>
     <trigger>controls/armament/trigger</trigger>
-    <speed>3116.0</speed>
+    <speed>2460.0</speed>
     <repeat>true</repeat>
-    <delay>0.27</delay>
+    <delay>0.6</delay>
     <count>-1</count>
     <x-offset>-4.686</x-offset>
     <y-offset>-0.748</y-offset>
     <z-offset>1.491</z-offset>
     <yaw-offset>0.0</yaw-offset>
-    <pitch-offset>2.2</pitch-offset>
-    <life>2.0</life>
+    <pitch-offset>0.1</pitch-offset>
+    <life>4.0</life>
     <wind>false</wind>
-    <weight>0.1069</weight>
+    <weight>0.07495</weight>
     <cd>0.193</cd>
-    <eda>0.00192674</eda> 
+    <eda>0.00571198</eda> 
+		<collision>true</collision>
+		<collision-report>sim/ai/aircraft/collision/gun</collision-report>
+		<impact>true</impact>
+		<impact-report>sim/ai/aircraft/impact/gun</impact-report>
+		<submodel-path>Aircraft/bf109/Models/subsubmodels.xml</submodel-path>
   </submodel>
+
 <!-- termporarly disabled
 	<submodel> 
       <name>left-up-smoke</name>
@@ -44,25 +50,28 @@
 -->
 <!--right up-->
   <submodel>
-    <name>right-tracer</name>
+    <name>right-up-tracer</name>
     <model>Aircraft/bf109/Models/tracer.xml</model>
     <trigger>controls/armament/trigger</trigger>
-    <speed>3116.0</speed>
+    <speed>2460.0</speed>
     <repeat>true</repeat>
-    <delay>0.3</delay>
+    <delay>0.62</delay>
     <count>-1</count>
     <x-offset>-4.686</x-offset>
     <y-offset>0.748</y-offset>
     <z-offset>1.491</z-offset>
     <yaw-offset>0.0</yaw-offset>
-
-    <pitch-offset>2.2</pitch-offset>
-
-    <life>2.0</life>
+    <pitch-offset>0.1</pitch-offset>
+    <life>4.0</life>
     <wind>false</wind>
-    <weight>0.1069</weight>
+    <weight>0.07495</weight>
     <cd>0.193</cd>
-    <eda>0.00192674</eda>  
+    <eda>0.00571198</eda> 
+		<collision>true</collision>
+		<collision-report>sim/ai/aircraft/collision/gun</collision-report>
+		<impact>true</impact>
+		<impact-report>sim/ai/aircraft/impact/gun</impact-report>
+		<submodel-path>Aircraft/bf109/Models/subsubmodels.xml</submodel-path>
   </submodel>
 <!--
 	<submodel> 
@@ -89,20 +98,25 @@
     <name>engine-tracer</name>
     <model>Aircraft/bf109/Models/tracer.xml</model>
     <trigger>controls/armament/trigger1</trigger>
-    <speed>3116.0</speed>
+    <speed>2657.48</speed>
     <repeat>true</repeat>
-    <delay>0.33</delay>
+    <delay>0.35</delay>
     <count>-1</count>
     <x-offset>-3.686</x-offset>
     <y-offset>0.0</y-offset>
     <z-offset>0.0</z-offset>
     <yaw-offset>0.0</yaw-offset>
-    <pitch-offset>3.2</pitch-offset>
-    <life>2.0</life>
+    <pitch-offset>0.0</pitch-offset>
+    <life>4.0</life>
     <wind>false</wind>
-    <weight>0.1069</weight>
+    <weight>0.253532</weight>
     <cd>0.193</cd>
     <eda>0.00136354</eda> 
+		<collision>true</collision>
+		<collision-report>sim/ai/aircraft/collision/cannon</collision-report>
+		<impact>true</impact>
+		<impact-report>sim/ai/aircraft/impact/cannon</impact-report>
+		<submodel-path>Aircraft/bf109/Models/subsubmodels.xml</submodel-path>
   </submodel>
 
 
@@ -118,7 +132,7 @@
     <z-offset>-0.6</z-offset>
     <pitch-offset>8.0</pitch-offset>
     <yaw-offset>0.0</yaw-offset>
-    <life>50</life>
+    <life>15</life>
     <aero-stabilised>true</aero-stabilised>
     <wind>false</wind>
     <weight>250.0</weight>
@@ -139,7 +153,7 @@
     <z-offset>-0.6</z-offset>
     <pitch-offset>8.0</pitch-offset>
     <yaw-offset>0.0</yaw-offset>
-    <life>50</life>
+    <life>15</life>
     <aero-stabilised>true</aero-stabilised>
     <wind>false</wind>
     <weight>250.0</weight>
@@ -160,7 +174,7 @@
     <z-offset>-0.6</z-offset>
     <pitch-offset>8.0</pitch-offset>
     <yaw-offset>0.0</yaw-offset>
-    <life>50</life>
+    <life>15</life>
     <aero-stabilised>true</aero-stabilised>
     <wind>false</wind>
     <weight>250.0</weight>
@@ -181,7 +195,7 @@
     <z-offset>-0.6</z-offset>
     <pitch-offset>8.0</pitch-offset>
     <yaw-offset>0.0</yaw-offset>
-    <life>50</life>
+    <life>15</life>
     <aero-stabilised>true</aero-stabilised>
     <wind>false</wind>
     <weight>250.0</weight>
@@ -202,7 +216,7 @@
     <z-offset>-1.71</z-offset>
     <pitch-offset>0.0</pitch-offset>
     <yaw-offset>0.0</yaw-offset>
-    <life>50</life>
+    <life>20</life>
     <contents>sim/weight[0]/weight-lb</contents>
     <aero-stabilised>false</aero-stabilised>
     <wind>false</wind>
@@ -223,7 +237,7 @@
     <z-offset>-1.71</z-offset>
     <pitch-offset>0.0</pitch-offset>
     <yaw-offset>0.0</yaw-offset>
-    <life>50</life>
+    <life>30</life>
     <contents>sim/weight[0]/weight-lb</contents>
     <aero-stabilised>true</aero-stabilised>
     <wind>false</wind>
@@ -239,7 +253,7 @@
     <name>left-tracer</name>
     <model>Aircraft/bf109/Models/tracer.xml</model>
     <trigger>controls/armament/trigger2</trigger>
-    <speed>2840.0</speed>
+    <speed>2657.48</speed>
     <repeat>true</repeat>
     <delay>0.25</delay>
     <count>-1</count>
@@ -247,12 +261,17 @@
     <y-offset>-6.4</y-offset>
     <z-offset>-1.7</z-offset>
     <yaw-offset>0.0</yaw-offset>
-    <pitch-offset>3.2</pitch-offset>
-    <life>2.0</life>
+    <pitch-offset>0.0</pitch-offset>
+    <life>4.0</life>
     <wind>false</wind>
-    <weight>0.1069</weight>
+    <weight>0.253532</weight>
     <cd>0.193</cd>
     <eda>0.00136354</eda> 
+		<collision>true</collision>
+		<collision-report>sim/ai/aircraft/collision/cannon</collision-report>
+		<impact>true</impact>
+		<impact-report>sim/ai/aircraft/impact/cannon</impact-report>
+		<submodel-path>Aircraft/bf109/Models/subsubmodels.xml</submodel-path>
   </submodel>
 <!--
 	<submodel> 
@@ -279,7 +298,7 @@
     <name>right-tracer</name>
     <model>Aircraft/bf109/Models/tracer.xml</model>
     <trigger>controls/armament/trigger2</trigger>
-    <speed>2840.0</speed>
+    <speed>2657.48</speed>
     <repeat>true</repeat>
     <delay>0.25</delay>
     <count>-1</count>
@@ -287,12 +306,17 @@
     <y-offset>6.4</y-offset>
     <z-offset>-1.7</z-offset>
     <yaw-offset>0.0</yaw-offset>
-    <pitch-offset>3.2</pitch-offset>
-    <life>2.0</life>
+    <pitch-offset>0.0</pitch-offset>
+    <life>4.0</life>
     <wind>false</wind>
-    <weight>0.1069</weight>
+    <weight>0.253532</weight>
     <cd>0.193</cd>
     <eda>0.00136354</eda> 
+		<collision>true</collision>
+		<collision-report>sim/ai/aircraft/collision/cannon</collision-report>
+		<impact>true</impact>
+		<impact-report>sim/ai/aircraft/impact/cannon</impact-report>
+		<submodel-path>Aircraft/bf109/Models/subsubmodels.xml</submodel-path>
   </submodel>
 <!--
 	<submodel> 

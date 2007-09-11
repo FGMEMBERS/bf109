@@ -48,6 +48,7 @@
    <y>-50</y>
    <w>100</w>
    <h>100</h>
+
    <binding>
     <command>property-adjust</command>
     <property>/controls/engines/engine[0]/primer</property>
@@ -56,6 +57,16 @@
     <max>1.0</max>
     <wrap>false</wrap>
    </binding>
+  <binding>
+		<command>property-toggle</command>
+    <property>/controls/engines/engine[0]/primer-pressed</property>
+	</binding>
+      <mod-up>
+       <binding>
+					<command>property-toggle</command>
+    			<property>/controls/engines/engine[0]/primer-pressed</property>
+       </binding>
+      </mod-up>
   </action>
 
 </actions>

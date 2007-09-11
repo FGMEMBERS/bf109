@@ -45,7 +45,7 @@ February 2006,  Detlef Faber
   </panel>
 
   <model>
-   <path>Aircraft/bf109/Models/bf109g-model.xml</path>
+   <path>Aircraft/bf109/Models/Bf-109g.xml</path>
    <livery>
      <variant type="string">default </variant>
      <material>
@@ -63,13 +63,20 @@ February 2006,  Detlef Faber
          </horstab>
      </material>
    </livery>
+   <crew>
+      <pilot>
+        <visible>1.0</visible>
+      </pilot>
+   </crew>
   </model> 
-
+		<tutorials>
+			<tutorial include="Tutorials/startup_tutorial.xml"/>
+		</tutorials>
   <view n="0">
    <internal archive="y">true</internal>
    <config>
     <x-offset-m archive="y" type="double">0.0</x-offset-m>
-    <y-offset-m archive="y" type="double">0.6</y-offset-m>
+    <y-offset-m archive="y" type="double">0.65</y-offset-m>
     <z-offset-m archive="y" type="double">3.75</z-offset-m>
     <pitch-offset-deg>-7.5</pitch-offset-deg>
    </config>
@@ -240,14 +247,36 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
       <lbs>270.0</lbs>
       </opt>
   </weight>
+	<menubar>
+		<default>
+			<menu n="10">
+				<label>Extras</label>
+					<enabled type="bool">true</enabled>
+					<item>
+						<label>Magically start engine</label>
+						<binding>
+							<command>nasal</command>
+							<script>bf109.magicstart();</script>
+						</binding>
+					</item>
+					<item>
+						<label>Select Livery</label>
+              <binding>
+                <command>nasal</command>
+                <script>aircraft.livery.dialog.toggle()</script>
+              </binding>
+					</item>
 
+			</menu>
+		</default>
+	</menubar>
  </sim>
 
  <engines>
   <engine>
    <mp-osi>3.0</mp-osi>
    <coolant-temp-degc type="float">15.0</coolant-temp-degc>
-   <oil-temp-degc type = "float">15.0</oil-temp-degc>
+   <oiltempc type = "float">15.0</oiltempc>
    <oil-visc type = "float">0.1</oil-visc>
    <rev-strain type="int">0</rev-strain>
    <overrev type="int">0</overrev>
@@ -287,10 +316,11 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
         <boost type="double">0.0</boost>
         <prop-auto type="bool">false</prop-auto>
         <primer type="double">0.0</primer>
+        <primer-pressed type="bool">0.0</primer-pressed>
         <radlever type="double">0.0</radlever>
         <cowl-flaps-norm type="float">0.0</cowl-flaps-norm>
         <coolflap-auto type ="int">0</coolflap-auto>
-				<on-startup-running type="bool">true</on-startup-running>
+				<on-startup-running type="bool">false</on-startup-running>
       </engine>
    </engines>
 
@@ -300,6 +330,9 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
    </gear>
 
    <armament>
+		<revi>
+			<shadeup type="bool">false</shadeup>
+		</revi>
       <trigger type="bool">false</trigger>
    </armament>
    <!-- The Bf 109 has no aileron or rudder trim controls -->
@@ -352,7 +385,7 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
 
       <key n="68">
         <name>D</name>
-        <desc>Toggle Canopy</desc>
+        <desc>Toggle Revi</desc>
         <binding n="0">
           <command>nasal</command>
           <script>bf109.toggle_revi()</script>
@@ -444,8 +477,8 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
           <script>bf109.fire_wgr()</script>
         </binding>
       </key>
-     <key n="32">
-      <name>SPACE</name>
+     <key n="115">
+      <name>s</name>
       <binding>
         <command>nasal</command>
         <script>bf109.starter(1)</script>
@@ -456,17 +489,8 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
          <script>bf109.starter(0)</script>
        </binding>
       </mod-up>
- </key> 
-      <!-- Livery Box -->
-         <key n="108">
-            <name>l</name>
-            <desc>Show livery select dialog</desc>
-              <binding>
-                <command>nasal</command>
-                <script>aircraft.livery.dialog.toggle()</script>
-              </binding>
-         </key>
-     </keyboard>
+ 	</key> 
+ </keyboard>
  </input>
 
 <!-- Nasal files/scripts -->

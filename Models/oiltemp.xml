@@ -18,7 +18,7 @@
  <animation>
   <type>rotate</type>
   <object-name>Needle1</object-name>
-  <property>/engines/engine[0]/oil-temperature-degf</property>
+  <property>/engines/engine[0]/oiltempc</property>
   <min>0.0</min>
   <max>400</max>
   <interpolation>

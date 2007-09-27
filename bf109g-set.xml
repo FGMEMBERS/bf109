@@ -165,7 +165,7 @@ February 2006,  Detlef Faber
       <desc>Drop (external) Tank</desc>
     </key>
    <key>
-      <name>m/M</name>
+      <name>d/D</name>
       <desc>Toggle Master Arm on/off</desc>
     </key>
    <key>
@@ -400,8 +400,8 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
           <script>bf109.drop_tank()</script>
         </binding>
       </key>  
-      <key n="109"> 
-        <name>m</name>
+      <key n="100"> 
+        <name>d</name>
         <desc>Toggle Master Arm on</desc>
         <binding> 
           <command>property-adjust</command>
@@ -411,8 +411,8 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
           <max type="double">1</max>
         </binding>
       </key>
-      <key n="77"> 
-        <name>M</name>
+      <key n="68"> 
+        <name>D</name>
         <desc>Toggle Master Arm off</desc>
         <binding> 
           <command>property-adjust</command>

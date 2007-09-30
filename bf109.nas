@@ -31,6 +31,13 @@ init = func {
            setprop("/controls/engines/engine[0]/prop-auto",1);
     };
    },1);
+    setlistener("engines/engine[0]/running", func {
+	pos4=cmdarg().getValue();
+        if(pos4 == 0.0){
+           interpolate ("engines/engine[0]/fuel-press",0,3);
+           interpolate ("engines/engine[0]/oil-press",0,3);
+    };
+   },1);
 main_loop = func {
 
 #### automatic slats
@@ -63,6 +70,7 @@ main_loop = func {
     setprop("/engines/engine[0]/running", 0);
     setprop("/engines/engine[0]/out-of-fuel", 1);
     setprop("/consumables/fuel/tank[0]/selected",0);
+    interpolate ("/engines/engine[0]/fuel-press", 0, 1);
     }
   if (rev2 > 2600) {
     strain = rev2 - 2600;
@@ -72,7 +80,7 @@ main_loop = func {
 
 ### coolant temp
   if (getprop("/engines/engine[0]/running") == 1) {
-
+    rev = getprop("/engines/engine[0]/rpm");
     thrust = getprop("/engines/engine[0]/prop-thrust");
 #    print ("#");
 #    print ( thrust );
@@ -90,18 +98,20 @@ main_loop = func {
 #    print (newtemp);
     setprop ("/engines/engine[0]/coolant-temp-degc" , newtemp);
 
+### fuel pressure
+		interpolate ("engines/engine[0]/fuel-press", 1.5, 3);
+
 ### oil and viscosity
 
 
-    otemp = getprop("/engines/engine[0]/oil-temperature-degf");
-    visc = getprop("/engines/engine[0]/oil-visc");
-
+    otemp = getprop("engines/engine[0]/oil-temperature-degf");
+    visc = getprop("engines/engine[0]/oil-visc");
+		interpolate ("engines/engine[0]/oil-press", 8.2 - 2*visc, 1);
     if (visc < 1.0 ) {
-      setprop("/engines/engine[0]/oil-visc", visc + 0.002);
-			setprop("/engines/engine[0]/oiltempc", otemp *visc);
-
+      setprop("engines/engine[0]/oil-visc", visc + 0.002);
+			setprop("engines/engine[0]/oiltempc", otemp *visc);
       if (rev2 > 1000) {
-           setprop("/engines/engine[0]/rev-strain", rstrain + (100/visc));
+           setprop("/engines/engine[0]/rev-strain", rstrain + (600/visc));
       }
     }     
 ### kill engine when overheated
@@ -111,7 +121,8 @@ main_loop = func {
       setprop("/engines/engine[0]/running", 0);
       setprop("/engines/engine[0]/out-of-fuel", 1);
    		setprop("/consumables/fuel/tank[0]/selected",0);
-
+      interpolate ("/engines/engine[0]/fuel-press", 0, 3);
+      interpolate ("/engines/engine[0]/oil-press", 0, 1);
     }
   }
 ### automatic coolflap adjustment
@@ -175,7 +186,6 @@ fire_cannon = func {
 }
 stop_cannon = func {
      setprop("/controls/armament/trigger1", 0); 
-
 }
 
 fire_wgr = func {

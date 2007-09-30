@@ -278,6 +278,8 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
    <coolant-temp-degc type="float">15.0</coolant-temp-degc>
    <oiltempc type = "float">15.0</oiltempc>
    <oil-visc type = "float">0.1</oil-visc>
+	 <oil-press type = "float">0.0</oil-press>
+	 <fuel-press type ="float">0.0</fuel-press>
    <rev-strain type="int">0</rev-strain>
    <overrev type="int">0</overrev>
    <overheat type="int">0</overheat>

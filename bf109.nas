@@ -1,8 +1,32 @@
-init = func {
+var position = nil;
+var pos2 = nil;
+var pos3 = nil;
+var pos4 = nil;
+var airspeed = nil;
+var revs = nil;
+var ppitch = nil;
+var mpress = nil;
+var rstrain = 0;
+var strain = 0;
+var thrust = 0;
+var ctemp = nil;
+var cpos = 0;
+var temp = nil;
+var dtemp = nil;
+var newtemp = nil;
+var otemp = nil;
+var visc = 0;
+var npos = 0;
+var rcount = 0;
+var remaining = 0;
+var starter_power = 0;
+
+var init = func {
 
   if (getprop("/controls/engines/engine[0]/on-startup-running") == 1) {
 		magicstart();
-  }  
+	}
+ 
    main_loop();
    }
     setlistener("/controls/fuel/switch-position", func {
@@ -38,10 +62,11 @@ init = func {
            interpolate ("engines/engine[0]/oil-press",0,3);
     };
    },1);
-main_loop = func {
+var main_loop = func {
 
 #### automatic slats
   airspeed = getprop("/velocities/airspeed-kt");
+    revs = getprop("/engines/engine[0]/rpm");
     if (airspeed < 110) {
       setprop("/controls/flight/slats", 1.0);
       } else {
@@ -50,10 +75,10 @@ main_loop = func {
 #### prop-adjust  
 
   if (getprop("/controls/engines/engine[0]/prop-auto") == 1) {  
-  revs = getprop("/engines/engine[0]/rpm");
+
     ppitch = getprop("/controls/engines/engine[0]/propeller-pitch");
     mpress = getprop("/engines/engine/mp-osi");  
-    revs = getprop("/engines/engine[0]/rpm");
+
       if (revs / mpress < 68.0)  {
           setprop("/controls/engines/engine[0]/propeller-pitch", ppitch + 0.003);
           }
@@ -63,7 +88,7 @@ main_loop = func {
     
 ### kill engine when overreved
   }
-  rev2 = getprop("/engines/engine[0]/rpm");
+#  rev2 = getprop("/engines/engine[0]/rpm");
   rstrain = getprop("/engines/engine[0]/rev-strain");
   if (rstrain > 350000) {
     setprop("/engines/engine[0]/overrev", 1);
@@ -72,15 +97,15 @@ main_loop = func {
     setprop("/consumables/fuel/tank[0]/selected",0);
     interpolate ("/engines/engine[0]/fuel-press", 0, 1);
     }
-  if (rev2 > 2600) {
-    strain = rev2 - 2600;
+  if (revs > 2600) {
+    strain = revs - 2600;
     setprop("/engines/engine[0]/rev-strain", rstrain + strain);
   }
   
 
 ### coolant temp
   if (getprop("/engines/engine[0]/running") == 1) {
-    rev = getprop("/engines/engine[0]/rpm");
+#    rev = getprop("/engines/engine[0]/rpm");
     thrust = getprop("/engines/engine[0]/prop-thrust");
 #    print ("#");
 #    print ( thrust );
@@ -110,10 +135,13 @@ main_loop = func {
     if (visc < 1.0 ) {
       setprop("engines/engine[0]/oil-visc", visc + 0.002);
 			setprop("engines/engine[0]/oiltempc", otemp *visc);
-      if (rev2 > 1000) {
+      if (revs > 1000) {
            setprop("/engines/engine[0]/rev-strain", rstrain + (600/visc));
       }
-    }     
+    } else {
+		setprop("engines/engine[0]/oiltempc", otemp);
+	}
+	   
 ### kill engine when overheated
 
     if (newtemp > 135) {
@@ -146,7 +174,7 @@ main_loop = func {
 } 
 
 
-toggle_canopy = func {
+var toggle_canopy = func {
   canopy = aircraft.door.new ("/controls/canopy/",3);
   if(getprop("/controls/canopy/position-norm") > 0) {
       canopy.close();
@@ -156,7 +184,7 @@ toggle_canopy = func {
   }
 }
 
-toggle_revi = func {
+var toggle_revi = func {
   revi = aircraft.door.new ("/controls/armament/revi",2);
   if(getprop("/controls/armament/revi/position-norm") > 0) {
       revi.close();
@@ -166,7 +194,7 @@ toggle_revi = func {
   }
 }
 
-fire_MG = func {
+var fire_MG = func {
  if (getprop("/controls/armament/master-arm") == 1)  {
      setprop("/controls/armament/trigger", 1);
 		if (getprop("/sim/weight[1]/weight-lb") == 110)  {
@@ -174,21 +202,21 @@ fire_MG = func {
 		}
      } 
 }
-stop_MG = func {
+var stop_MG = func {
      setprop("/controls/armament/trigger", 0); 
      setprop("/controls/armament/trigger2", 0);
 }
 
-fire_cannon = func {
+var fire_cannon = func {
  if (getprop("/controls/armament/master-arm") == 1)  {
      setprop("/controls/armament/trigger1", 1);
      } 
 }
-stop_cannon = func {
+var stop_cannon = func {
      setprop("/controls/armament/trigger1", 0); 
 }
 
-fire_wgr = func {
+var fire_wgr = func {
  if (getprop("/controls/armament/master-arm") == 1)  {
   rcount=getprop("/sim/weight[1]/weight-lb");
   if(rcount > 20){
@@ -201,7 +229,7 @@ fire_wgr = func {
  }
 }
 
-drop_bomb = func {
+var drop_bomb = func {
  if (getprop("/controls/armament/master-arm") == 1)  {
   rcount=getprop("/sim/weight[0]/weight-lb");
   if(rcount > 49){
@@ -212,7 +240,7 @@ drop_bomb = func {
 }
 
 
-drop_tank = func {
+var drop_tank = func {
   rcount=getprop("/sim/weight[0]/weight-lb");
   if(rcount > 49){
      setprop("/controls/armament/station/release-tank", 1);
@@ -224,7 +252,7 @@ drop_tank = func {
      } 
  }
 
-starter = func {
+var starter = func {
 	starter_power = getprop("/systems/electrical/volts");
 	if(starter_power == nil)
 		{starter_power = 0;}
@@ -236,27 +264,27 @@ starter = func {
 			setprop("/controls/engines/engine[0]/starter",0);}	
 	}
 
-fuel_jettison = func {
+var fuel_jettison = func {
   remaining = getprop("consumables/fuel/tank[0]/level-gal_us");
   interpolate("consumables/fuel/tank[0]/level-gal_us", (remaining-20),5);
 }
 
-open_coolflaps = func {
+var open_coolflaps = func {
       setprop("/controls/engines/engine[0]/coolflap-auto",0);
       interpolate("controls/engines/engine[0]/cowl-flaps-norm",1,4);
       setprop("/controls/engines/engine[0]/radlever",2);
 }
-close_coolflaps = func {
+var close_coolflaps = func {
       setprop("/controls/engines/engine[0]/coolflap-auto",0);
       interpolate("controls/engines/engine[0]/cowl-flaps-norm",0,4);
       setprop("/controls/engines/engine[0]/radlever",0);
 }
-auto_coolflaps = func {
+var auto_coolflaps = func {
       setprop("/controls/engines/engine[0]/radlever",1);
       setprop("/controls/engines/engine[0]/coolflap-auto",1);
 }
 
-magicstart = func {
+var magicstart = func {
     setprop("/consumables/fuel/tank[0]/selected",1);
     setprop("/controls/engines/engine[0]/magnetos",3);
     setprop("/controls/engines/engine[0]/coolflap-auto",1);
@@ -267,6 +295,7 @@ magicstart = func {
     setprop("/engines/engine[0]/engine-running",1);
     setprop("/engines/engine[0]/out-of-fuel",0);
     setprop("/engines/engine[0]/coolant-temp-degc",40);
+    setprop("/controls/fuel/switch-position",0);
 }
 var flash_trigger = props.globals.getNode("controls/armament/trigger", 0);
 aircraft.light.new("sim/model/bf109/lighting/flash-l", [0.05, 0.052], flash_trigger);

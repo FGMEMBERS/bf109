@@ -408,7 +408,6 @@
  <animation>
   <type>rotate</type>
   <object-name>Stick</object-name>
-  <object-name>rhand</object-name>
   <property>/controls/flight/elevator</property>
   <factor>-10</factor>
   <center>
@@ -426,8 +425,6 @@
  <animation>
   <type>rotate</type>
   <object-name>Stick</object-name>
-  <object-name>rhand</object-name>
-  <object-name>rarm2</object-name>
   <property>/controls/flight/aileron</property>
   <factor>-10</factor>
   <center>

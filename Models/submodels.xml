@@ -318,27 +318,79 @@
 		<impact-report>sim/ai/aircraft/impact/cannon</impact-report>
 		<submodel-path>Aircraft/bf109/Models/subsubmodels.xml</submodel-path>
   </submodel>
-<!--
+<!-- engine abuse-->
 	<submodel> 
-      <name>right-smoke</name>
-      <model>Aircraft/bf109/Models/smoke.xml</model>
-      <trigger>controls/armament/trigger2</trigger>
+      <name>engine-smoke-r</name>
+      <model>Aircraft/bf109/Models/eng_smoke.xml</model>
+      <trigger>/engines/engine[0]/overrev</trigger>
       <speed>10</speed>
       <repeat>true</repeat>
-      <delay>0.25</delay>
-      <count>-1</count>
-    <x-offset>-30.0</x-offset>
-    <y-offset>6.448</y-offset>
-    <z-offset>-1.8</z-offset>
+      <delay>0.005</delay>
+      <count>2000</count>
+    <x-offset>-8.0</x-offset>
+    <y-offset>1.448</y-offset>
+    <z-offset>-1.0</z-offset>
       <yaw-offset>1.5</yaw-offset>
       <pitch-offset>1.8</pitch-offset>
 	  <eda>10</eda>
       <wind>true</wind>
-	  <buoyancy>33</buoyancy>
-	  <life>1</life>
+	  <buoyancy>39</buoyancy>
+	  <life>4</life>
+    </submodel>
+	<submodel> 
+      <name>engine-smoke-l</name>
+      <model>Aircraft/bf109/Models/eng_smoke.xml</model>
+      <trigger>/engines/engine[0]/overrev</trigger>
+      <speed>10</speed>
+      <repeat>true</repeat>
+      <delay>0.005</delay>
+      <count>2000</count>
+    <x-offset>-8.0</x-offset>
+    <y-offset>-1.448</y-offset>
+    <z-offset>-1.0</z-offset>
+      <yaw-offset>1.5</yaw-offset>
+      <pitch-offset>1.8</pitch-offset>
+	  <eda>10</eda>
+      <wind>true</wind>
+	  <buoyancy>39</buoyancy>
+	  <life>4</life>
+    </submodel>
+	<submodel> 
+      <name>engine-wsmoke-r</name>
+      <model>Aircraft/bf109/Models/eng_smoke.xml</model>
+      <trigger>/engines/engine[0]/overheat</trigger>
+      <speed>10</speed>
+      <repeat>true</repeat>
+      <delay>0.005</delay>
+      <count>1500</count>
+    <x-offset>-8.0</x-offset>
+    <y-offset>1.448</y-offset>
+    <z-offset>-1.0</z-offset>
+      <yaw-offset>1.5</yaw-offset>
+      <pitch-offset>1.8</pitch-offset>
+	  <eda>10</eda>
+      <wind>true</wind>
+	  <buoyancy>39</buoyancy>
+	  <life>4</life>
+    </submodel>
+	<submodel> 
+      <name>engine-wsmoke-l</name>
+      <model>Aircraft/bf109/Models/eng_smoke.xml</model>
+      <trigger>/engines/engine[0]/overheat</trigger>
+      <speed>10</speed>
+      <repeat>true</repeat>
+      <delay>0.005</delay>
+      <count>1500</count>
+    <x-offset>-8.0</x-offset>
+    <y-offset>-1.448</y-offset>
+    <z-offset>-1.0</z-offset>
+      <yaw-offset>1.5</yaw-offset>
+      <pitch-offset>1.8</pitch-offset>
+	  <eda>10</eda>
+      <wind>true</wind>
+	  <buoyancy>39</buoyancy>
+	  <life>4</life>
     </submodel>
 
-
--->
 
 </PropertyList>

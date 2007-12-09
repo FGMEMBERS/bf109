@@ -3,7 +3,7 @@ MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 
 OBJECT world
 kids 2
 OBJECT poly
-name "noshadow.fpdisk"
+name "fpdisk"
 data 6
 Circle
 texture "fastpdisk.rgb"
@@ -431,7 +431,7 @@ refs 3
 33 0.500015199184 0.500000476837
 kids 0
 OBJECT poly
-name "noshadow.spdisk"
+name "spdisk"
 data 10
 Circle.082
 texture "slowpdisk.rgb"

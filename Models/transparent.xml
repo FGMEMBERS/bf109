@@ -10,7 +10,7 @@
 
  <animation>
   <type>rotate</type>
-  <object-name>noshadow.canopyglas</object-name>
+  <object-name>canopyglass</object-name>
   <property>controls/canopy/position-norm</property>
   <interpolation>
    <entry>
@@ -34,4 +34,9 @@
   </axis>
  </animation>
 
+	<animation>
+		<type>noshadow</type>
+		<object-name>canopyglass</object-name>
+		<object-name>frontglass</object-name>
+	</animation>
 </PropertyList>

@@ -9,9 +9,8 @@
   <type>rotate</type>
   <object-name>needlefuel</object-name>
   <property>engines/engine[0]/oil-press</property>
-
-  <min>0</min>
-  <max>200</max>
+  <min>0.0</min>
+  <max>10.0</max>
   <interpolation>
    <entry>
     <ind>0</ind>
@@ -37,9 +36,8 @@
  <animation>
   <type>rotate</type>
   <object-name>needleoil</object-name>
-  <property>/engines/engine[0]/fuel-press</property>
-  <min>0</min>
-  <max>25</max>
+  <property>engines/engine[0]/fuel-press</property>
+
   <interpolation>
    <entry>
     <ind>0</ind>
@@ -61,7 +59,7 @@
    <z>0</z>
   </axis>
  </animation>
-
+<!--
  <animation>
   <type>material</type>
   <object-name>Face</object-name>
@@ -74,5 +72,5 @@
     <blue>0.25</blue>
   </emission>
  </animation>
-
+-->
 </PropertyList>

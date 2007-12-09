@@ -4,7 +4,7 @@ MATERIAL "glass" rgb 0.104471 0.092033 0.091462 amb 0.5 0.5 0.5 emis 0 0 0 spec 
 OBJECT world
 kids 2
 OBJECT poly
-name "noshadow.canopyglas"
+name "canopyglass"
 data 10
 Circle.021
 crease 30.000000

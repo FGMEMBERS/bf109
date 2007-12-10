@@ -10,6 +10,7 @@
  </offsets>
 	<model>
 		<path>Aircraft/bf109/Models/equipment.xml</path>
+   		<nopreview/>
 	</model>
   <!-- Front hotspots -->
  <panel>
@@ -1040,6 +1041,7 @@
     <model> 
       <path>Aircraft/bf109/Models/pilot.xml</path>
 	  <name>pilot</name>
+   <nopreview/>
       <offsets> 
         <x-m>3.6</x-m>
         <y-m>0.0</y-m>
@@ -1061,6 +1063,7 @@
   <model> 
    <path>Aircraft/bf109/Models/blackout.xml</path>
    <name>Blackout</name>
+   <nopreview/>
     <offsets> 
      <x-m>3.8000</x-m>
      <y-m>0.0000</y-m>
@@ -1071,6 +1074,7 @@
   <model> 
    <path>Aircraft/bf109/Models/blaze-l.xml</path>
    <name>Blaze-l</name>
+   <nopreview/>
     <offsets> 
      <x-m>2.0</x-m>
      <y-m>0.2000</y-m>
@@ -1080,6 +1084,7 @@
   <model> 
    <path>Aircraft/bf109/Models/blaze-r.xml</path>
    <name>Blaze-l</name>
+   <nopreview/>
     <offsets> 
      <x-m>2.0</x-m>
      <y-m>-0.2000</y-m>
@@ -1090,6 +1095,7 @@
   <model> 
    <path>Aircraft/bf109/Models/blaze.xml</path>
    <name>Blaze-f</name>
+   <nopreview/>
     <offsets> 
      <x-m>0.0</x-m>
      <y-m>0.0</y-m>
@@ -1099,6 +1105,7 @@
   <model> 
    <path>Aircraft/bf109/Models/pdisk.xml</path>
    <name>Blaze-f</name>
+   <nopreview/>
     <offsets> 
      <x-m>-1.1</x-m>
      <y-m>0.0</y-m>

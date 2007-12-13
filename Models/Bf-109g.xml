@@ -1104,7 +1104,7 @@
   </model>
   <model> 
    <path>Aircraft/bf109/Models/pdisk.xml</path>
-   <name>Blaze-f</name>
+   <name>pdisk</name>
    <nopreview/>
     <offsets> 
      <x-m>-1.1</x-m>
@@ -1122,6 +1122,10 @@
     </offsets>
   </model>
 
+	<animation>
+		<type>noshadow</type>
+		<object-name>pdisk</object-name>
+	</animation>
 <!--Material -->
   <animation>
     <type>material</type>

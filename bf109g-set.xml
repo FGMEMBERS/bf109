@@ -13,7 +13,7 @@ February 2006,  Detlef Faber
 
   <description>Messerschmitt BF-109 G14</description>
   <author>Detlef Faber</author>
-  <status>beta</status>
+  <status>production</status>
   <startup>
     <splash-texture>Aircraft/bf109/bf109-splash.rgb</splash-texture>
   </startup>

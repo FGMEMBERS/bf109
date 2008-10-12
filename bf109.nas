@@ -29,8 +29,8 @@ var init = func {
  
    main_loop();
    }
-    setlistener("/controls/fuel/switch-position", func {
-	position=cmdarg().getValue();
+    setlistener("/controls/fuel/switch-position", func(n) {
+	position=n.getValue();
     setprop("/consumables/fuel/tank[0]/selected",0);
     setprop("/consumables/fuel/tank[1]/selected",0);
         if(position >= 0.0){
@@ -41,22 +41,22 @@ var init = func {
       };
     };
    },1);
-    setlistener("/controls/engines/engine[0]/primer", func {
-	pos2=cmdarg().getValue();
+    setlistener("/controls/engines/engine[0]/primer", func(n) {
+	pos2=n.getValue();
         if(pos2 > 0.9){
 
                setprop("/engines/engine[0]/out-of-fuel",0);
       
     };
    },1);
-    setlistener("/controls/engines/engine[0]/throttle", func {
-	pos3=cmdarg().getValue();
+    setlistener("/controls/engines/engine[0]/throttle", func(n) {
+	pos3=n.getValue();
         if(pos3 >= 0.7){
            setprop("/controls/engines/engine[0]/prop-auto",1);
     };
    },1);
-    setlistener("engines/engine[0]/running", func {
-	pos4=cmdarg().getValue();
+    setlistener("engines/engine[0]/running", func(n) {
+	pos4=n.getValue();
         if(pos4 == 0.0){
            interpolate ("engines/engine[0]/fuel-press",0,3);
            interpolate ("engines/engine[0]/oil-press",0,3);

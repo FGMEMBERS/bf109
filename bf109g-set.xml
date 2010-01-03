@@ -315,7 +315,7 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
    <engines>
       <engine n="0">
         <magnetos>0</magnetos>
-        <boost type="double">0.0</boost>
+        <boost type="double">1.0</boost>
         <prop-auto type="bool">false</prop-auto>
         <primer type="double">0.0</primer>
         <primer-pressed type="bool">0.0</primer-pressed>

@@ -8,6 +8,16 @@
  <offsets>
    <z-m>0.0</z-m>
  </offsets>
+
+	<animation>
+		<type>shader</type>
+		<shader>chrome</shader>
+		<texture>Aircraft/bf109/Models/glass_shader.png</texture>
+		<object-name>canopyglass</object-name>
+		<object-name>frontglass</object-name>
+	</animation>
+
+
 	<model>
 		<path>Aircraft/bf109/Models/equipment.xml</path>
    		<nopreview/>
@@ -158,287 +168,17 @@
    <z-m>0.15</z-m>
   </top-left>
  </panel>
- <!-- panel models -->
- <model>
-  <path>Aircraft/bf109/Models/alt-ger.xml</path>
-  <offsets>
-   <x-m>2.985</x-m>
-   <y-m>-0.127</y-m>
-   <z-m>0.351</z-m>
-  </offsets>
- </model>
- <model>
-  <path>Aircraft/bf109/Models/cooltemp.xml</path>
-  <offsets>
-   <x-m>2.98</x-m>
-   <y-m>0.18</y-m>
-   <z-m>0.415</z-m>
-  </offsets>
- </model>
- <model>
-  <path>Aircraft/bf109/Models/oiltemp.xml</path>
-  <offsets>
-   <x-m>2.98</x-m>
-   <y-m>0.2</y-m>
-   <z-m>0.363</z-m>
-  </offsets>
- </model>
- <model>
-  <path>Aircraft/bf109/Models/pitchindicator.xml</path>
-  <offsets>
-   <x-m>2.98</x-m>
-   <y-m>0.2</y-m>
-   <z-m>0.305</z-m>
-  </offsets>
- </model>
- <model>
-  <path>Aircraft/bf109/Models/fuelgauge.xml</path>
-  <offsets>
-   <x-m>2.98</x-m>
-   <y-m>0.2</y-m>
-   <z-m>0.24</z-m>
-  </offsets>
- </model>
 
-
-
-<model>
-  <path>Aircraft/bf109/Models/asi-ger.xml</path>
-  <offsets>
-   <x-m>2.985</x-m>
-   <y-m>-0.138</y-m>
-   <z-m>0.433</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/bf109/Models/tach-ger.xml</path>
-  <offsets>
-   <x-m>2.98</x-m>
-   <y-m>0.118</y-m>
-   <z-m>0.355</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/bf109/Models/engine-ger.xml</path>
-  <offsets>
-   <x-m>2.98</x-m>
-   <y-m>0.12</y-m>
-   <z-m>0.435</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/bf109/Models/vario-ger.xml</path>
-  <offsets>
-   <x-m>2.985</x-m>
-   <y-m>0.04</y-m>
-   <z-m>0.432</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/bf109/Models/afn2.xml</path>
-  <offsets>
-   <x-m>2.985</x-m>
-   <y-m>0.035</y-m>
-   <z-m>0.345</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/bf109/Models/remote-ger.xml</path>
-  <offsets>
-   <x-m>2.985</x-m>
-   <y-m>-0.045</y-m>
-   <z-m>0.345</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/bf109/Models/man-ger.xml</path>
-  <offsets>
-   <x-m>2.98</x-m>
-   <y-m>0.125</y-m>
-   <z-m>0.267</z-m>
-  </offsets>
- </model>
-
-
-<model>
-  <path>Aircraft/bf109/Models/att-ger.xml</path>
-  <offsets>
-   <x-m>3.01</x-m>
-   <y-m>-0.045</y-m>
-   <z-m>0.43</z-m>
-  </offsets>
- </model>
-
-<model>
-  <path>Aircraft/bf109/Models/ignition-ger.xml</path>
-  <offsets>
-   <x-m>2.98</x-m>
-   <y-m>-0.225</y-m>
-   <z-m>0.33</z-m>
-  </offsets>
- </model>
-<model>
-  <path>Aircraft/bf109/Models/starter-ger.xml</path>
-  <offsets>
-   <x-m>2.98</x-m>
-   <y-m>-0.21</y-m>
-   <z-m>0.27</z-m>
-  </offsets>
- </model>
-<model>
-  <path>Aircraft/bf109/Models/gear-ger.xml</path>
-  <offsets>
-   <x-m>2.98</x-m>
-   <y-m>-0.21</y-m>
-   <z-m>0.23</z-m>
-  </offsets>
- </model>
-
-<model>
-  <path>Aircraft/bf109/Models/gearswitch-ger.xml</path>
-  <offsets>
-   <x-m>2.985</x-m>
-   <y-m>-0.165</y-m>
-   <z-m>0.24</z-m>
-  </offsets>
- </model>
-
-<model>
-  <path>Aircraft/bf109/Models/canopy-rel-ger.ac</path>
-  <offsets>
-   <x-m>2.98</x-m>
-   <y-m>-0.2</y-m>
-   <z-m>0.42</z-m>
-  </offsets>
- </model>
-
-<model>
-  <path>Aircraft/bf109/Models/revi-ger.xml</path>
-  <offsets>
-   <x-m>3.04</x-m>
-   <y-m>0.04</y-m>
-   <z-m>0.543</z-m>
-  </offsets>
- </model>
-
-<model>
-  <path>Aircraft/bf109/Models/masterarm-ger.xml</path>
-  <offsets>
-   <x-m>2.976</x-m>
-   <y-m>-0.09</y-m>
-   <z-m>0.51</z-m>
-  </offsets>
- </model>
-
-<model>
-  <path>Aircraft/bf109/Models/fueldump-ger.ac</path>
-  <offsets>
-   <x-m>2.95</x-m>
-   <y-m>0.25</y-m>
-   <z-m>0.18</z-m>
-  </offsets>
- </model>
-<model>
-  <path>Aircraft/bf109/Models/coolflap-ger.xml</path>
-  <offsets>
-   <x-m>2.97</x-m>
-   <y-m>0.22</y-m>
-   <z-m>0.09</z-m>
-  </offsets>
- </model>
-
- <!-- non-panel models -->
-
-<model>
-  <path>Aircraft/bf109/Models/throttle-ger.xml</path>
-  <offsets>
-   <x-m>3.09</x-m>
-   <y-m>-0.27</y-m>
-   <z-m>0.24</z-m>
-  </offsets>
- </model>
-
-<model>
-  <path>Aircraft/bf109/Models/taillock.xml</path>
-  <offsets>
-   <x-m>3.495</x-m>
-   <y-m>-0.27</y-m>
-   <z-m>0.28</z-m>
-  </offsets>
- </model>
-
-<model>
-  <path>Aircraft/bf109/Models/flapwheel.xml</path>
-  <offsets>
-   <x-m>3.395</x-m>
-   <y-m>-0.3</y-m>
-   <z-m>0.1</z-m>
-  </offsets>
- </model>
-
-<model>
-  <path>Aircraft/bf109/Models/trimwheel.xml</path>
-  <offsets>
-   <x-m>3.395</x-m>
-   <y-m>-0.25</y-m>
-   <z-m>0.1</z-m>
-  </offsets>
- </model>
-<model>
-  <path>Aircraft/bf109/Models/primer-ger.xml</path>
-  <offsets>
-   <x-m>3.33</x-m>
-   <y-m>-0.21</y-m>
-   <z-m>0.05</z-m>
-  </offsets>
- </model>
-<model>
-  <path>Aircraft/bf109/Models/breaker.ac</path>
-  <offsets>
-   <x-m>0.0</x-m>
-   <y-m>0.0</y-m>
-   <z-m>0.0</z-m>
-  </offsets>
- </model>
- <animation>
-  <type>rotate</type>
-  <object-name>Stick</object-name>
-  <property>controls/flight/elevator</property>
-  <factor>-10</factor>
-  <center>
-   <x-m>3.14</x-m>
-   <y-m>0.00</y-m>
-   <z-m>-0.22</z-m>
-  </center>
-  <axis>
-   <x>0.0</x>
-   <y>1.0</y>
-   <z>0.0</z>
-  </axis>
- </animation>
-
- <animation>
-  <type>rotate</type>
-  <object-name>Stick</object-name>
-  <property>controls/flight/aileron</property>
-  <factor>-10</factor>
-  <center>
-   <x-m>3.14</x-m>
-   <y-m>0.00</y-m>
-   <z-m>-0.22</z-m>
-  </center>
-  <axis>
-   <x>1.0</x>
-   <y>0.0</y>
-   <z>0.0</z>
-  </axis>
- </animation>
+	<model>
+		<name>cockpit</name>
+		<path>Aircraft/bf109/Models/cockpit.xml</path>
+	</model>
+	<animation>
+  <object-name>cockpit</object-name>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>10</max-m>
+	</animation>
 
  <animation>
   <type>select</type>
@@ -526,7 +266,7 @@
 
  <animation>
   <type>rotate</type>
-  <object-name>leftwheelstop</object-name>
+  <object-name>leftwheel</object-name>
   <property>gear/gear[0]/position-norm</property>
   <interpolation>
    <entry>
@@ -582,7 +322,7 @@
 
  <animation>
   <type>rotate</type>
-  <object-name>rightwheelstop</object-name>
+  <object-name>rightwheel</object-name>
   <property>gear/gear[1]/position-norm</property>
   <interpolation>
    <entry>
@@ -613,6 +353,7 @@
  <animation>
   <type>rotate</type>
   <object-name>canopy</object-name>
+	<object-name>canopyglass</object-name>
   <property>controls/canopy/position-norm</property>
   <interpolation>
    <entry>
@@ -635,34 +376,6 @@
    <z>0.0</z>
   </axis>
  </animation>
-
-
-
- <animation>
-  <type>select</type>
-  <object-name>rightwheel</object-name>
-  <condition>
-   <greater-than>
-    <property>gear/gear[1]/compression-norm</property>
-    <value>0.0</value>
-   </greater-than>
-  </condition>
- </animation>
-
- <animation>
-  <type>select</type>
-  <object-name>leftwheel</object-name>
-  <condition>
-   <greater-than>
-    <property>gear/gear[0]/compression-norm</property>
-    <value>0.0</value>
-   </greater-than>
-  </condition>
- </animation>
-
-
-
-
 
 <animation>
   <type>rotate</type>
@@ -901,11 +614,11 @@
    </entry>
    <entry>
     <ind>0.50</ind>
-    <dep>0.25</dep>
+    <dep>0.15</dep>
    </entry>
    <entry>
     <ind>1.00</ind>
-    <dep>0.30</dep>
+    <dep>0.20</dep>
    </entry>
   </interpolation>
   <axis>
@@ -926,11 +639,11 @@
    </entry>
    <entry>
     <ind>0.50</ind>
-    <dep>0.25</dep>
+    <dep>0.15</dep>
    </entry>
    <entry>
     <ind>1.00</ind>
-    <dep>0.30</dep>
+    <dep>0.20</dep>
    </entry>
   </interpolation>
   <axis>
@@ -943,8 +656,8 @@
  <animation>
   <type>spin</type>
   <object-name>leftwheel</object-name>
-  <property>velocities/uBody-fps</property>
-  <factor>-1.5</factor>
+  <property>gear/gear[0]/rollspeed-ms</property>
+  <factor>-5.5</factor>
   <center>
    <x-m>2.0325</x-m>
    <y-m>-0.874</y-m>
@@ -960,8 +673,8 @@
  <animation>
   <type>spin</type>
   <object-name>rightwheel</object-name>
-  <property>velocities/uBody-fps</property>
-  <factor>-1.5</factor>
+  <property>gear/gear[1]/rollspeed-ms</property>
+  <factor>-5.5</factor>
   <center>
    <x-m>2.0325</x-m>
    <y-m>0.874</y-m>
@@ -973,29 +686,7 @@
    <z>0.17</z>
   </axis>
  </animation>
-
- <animation>
-  <type>select</type>
-  <object-name>rightwheelstop</object-name>
-  <condition>
-   <equals>
-    <property>gear/gear[1]/compression-norm</property>
-    <value>0.0</value>
-   </equals>
-  </condition>
- </animation>
-
- <animation>
-  <type>select</type>
-  <object-name>leftwheelstop</object-name>
-  <condition>
-   <equals>
-    <property>gear/gear[0]/compression-norm</property>
-    <value>0.0</value>
-   </equals>
-  </condition>
- </animation>
-
+
  <animation>
   <type>translate</type>
   <object-name>leftslat</object-name>
@@ -1060,16 +751,6 @@
   </condition>
  </animation>
 
-  <model> 
-   <path>Aircraft/bf109/Models/blackout.xml</path>
-   <name>Blackout</name>
-   <nopreview/>
-    <offsets> 
-     <x-m>3.8000</x-m>
-     <y-m>0.0000</y-m>
-     <z-m>0.606</z-m>
-    </offsets>
-  </model>
 
   <model> 
    <path>Aircraft/bf109/Models/blaze-l.xml</path>
@@ -1108,15 +789,6 @@
    <nopreview/>
     <offsets> 
      <x-m>-1.1</x-m>
-     <y-m>0.0</y-m>
-     <z-m>0.0</z-m>
-    </offsets>
-  </model>
-  <model> 
-   <path>Aircraft/bf109/Models/transparent.xml</path>
-   <name>transparent</name>
-    <offsets> 
-     <x-m>0.0</x-m>
      <y-m>0.0</y-m>
      <z-m>0.0</z-m>
     </offsets>

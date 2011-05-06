@@ -6,7 +6,7 @@ OBJECT poly
 name "switch"
 data 8
 Cube.001
-texture "ignswitch.rgb"
+texture "Instruments/ignswitch.png"
 texrep 1 1
 crease 30
 numvert 29
@@ -245,7 +245,7 @@ OBJECT poly
 name "case"
 data 4
 Cube
-texture "ignswitch.rgb"
+texture "Instruments/ignswitch.png"
 texrep 1 1
 crease 30
 numvert 44

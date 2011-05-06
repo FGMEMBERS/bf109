@@ -208,8 +208,8 @@
 <model>
   <path>Aircraft/bf109/Models/coolflap-ger.xml</path>
   <offsets>
-   <x-m>2.97</x-m>
-   <y-m>0.22</y-m>
+   <x-m>3.07</x-m><!-- 2.97-->
+   <y-m>0.26</y-m><!-- 0.22-->
    <z-m>0.09</z-m>
   </offsets>
  </model>
@@ -254,8 +254,8 @@
 <model>
   <path>Aircraft/bf109/Models/Instruments/primer-ger.xml</path>
   <offsets>
-   <x-m>3.33</x-m>
-   <y-m>-0.21</y-m>
+   <x-m>3.33</x-m><!-- 3.33 -->
+   <y-m>-0.21</y-m><!-- -0.21 -->
    <z-m>0.05</z-m>
   </offsets>
  </model>
@@ -266,7 +266,28 @@
    <y-m>0.0</y-m>
    <z-m>0.0</z-m>
   </offsets>
- </model>
+  <animation>
+  <type>material</type>
+
+  <emission>
+    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <red>0.01</red>
+    <green>0.01</green>
+    <blue>0.025</blue>
+  </emission>
+ </animation>
+
+ </model> 
+<!-- eigene Erweiterung -->
+<model>^M
+  <path>Aircraft/bf109/Models/stick.ac</path>^M
+  <offsets>^M
+   <x-m>0.0</x-m>^M
+   <y-m>0.0</y-m>^M
+   <z-m>0.0</z-m>^M
+  </offsets>^M
+ </model>^M
+
  <animation>
   <type>rotate</type>
   <object-name>Stick</object-name>
@@ -301,4 +322,82 @@
   </axis>
  </animation>
 
+ 
+<model>^M
+  <name>O2-Pressure</name>
+  <path>Aircraft/bf109/Models/Instruments/o2pressure.xml</path>^M
+  <offsets>^M
+   <x-m>0</x-m>^M
+   <y-m>0</y-m>^M
+   <z-m>0</z-m>^M
+  </offsets>^M
+ </model>
+<model>^M
+  <name>O2-Guard</name>
+  <path>Aircraft/bf109/Models/Instruments/o2guard.xml</path>^M
+  <offsets>^M
+   <x-m>0</x-m>^M
+   <y-m>0</y-m>^M
+   <z-m>0</z-m>^M
+  </offsets>^M
+ </model>
+
+ <model>
+   <name>PilotPedals</name>
+   <path>pedals.xml</path>
+   <offsets>^M
+   <x-m>2.75</x-m>^M
+   <y-m>0</y-m>^M
+   <z-m>-0.11</z-m>^M
+  </offsets>^M
+ </model>
+
+<model>^M
+  <path>Aircraft/bf109/Models/o2.ac</path>^M
+  <offsets>^M
+   <x-m>0.0</x-m>^M
+   <y-m>0.0</y-m>^M
+   <z-m>0.0</z-m>^M
+  </offsets>^M
+ </model>^M
+
+<model>^M
+  <path>Aircraft/bf109/Models/bottom-switches.xml</path>^M
+  <offsets>^M
+   <x-m>0.0</x-m>^M
+   <y-m>0.0</y-m>^M
+   <z-m>0.0</z-m>^M
+  </offsets>^M
+ </model>^M
+
+<model>^M<!-- Uhr -->
+  <path>Aircraft/bf109/Models/Instruments/clock.xml</path>^M
+  <offsets>^M
+   <x-m>2.975</x-m>^M
+   <y-m>-0.05</y-m>^M
+   <z-m>0.52</z-m>^M
+  </offsets>^M
+ </model>^M
+
+<model>^M
+  <path>Aircraft/bf109/Models/uv-lamp.ac</path>^M
+  <offsets>^M
+   <x-m>0.0</x-m>^M
+   <y-m>0.0</y-m>^M
+   <z-m>0.0</z-m>^M
+  </offsets>^M
+ </model>^M
+
+<model>^M
+  <path>Aircraft/bf109/Models/benzinleitung.ac</path>^M
+  <offsets>^M
+   <x-m>0.0</x-m>^M
+   <y-m>0.0</y-m>^M
+   <z-m>0.0</z-m>^M
+  </offsets>^M
+ </model>^M
+
 </PropertyList>
+<!-- x: längsachse -->
+<!-- y: querachse -->
+<!-- z: hochachse -->

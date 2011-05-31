@@ -1,8 +1,50 @@
 <PropertyList>
 
+  <path>cockpit.ac</path>
+
+   <effect>
+ 			<inherits-from>Aircraft/bf109/Models/Effects/interiour_bumpspec</inherits-from>
+  	  <object-name>interiour</object-name>
+  	  <object-name>panel</object-name>
+  	  <object-name>subpanel</object-name>
+    </effect>
+
  <!-- panel models -->
  <model>
-  <path>Aircraft/bf109/Models/Instruments/alt-ger.xml</path>
+  <path>Aircraft/bf109/Models/Instruments/shotcounter-ger/shotcounter-ger.xml</path>
+  <offsets>
+   <x-m>2.98</x-m>
+   <y-m>-0.063</y-m>
+   <z-m>0.519</z-m>
+  </offsets>
+ </model>
+<model>
+  <path>Aircraft/bf109/Models/Instruments/masterarm-ger/masterarm-ger.xml</path>
+  <offsets>
+   <x-m>2.988</x-m>
+   <y-m>-0.041</y-m>
+   <z-m>0.517</z-m>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/bf109/Models/Instruments/shotcounter-ger/shotcounter-ger.xml</path>
+  <offsets>
+   <x-m>2.98</x-m>
+   <y-m>-0.03</y-m>
+   <z-m>0.519</z-m>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/bf109/Models/Instruments/clock-ger/clock-ger.xml</path>
+  <offsets>
+   <x-m>2.975</x-m>
+   <y-m>0.085</y-m>
+   <z-m>0.518</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/bf109/Models/Instruments/alt-ger/alt-ger.xml</path>
   <offsets>
    <x-m>2.985</x-m>
    <y-m>-0.133</y-m>
@@ -10,7 +52,7 @@
   </offsets>
  </model>
  <model>
-  <path>Aircraft/bf109/Models/Instruments/cooltemp.xml</path>
+  <path>Aircraft/bf109/Models/Instruments/coolant-temp-ger/cooltemp.xml</path>
   <offsets>
    <x-m>2.98</x-m>
    <y-m>0.185</y-m>
@@ -18,7 +60,7 @@
   </offsets>
  </model>
  <model>
-  <path>Aircraft/bf109/Models/Instruments/oiltemp.xml</path>
+  <path>Aircraft/bf109/Models/Instruments/oiltemp-ger/oiltemp.xml</path>
   <offsets>
    <x-m>2.98</x-m>
    <y-m>0.2</y-m>
@@ -26,15 +68,25 @@
   </offsets>
  </model>
  <model>
-  <path>Aircraft/bf109/Models/Instruments/pitchindicator.xml</path>
+  <path>Aircraft/bf109/Models/Instruments/prop-pitch/pitchindicator.xml</path>
   <offsets>
    <x-m>2.98</x-m>
    <y-m>0.22</y-m>
    <z-m>0.29</z-m>
   </offsets>
  </model>
+
  <model>
-  <path>Aircraft/bf109/Models/Instruments/fuelgauge.xml</path>
+  <path>Aircraft/bf109/Models/Instruments/gear-emergency/gear-emergency.xml</path>
+  <offsets>
+   <x-m>2.98</x-m>
+   <y-m>0.25</y-m>
+   <z-m>0.245</z-m>
+	 <roll-deg>30.0</roll-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/bf109/Models/Instruments/fuel400/fuelgauge.xml</path>
   <offsets>
    <x-m>2.98</x-m>
    <y-m>0.2</y-m>
@@ -43,7 +95,7 @@
  </model>
 
  <model>
-  <path>Aircraft/bf109/Models/Instruments/fuel-reserve.xml</path>
+  <path>Aircraft/bf109/Models/Instruments/lights/fuel-reserve.xml</path>
   <offsets>
    <x-m>2.98</x-m>
    <y-m>0.244</y-m>
@@ -53,7 +105,7 @@
 
 
 <model>
-  <path>Aircraft/bf109/Models/Instruments/asi750-ger.xml</path>
+  <path>Aircraft/bf109/Models/Instruments/asi750-ger/asi750-ger.xml</path>
   <offsets>
    <x-m>2.985</x-m>
    <y-m>-0.141</y-m>
@@ -62,7 +114,7 @@
  </model>
 
  <model>
-  <path>Aircraft/bf109/Models/Instruments/tach35-ger.xml</path>
+  <path>Aircraft/bf109/Models/Instruments/tach35-ger/tach35-ger.xml</path>
   <offsets>
    <x-m>2.98</x-m>
    <y-m>0.118</y-m>
@@ -71,7 +123,7 @@
  </model>
 
  <model>
-  <path>Aircraft/bf109/Models/Instruments/engine-ger.xml</path>
+  <path>Aircraft/bf109/Models/Instruments/oil-fuelpress-ger/oil-fuelpress-ger.xml</path>
   <offsets>
    <x-m>2.98</x-m>
    <y-m>0.115</y-m>
@@ -80,7 +132,7 @@
  </model>
 
  <model>
-  <path>Aircraft/bf109/Models/Instruments/vario30-ger.xml</path>
+  <path>Aircraft/bf109/Models/Instruments/vario30-ger/vario30-ger.xml</path>
   <offsets>
    <x-m>2.985</x-m>
    <y-m>0.035</y-m>
@@ -89,7 +141,7 @@
  </model>
 
  <model>
-  <path>Aircraft/bf109/Models/Instruments/afn2.xml</path>
+  <path>Aircraft/bf109/Models/Instruments/afn2/afn2.xml</path>
   <offsets>
    <x-m>2.985</x-m>
    <y-m>0.035</y-m>
@@ -98,7 +150,7 @@
  </model>
 
  <model>
-  <path>Aircraft/bf109/Models/Instruments/remote-ger.xml</path>
+  <path>Aircraft/bf109/Models/Instruments/remote-compass-ger/remote-ger.xml</path>
   <offsets>
    <x-m>2.985</x-m>
    <y-m>-0.048</y-m>
@@ -107,7 +159,7 @@
  </model>
 
  <model>
-  <path>Aircraft/bf109/Models/Instruments/man18-ger.xml</path>
+  <path>Aircraft/bf109/Models/Instruments/man18-ger/man18-ger.xml</path>
   <offsets>
    <x-m>2.98</x-m>
    <y-m>0.125</y-m>
@@ -117,7 +169,7 @@
 
 
 <model>
-  <path>Aircraft/bf109/Models/Instruments/att-ger.xml</path>
+  <path>Aircraft/bf109/Models/Instruments/att-ger/att-ger.xml</path>
   <offsets>
    <x-m>3.01</x-m>
    <y-m>-0.048</y-m>
@@ -126,7 +178,7 @@
  </model>
 
 <model>
-  <path>Aircraft/bf109/Models/Instruments/ignition-ger.xml</path>
+  <path>Aircraft/bf109/Models/Instruments/ignition-ger/ignition-ger.xml</path>
   <offsets>
    <x-m>2.98</x-m>
    <y-m>-0.225</y-m>
@@ -134,7 +186,7 @@
   </offsets>
  </model>
 <model>
-  <path>Aircraft/bf109/Models/Instruments/starter-ger.xml</path>
+  <path>Aircraft/bf109/Models/Instruments/starter-ger/starter-ger.xml</path>
   <offsets>
    <x-m>2.98</x-m>
    <y-m>-0.21</y-m>
@@ -144,7 +196,7 @@
 
 
 <model>
-  <path>Aircraft/bf109/Models/Instruments/shutoff.xml</path>
+  <path>Aircraft/bf109/Models/Instruments/shutoff-ger/shutoff.xml</path>
   <offsets>
    <x-m>2.98</x-m>
    <y-m>-0.197</y-m>
@@ -153,7 +205,7 @@
  </model>
 
 <model>
-  <path>Aircraft/bf109/Models/Instruments/gear-ger.xml</path>
+  <path>Aircraft/bf109/Models/Instruments/gearindicator-ger/gear-ger.xml</path>
   <offsets>
    <x-m>2.98</x-m>
    <y-m>-0.21</y-m>
@@ -162,7 +214,7 @@
  </model>
 
 <model>
-  <path>Aircraft/bf109/Models/gearswitch-ger.xml</path>
+  <path>Aircraft/bf109/Models/Instruments/gearswitch-ger/gearswitch-ger.xml</path>
   <offsets>
    <x-m>2.985</x-m>
    <y-m>-0.165</y-m>
@@ -171,16 +223,17 @@
  </model>
 
 <model>
-  <path>Aircraft/bf109/Models/canopy-rel-ger.ac</path>
+  <path>Aircraft/bf109/Models/Instruments/canopyjett-ger/canopyjett-ger.xml</path>
   <offsets>
    <x-m>2.98</x-m>
    <y-m>-0.2</y-m>
    <z-m>0.42</z-m>
+	 <roll-deg>140.0</roll-deg>
   </offsets>
  </model>
 
 <model>
-  <path>Aircraft/bf109/Models/revi-ger.xml</path>
+  <path>Aircraft/bf109/Models/Instruments/revi12d/revi-ger.xml</path>
   <offsets>
    <x-m>3.04</x-m>
    <y-m>0.04</y-m>
@@ -188,17 +241,10 @@
   </offsets>
  </model>
 
-<model>
-  <path>Aircraft/bf109/Models/masterarm-ger.xml</path>
-  <offsets>
-   <x-m>2.976</x-m>
-   <y-m>-0.09</y-m>
-   <z-m>0.51</z-m>
-  </offsets>
- </model>
+
 
 <model>
-  <path>Aircraft/bf109/Models/fueldump-ger.ac</path>
+  <path>Aircraft/bf109/Models/Instruments/fueldump-ger/fueldump-ger.xml</path>
   <offsets>
    <x-m>2.95</x-m>
    <y-m>0.25</y-m>
@@ -206,10 +252,12 @@
   </offsets>
  </model>
 <model>
-  <path>Aircraft/bf109/Models/coolflap-ger.xml</path>
+  <path>Aircraft/bf109/Models/Instruments/coolflap-ger/coolflap-ger.xml</path>
   <offsets>
-   <x-m>3.07</x-m><!-- 2.97-->
-   <y-m>0.26</y-m><!-- 0.22-->
+   <x-m>3.07</x-m>
+<!-- 2.97-->
+   <y-m>0.26</y-m>
+<!-- 0.22-->
    <z-m>0.09</z-m>
   </offsets>
  </model>
@@ -217,7 +265,7 @@
  <!-- non-panel models -->
 
 <model>
-  <path>Aircraft/bf109/Models/throttle-ger.xml</path>
+  <path>Aircraft/bf109/Models/Instruments/throttle-109/throttle-ger.xml</path>
   <offsets>
    <x-m>3.09</x-m>
    <y-m>-0.27</y-m>
@@ -226,7 +274,7 @@
  </model>
 
 <model>
-  <path>Aircraft/bf109/Models/taillock.xml</path>
+  <path>Aircraft/bf109/Models/taillock-ger/taillock.xml</path>
   <offsets>
    <x-m>3.495</x-m>
    <y-m>-0.27</y-m>
@@ -235,7 +283,7 @@
  </model>
 
 <model>
-  <path>Aircraft/bf109/Models/flapwheel.xml</path>
+  <path>Aircraft/bf109/Models/Instruments/trim-flap-wheel/flapwheel.xml</path>
   <offsets>
    <x-m>3.395</x-m>
    <y-m>-0.3</y-m>
@@ -244,7 +292,7 @@
  </model>
 
 <model>
-  <path>Aircraft/bf109/Models/trimwheel.xml</path>
+  <path>Aircraft/bf109/Models/Instruments/trim-flap-wheel/trimwheel.xml</path>
   <offsets>
    <x-m>3.395</x-m>
    <y-m>-0.25</y-m>
@@ -252,10 +300,12 @@
   </offsets>
  </model>
 <model>
-  <path>Aircraft/bf109/Models/Instruments/primer-ger.xml</path>
+  <path>Aircraft/bf109/Models/Instruments/primer-ger/primer-ger.xml</path>
   <offsets>
-   <x-m>3.33</x-m><!-- 3.33 -->
-   <y-m>-0.21</y-m><!-- -0.21 -->
+   <x-m>3.33</x-m>
+
+   <y-m>-0.21</y-m>
+
    <z-m>0.05</z-m>
   </offsets>
  </model>
@@ -277,125 +327,92 @@
   </emission>
  </animation>
 
- </model> 
+ </model>
+
 <!-- eigene Erweiterung -->
-<model>^M
-  <path>Aircraft/bf109/Models/stick.ac</path>^M
-  <offsets>^M
-   <x-m>0.0</x-m>^M
-   <y-m>0.0</y-m>^M
-   <z-m>0.0</z-m>^M
-  </offsets>^M
- </model>^M
-
- <animation>
-  <type>rotate</type>
-  <object-name>Stick</object-name>
-  <property>controls/flight/elevator</property>
-  <factor>-10</factor>
-  <center>
-   <x-m>3.14</x-m>
-   <y-m>0.00</y-m>
-   <z-m>-0.22</z-m>
-  </center>
-  <axis>
-   <x>0.0</x>
-   <y>1.0</y>
-   <z>0.0</z>
-  </axis>
- </animation>
-
- <animation>
-  <type>rotate</type>
-  <object-name>Stick</object-name>
-  <property>controls/flight/aileron</property>
-  <factor>-10</factor>
-  <center>
-   <x-m>3.14</x-m>
-   <y-m>0.00</y-m>
-   <z-m>-0.22</z-m>
-  </center>
-  <axis>
-   <x>1.0</x>
-   <y>0.0</y>
-   <z>0.0</z>
-  </axis>
- </animation>
+<model>
+  <path>Aircraft/bf109/Models/Instruments/kg13/stick.xml</path>
+  <offsets>
+   <x-m>3.226</x-m>
+   <y-m>0.0</y-m>
+   <z-m>-0.181</z-m>
+  </offsets>
+ </model>
 
  
-<model>^M
+<model>
   <name>O2-Pressure</name>
-  <path>Aircraft/bf109/Models/Instruments/o2pressure.xml</path>^M
-  <offsets>^M
-   <x-m>0</x-m>^M
-   <y-m>0</y-m>^M
-   <z-m>0</z-m>^M
-  </offsets>^M
+  <path>Aircraft/bf109/Models/Instruments/o2press-ger/o2pressure.xml</path>
+  <offsets>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </offsets>
  </model>
-<model>^M
+<model>
   <name>O2-Guard</name>
-  <path>Aircraft/bf109/Models/Instruments/o2guard.xml</path>^M
-  <offsets>^M
-   <x-m>0</x-m>^M
-   <y-m>0</y-m>^M
-   <z-m>0</z-m>^M
-  </offsets>^M
+  <path>Aircraft/bf109/Models/Instruments/o2guard-ger/o2guard.xml</path>
+  <offsets>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </offsets>
  </model>
 
  <model>
    <name>PilotPedals</name>
    <path>pedals.xml</path>
-   <offsets>^M
-   <x-m>2.75</x-m>^M
-   <y-m>0</y-m>^M
-   <z-m>-0.11</z-m>^M
-  </offsets>^M
+   <offsets>
+   <x-m>2.75</x-m>
+   <y-m>0</y-m>
+   <z-m>-0.11</z-m>
+  </offsets>
  </model>
 
-<model>^M
-  <path>Aircraft/bf109/Models/o2.ac</path>^M
-  <offsets>^M
-   <x-m>0.0</x-m>^M
-   <y-m>0.0</y-m>^M
-   <z-m>0.0</z-m>^M
-  </offsets>^M
- </model>^M
+<model>
+  <path>Aircraft/bf109/Models/o2.ac</path>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </offsets>
+ </model>
 
-<model>^M
-  <path>Aircraft/bf109/Models/bottom-switches.xml</path>^M
-  <offsets>^M
-   <x-m>0.0</x-m>^M
-   <y-m>0.0</y-m>^M
-   <z-m>0.0</z-m>^M
-  </offsets>^M
- </model>^M
+<model>
+  <path>Aircraft/bf109/Models/bottom-switches.xml</path>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </offsets>
+ </model>
 
-<model>^M<!-- Uhr -->
-  <path>Aircraft/bf109/Models/Instruments/clock.xml</path>^M
-  <offsets>^M
-   <x-m>2.975</x-m>^M
-   <y-m>-0.05</y-m>^M
-   <z-m>0.52</z-m>^M
-  </offsets>^M
- </model>^M
+<model>
+  <path>Aircraft/bf109/Models/Instruments/simpleclock/simpleclock-ger.xml</path>
+  <offsets>
+   <x-m>2.975</x-m>
+   <y-m>-0.05</y-m>
+   <z-m>0.52</z-m>
+  </offsets>
+ </model>
 
-<model>^M
-  <path>Aircraft/bf109/Models/uv-lamp.ac</path>^M
-  <offsets>^M
-   <x-m>0.0</x-m>^M
-   <y-m>0.0</y-m>^M
-   <z-m>0.0</z-m>^M
-  </offsets>^M
- </model>^M
+<model>
+  <path>Aircraft/bf109/Models/uv-lamp.ac</path>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </offsets>
+ </model>
 
-<model>^M
-  <path>Aircraft/bf109/Models/benzinleitung.ac</path>^M
-  <offsets>^M
-   <x-m>0.0</x-m>^M
-   <y-m>0.0</y-m>^M
-   <z-m>0.0</z-m>^M
-  </offsets>^M
- </model>^M
+<model>
+  <path>Aircraft/bf109/Models/benzinleitung.ac</path>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </offsets>
+ </model>
 
 </PropertyList>
 <!-- x: längsachse -->

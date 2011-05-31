@@ -6428,7 +6428,7 @@ OBJECT poly
 name "skala"
 data 12
 Cylinder.002
-texture "Instruments/ignswitch.png"
+texture "Instruments/common/ignswitch.png"
 texrep 1 1
 crease 30.000000
 numvert 66

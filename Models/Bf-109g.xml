@@ -4,7 +4,7 @@
 
 <PropertyList>
 
- <path>bf109g2.ac</path>
+ <path>bf109g14.ac</path>
  <offsets>
    <z-m>0.0</z-m>
  </offsets>
@@ -22,152 +22,31 @@
 		<path>Aircraft/bf109/Models/equipment.xml</path>
    		<nopreview/>
 	</model>
-  <!-- Front hotspots -->
- <panel>
-  <path>Aircraft/bf109/Models/bf109-panel-hotspots.xml</path>
-  <bottom-left>
-   <x-m>3.0</x-m>
-   <y-m>-0.25</y-m>
-   <z-m>0.15</z-m>
-  </bottom-left>
-  <bottom-right>
-   <x-m>3.0</x-m>
-   <y-m>0.25</y-m>
-   <z-m>0.15</z-m>
-  </bottom-right>
-  <top-left>
-   <x-m>3.0</x-m>
-   <y-m>-0.25</y-m>
-   <z-m> 0.55</z-m>
-  </top-left>
- </panel>
 
- <panel>
-  <path>Aircraft/bf109/Models/bf109-left-hotspots.xml</path>
-  <bottom-left>
-   <x-m>3.49</x-m>
-   <y-m>-0.33</y-m>
-   <z-m>0.08</z-m>
-  </bottom-left>
-  <bottom-right>
-   <x-m>3.49</x-m>
-   <y-m>-0.22</y-m>
-   <z-m>0.08</z-m>
-  </bottom-right>
-  <top-left>
-   <x-m>3.19</x-m>
-   <y-m>-0.33</y-m>
-   <z-m>0.08</z-m>
-  </top-left>
- </panel>
- <panel>
-  <path>Aircraft/bf109/Models/bf109-left-hotspots2.xml</path>
-  <bottom-left>
-   <x-m>3.25</x-m>
-   <y-m>-0.31</y-m>
-   <z-m>0.28</z-m>
-  </bottom-left>
-  <bottom-right>
-   <x-m>3.25</x-m>
-   <y-m>-0.19</y-m>
-   <z-m>0.28</z-m>
-  </bottom-right>
-  <top-left>
-   <x-m>2.95</x-m>
-   <y-m>-0.31</y-m>
-   <z-m>0.28</z-m>
-  </top-left>
- </panel>
- <panel>
-  <path>Aircraft/bf109/Models/primer-hotspot.xml</path>
-  <bottom-left>
-   <x-m>3.33</x-m>
-   <y-m>-0.21</y-m>
-   <z-m>0.16</z-m>
-  </bottom-left>
-  <bottom-right>
-   <x-m>3.33</x-m>
-   <y-m>-0.16</y-m>
-   <z-m>0.16</z-m>
-  </bottom-right>
-  <top-left>
-   <x-m>3.28</x-m>
-   <y-m>-0.21</y-m>
-   <z-m>0.16</z-m>
-  </top-left>
- </panel>
- <panel>
-  <path>Aircraft/bf109/Models/propadj-hotspot.xml</path>
-  <bottom-left>
-   <x-m>3.12</x-m>
-   <y-m>-0.24</y-m>
-   <z-m>0.19</z-m>
-  </bottom-left>
-  <bottom-right>
-   <x-m>3.12</x-m>
-   <y-m>-0.24</y-m>
-   <z-m>0.13</z-m>
-  </bottom-right>
-  <top-left>
-   <x-m>3.02</x-m>
-   <y-m>-0.24</y-m>
-   <z-m>0.19</z-m>
-  </top-left>
- </panel>
- <panel>
-  <path>Aircraft/bf109/Models/taillock-hotspot.xml</path>
-  <bottom-left>
-   <x-m>3.47</x-m>
-   <y-m>-0.26</y-m>
-   <z-m>0.28</z-m>
-  </bottom-left>
-  <bottom-right>
-   <x-m>3.47</x-m>
-   <y-m>-0.26</y-m>
-   <z-m>0.13</z-m>
-  </bottom-right>
-  <top-left>
-   <x-m>3.38</x-m>
-   <y-m>-0.26</y-m>
-   <z-m>0.28</z-m>
-  </top-left>
- </panel>
- <panel>
-  <path>Aircraft/bf109/Models/taillock-hotspot.xml</path>
-  <bottom-left>
-   <x-m>3.47</x-m>
-   <y-m>-0.26</y-m>
-   <z-m>0.28</z-m>
-  </bottom-left>
-  <bottom-right>
-   <x-m>3.47</x-m>
-   <y-m>-0.26</y-m>
-   <z-m>0.13</z-m>
-  </bottom-right>
-  <top-left>
-   <x-m>3.38</x-m>
-   <y-m>-0.26</y-m>
-   <z-m>0.28</z-m>
-  </top-left>
- </panel>
-<panel>
-  <path>Aircraft/bf109/Models/coolflap-hotspots.xml</path>
-  <bottom-left>
-   <x-m>3.0</x-m>
-   <y-m>0.2</y-m>
-   <z-m>0.06</z-m>
-  </bottom-left>
-  <bottom-right>
-   <x-m>3.0</x-m>
-   <y-m>0.32</y-m>
-   <z-m>0.06</z-m>
-  </bottom-right>
-  <top-left>
-   <x-m>3.0</x-m>
-   <y-m>0.2</y-m>
-   <z-m>0.15</z-m>
-  </top-left>
- </panel>
+   <effect>
+ 			<inherits-from>Aircraft/bf109/Models/Effects/109_bumpspec</inherits-from>
+  	  <object-name>Fuselage</object-name>
+  	  <object-name>fwdband</object-name>
+  	  <object-name>cowlunderside</object-name>
+  	  <object-name>rearband</object-name>
+  	  <object-name>leftwing</object-name>
+  	  <object-name>rightwing</object-name>
+			<object-name>wingtip.L</object-name>
+			<object-name>wingtip.R</object-name>
+			<object-name>canopy</object-name>
+			<object-name>intake</object-name>
+			<object-name>leftslat</object-name>
+			<object-name>rightslat</object-name>
+			<object-name>leftoutflap</object-name>
+			<object-name>rightoutflap</object-name>
+			<object-name>LeftAileron</object-name>
+			<object-name>rightaileron</object-name>
+			<object-name>leftflap</object-name>
+			<object-name>rightflap</object-name>
+			<object-name>leftcoolflap</object-name>
+			<object-name>rightcoolflap</object-name>
+			<object-name>Rudder</object-name>
+    </effect>
 
 	<model>
 		<name>cockpit</name>
@@ -177,13 +56,12 @@
   <object-name>cockpit</object-name>
 		<type>range</type>
 		<min-m>0</min-m>
-		<max-m>10</max-m>
+		<max-m>40</max-m>
 	</animation>
 
  <animation>
   <type>select</type>
   <object-name>Prop</object-name>
-  <object-name>Propeller1</object-name>
   <condition>
    <less-than>
     <property>engines/engine[0]/rpm</property>
@@ -191,30 +69,50 @@
    </less-than>
   </condition>
  </animation>
-
-<animation>
+<!--
+ <animation>
   <type>select</type>
-  <object-name>Propturn</object-name>
+  <object-name>Prop</object-name>
   <condition>
    <greater-than>
     <property>engines/engine[0]/rpm</property>
-    <value>1000</value>
+    <value>2</value>
    </greater-than>
+  </condition>
+ </animation>
+-->
+ <animation>
+  <type>select</type>
+  <object-name>tropfilter1</object-name>
+  <object-name>tropfilter2</object-name>
+  <object-name>filterintake.L</object-name>
+  <object-name>filterintake.R</object-name>
+  <condition>
+   <equals>
+    <property>sim/model/livery/trop</property>
+    <value>true</value>
+   </equals>
   </condition>
  </animation>
 
 <animation>
   <type>spin</type>
-  <object-name>Propturn</object-name>
+  <object-name>Prophub</object-name>
     <property>engines/engine[0]/rpm</property>
-    <factor>-0.01</factor>
+    <factor>1</factor>
+  <condition>
+   <greater-than>
+    <property>engines/engine[0]/rpm</property>
+    <value>2</value>
+   </greater-than>
+  </condition>
   <center>
    <x-m>3.40</x-m>
    <y-m>0.0</y-m>
    <z-m>0.0</z-m>
   </center>
   <axis>
-   <x>1.0</x>
+   <x>-1.0</x>
    <y>0.0</y>
    <z>0.0</z>
   </axis>
@@ -222,17 +120,22 @@
 
  <animation>
   <type>spin</type>
-  <object-name>Propeller1</object-name>
   <object-name>Prop</object-name>
+  <condition>
+   <greater-than>
+    <property>engines/engine[0]/rpm</property>
+    <value>2</value>
+   </greater-than>
+  </condition>
   <property>engines/engine[0]/rpm</property>
-  <factor>-0.479</factor>
+  <factor>1</factor>
   <center>
    <x-m>3.40</x-m>
    <y-m>0.0</y-m>
    <z-m>0.0</z-m>
   </center>
   <axis>
-   <x>1.0</x>
+   <x>-1.0</x>
    <y>0.0</y>
    <z>0.0</z>
   </axis>
@@ -375,6 +278,18 @@
    <y>0.0</y>
    <z>0.0</z>
   </axis>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>canopy</object-name>
+	<object-name>canopyglass</object-name>
+  <condition>
+   <equals>
+    <property>controls/canopy/release</property>
+    <value>false</value>
+   </equals>
+  </condition>
  </animation>
 
 <animation>
@@ -686,7 +601,8 @@
    <z>0.17</z>
   </axis>
  </animation>
-
+
+
  <animation>
   <type>translate</type>
   <object-name>leftslat</object-name>
@@ -753,7 +669,7 @@
 
 
   <model> 
-   <path>Aircraft/bf109/Models/blaze-l.xml</path>
+   <path>Aircraft/bf109/Models/Effects/blaze-l.xml</path>
    <name>Blaze-l</name>
    <nopreview/>
     <offsets> 
@@ -763,7 +679,7 @@
     </offsets>
   </model>
   <model> 
-   <path>Aircraft/bf109/Models/blaze-r.xml</path>
+   <path>Aircraft/bf109/Models/Effects/blaze-r.xml</path>
    <name>Blaze-l</name>
    <nopreview/>
     <offsets> 
@@ -774,7 +690,7 @@
   </model>
 
   <model> 
-   <path>Aircraft/bf109/Models/blaze.xml</path>
+   <path>Aircraft/bf109/Models/Effects/blaze.xml</path>
    <name>Blaze-f</name>
    <nopreview/>
     <offsets> 
@@ -802,75 +718,118 @@
   <animation>
     <type>material</type>
     <object-name>Fuselage</object-name>
+    <object-name>leftwing</object-name>
+    <object-name>LeftAileron</object-name>
+    <object-name>leftoutflap</object-name>
+    <object-name>leftflap</object-name>
+    <object-name>rightwing</object-name>
+    <object-name>rightaileron</object-name>
+    <object-name>rightoutflap</object-name>
+    <object-name>rightflap</object-name>
+    <object-name>horstab</object-name>
+			<object-name>canopy</object-name>
+			<object-name>intake</object-name>
+			<object-name>leftslat</object-name>
+			<object-name>rightslat</object-name>
+			<object-name>LeftElevator</object-name>
     <property-base>sim/model/livery/material/fuselage</property-base>
     <texture-prop>texture</texture-prop>
-    <texture>bf109-1.rgb</texture>
-  </animation>
-  <animation>
-    <type>material</type>
-    <object-name>leftwing</object-name>
-    <property-base>sim/model/livery/material/leftwing</property-base>
-    <texture-prop>texture</texture-prop>
-    <texture>bf109-2.rgb</texture>
-  </animation>
-  <animation>
-    <type>material</type>
-    <object-name>LeftAileron</object-name>
-    <property-base>sim/model/livery/material/leftwing</property-base>
-    <texture-prop>texture</texture-prop>
-    <texture>bf109-2.rgb</texture>
-  </animation>
-  <animation>
-    <type>material</type>
-    <object-name>leftoutflap</object-name>
-    <property-base>sim/model/livery/material/leftwing</property-base>
-    <texture-prop>texture</texture-prop>
-    <texture>bf109-2.rgb</texture>
+    <texture>bf109-1.png</texture>
   </animation>
 
   <animation>
     <type>material</type>
-    <object-name>leftflap</object-name>
-    <property-base>sim/model/livery/material/leftwing</property-base>
+    <object-name>fwdband</object-name>
+    <property-base>sim/model/livery/material/fwdband</property-base>
     <texture-prop>texture</texture-prop>
-    <texture>bf109-2.rgb</texture>
+    <texture>bf109-1.png</texture>
+  </animation>
+  <animation>
+    <type>material</type>
+			<object-name>Rudder</object-name>
+    <property-base>sim/model/livery/material/rudder</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>bf109-1.png</texture>
+  </animation>
+  <animation>
+    <type>material</type>
+			<object-name>Prophub</object-name>
+    <property-base>sim/model/livery/material/prophub</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>bf109-1.png</texture>
   </animation>
 
+	<animation>
+		<type>material</type>
+		<object-name>rearband</object-name>
+		<property-base>sim/model/livery/material/rearband/colour</property-base>
+		<diffuse>
+			<red-prop>diffuse/red</red-prop>
+			<green-prop>diffuse/green</green-prop>
+			<blue-prop>diffuse/blue</blue-prop>
+		</diffuse>
+		<ambient>
+			<red-prop>ambient/red</red-prop>
+			<green-prop>ambient/green</green-prop>
+			<blue-prop>ambient/blue</blue-prop>
+		</ambient>
+		<specular>
+			<red-prop>specular/red</red-prop>
+			<green-prop>specular/green</green-prop>
+			<blue-prop>specular/blue</blue-prop>
+		</specular>
+		<emission>
+			<red-prop>emission/red</red-prop>
+			<green-prop>emission/green</green-prop>
+			<blue-prop>emission/blue</blue-prop>
+		</emission>
+		<transparency>
+			<alpha-prop>transparency/alpha</alpha-prop>
+		</transparency>
+		<shininess-prop>shininess</shininess-prop>
+	</animation>
+	<animation>
+		<type>material</type>
+		<object-name>wingtip.L</object-name>
+		<object-name>wingtip.R</object-name>
+    <property-base>sim/model/livery/material/wingtip</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>Liveries/special.png</texture>
+	</animation>
   <animation>
     <type>material</type>
-    <object-name>rightwing</object-name>
-    <property-base>sim/model/livery/material/rightwing</property-base>
+    <object-name>cowlunderside</object-name>
+    <property-base>sim/model/livery/material/cowlunderside</property-base>
     <texture-prop>texture</texture-prop>
-    <texture>bf109-3.rgb</texture>
+    <texture>bf109-1.png</texture>
   </animation>
-  <animation>
+ <animation>
     <type>material</type>
-    <object-name>rightaileron</object-name>
-    <property-base>sim/model/livery/material/rightwing</property-base>
-    <texture-prop>texture</texture-prop>
-    <texture>bf109-3.rgb</texture>
+      <object-name>logo.L</object-name>
+      <object-name>logo.R</object-name>
+        <texture-prop>sim/model/logo/texture</texture-prop>
   </animation>
-  <animation>
-    <type>material</type>
-    <object-name>rightoutflap</object-name>
-    <property-base>sim/model/livery/material/rightwing</property-base>
-    <texture-prop>texture</texture-prop>
-    <texture>bf109-3.rgb</texture>
-  </animation>
-  <animation>
-    <type>material</type>
-    <object-name>rightflap</object-name>
-    <property-base>sim/model/livery/material/rightwing</property-base>
-    <texture-prop>texture</texture-prop>
-    <texture>bf109-3.rgb</texture>
-  </animation>
+ <animation>
+  <type>select</type>
+      <object-name>logo.L</object-name>
+  <condition>
+   <greater-than>
+    <property>sim/model/logo/display</property>
+    <value>0</value>
+   </greater-than>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+      <object-name>logo.R</object-name>
+  <condition>
+   <greater-than>
+    <property>sim/model/logo/display</property>
+    <value>1</value>
+   </greater-than>
+  </condition>
+ </animation>
 
-  <animation>
-    <type>material</type>
-    <object-name>horstab</object-name>
-    <property-base>sim/model/livery/material/horstab</property-base>
-    <texture-prop>texture</texture-prop>
-    <texture>bf109-4.rgb</texture>
-  </animation>
+
 
 </PropertyList>

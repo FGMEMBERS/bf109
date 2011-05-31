@@ -47,28 +47,75 @@ February 2006,  Detlef Faber
   <model>
    <path>Aircraft/bf109/Models/Bf-109g.xml</path>
    <livery>
-     <variant type="string">default </variant>
+		 <trop type="bool">false</trop>
+     <variant type="string">Default</variant>
      <material>
+			 <cowlunderside>
+			   <texture>Liveries/special.png</texture>
+			 </cowlunderside>
        <fuselage>
-         <texture>bf109-1.rgb</texture>
+         <texture>bf109-1.png</texture>
        </fuselage>
-       <leftwing>
-           <texture>bf109-2.rgb</texture>
-       </leftwing>
-       <rightwing>
-           <texture>bf109-3.rgb</texture>
-       </rightwing>
-       <horstab>
-           <texture>bf109-4.rgb</texture>
-         </horstab>
+         <fwdband>
+          <texture>Liveries/special.png</texture>
+         </fwdband>
+				 <prophub>
+          <texture>bf109-1.png</texture>
+				 </prophub>
+         <rearband>
+					<colour>
+					  <diffuse>
+					   <red>0.9</red>
+					   <green>0.0</green>
+					   <blue>0.0</blue>
+					  </diffuse>
+					  <ambient>
+			 			  <red>0.9</red>
+					   <green>0.0</green>
+					   <blue>0.0</blue>
+					  </ambient>
+					  <specular>
+					   <red>0.9</red>
+					   <green>0.0</green>
+					   <blue>0.0</blue>
+					  </specular>
+					  <emission>
+					   <red>0.0</red>
+					   <green>0.0</green>
+					   <blue>0.0</blue>
+					  </emission>
+					  <transparency>
+				   <alpha>1.0</alpha>
+					  </transparency>	
+					  <shininess>2</shininess>
+					</colour>
+
+
+         </rearband>
+				 <rudder>
+          <texture>Liveries/special.png</texture>		
+				 </rudder>
+         <wingtip>
+          <texture>Liveries/special.png</texture>		
+         </wingtip>
      </material>
    </livery>
+		<logo>
+			<display type="int" userarchive="y">2</display>
+			<name>FlightGear</name>
+			<texture>../../Generic/Logos/FlightGear.png</texture>
+		</logo>
    <crew>
       <pilot>
         <visible>1.0</visible>
       </pilot>
    </crew>
   </model> 
+	<multiplay>
+		<generic>
+			<string/>
+		</generic>
+	</multiplay>
 		<tutorials>
 			<tutorial include="Tutorials/startup_tutorial.xml"/>
 		</tutorials>
@@ -266,7 +313,13 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
                 <script>aircraft.livery.dialog.toggle()</script>
               </binding>
 					</item>
-
+				<item>
+						<label>Select Logo</label>
+              <binding>
+                <command>nasal</command>
+                <script>bf109.logo_dialog.toggle()</script>
+              </binding>
+					</item>
 			</menu>
 		</default>
 	</menubar>
@@ -292,6 +345,7 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
 
  <consumables>
   <fuel>
+	 <on-reserve type="int">0</on-reserve>
    <tank n="0">
     <name>Internal</name>
     <selected type="bool">false</selected>
@@ -312,14 +366,22 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
 
  <!-- set up control properties for YASim -->
  <controls>
+	 <canopy>
+			<jetthandle-pulled type="bool">false</jetthandle-pulled>
+			<release type="bool">false</release>
+	 </canopy>
    <engines>
       <engine n="0">
         <magnetos>0</magnetos>
-        <boost type="double">1.0</boost>
+				<target-mp type="float">0</target-mp>
+        <boost type="float">0.7</boost>
+				<blower type="int">0</blower>
         <prop-auto type="bool">false</prop-auto>
+				<fueldump-pulled type="bool">false</fueldump-pulled>
         <primer type="double">0.0</primer>
         <primer-pressed type="bool">0.0</primer-pressed>
         <radlever type="double">0.0</radlever>
+				<throttle-c type="float">0</throttle-c>
         <cowl-flaps-norm type="float">0.0</cowl-flaps-norm>
         <coolflap-auto type ="int">0</coolflap-auto>
 				<on-startup-running type="bool">false</on-startup-running>
@@ -329,6 +391,8 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
    <gear>
       <tailwheel-lock>true</tailwheel-lock>
       <bellybrake type="float">1.0</bellybrake>
+			<emergency-extension type="bool">false</emergency-extension>
+			<emergency-extension-pulled type="bool">false</emergency-extension-pulled>
    </gear>
 
    <armament>
@@ -498,13 +562,9 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
 <!-- Nasal files/scripts -->
   <nasal>
     <bf109>
-      <file>Aircraft/bf109/bf109.nas</file>
-      <script>init();</script>
+      <file>Aircraft/bf109/Nasal/bf109.nas</file>
     </bf109>
 
-    <pilot-g>
-     <file>Aircraft/bf109/pilot-g.nas</file>
-    </pilot-g>
 
   </nasal>
 

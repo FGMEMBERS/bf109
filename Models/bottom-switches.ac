@@ -14,7 +14,7 @@ OBJECT world
 kids 12
 OBJECT poly
 name "Box.002"
-texture "Instruments/ignswitch.png"
+texture "Instruments/common/ignswitch.png"
 data 8
 Cube.006
 crease 30.000000
@@ -3097,7 +3097,7 @@ refs 4
 kids 0
 OBJECT poly
 name "Box.001"
-texture "Instruments/ignswitch.png"
+texture "Instruments/common/ignswitch.png"
 data 8
 Cube.005
 crease 30.000000
@@ -6180,7 +6180,7 @@ refs 4
 kids 0
 OBJECT poly
 name "Box.003"
-texture "Instruments/ignswitch.png"
+texture "Instruments/common/ignswitch.png"
 data 8
 Cube.007
 crease 30.000000

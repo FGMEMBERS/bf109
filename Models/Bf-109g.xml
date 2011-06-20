@@ -6,7 +6,7 @@
 
  <path>bf109g14.ac</path>
  <offsets>
-   <z-m>0.0</z-m>
+   <x-m>-2.999</x-m>
  </offsets>
 
 	<animation>
@@ -16,7 +16,6 @@
 		<object-name>canopyglass</object-name>
 		<object-name>frontglass</object-name>
 	</animation>
-
 
 	<model>
 		<path>Aircraft/bf109/Models/equipment.xml</path>
@@ -47,6 +46,33 @@
 			<object-name>rightcoolflap</object-name>
 			<object-name>Rudder</object-name>
     </effect>
+    <model>
+		<name>bc250</name>
+		<path>Aircraft/bf109/Models/sc250.ac</path>
+		<offsets>
+			<x-m>2.5</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-0.47</z-m>
+			<pitch-deg>0.0</pitch-deg>
+		</offsets>
+	</model>	
+ <animation>
+  <type>select</type>
+  <object-name>bc250</object-name>
+  <condition>
+     <and>
+        <equals>
+          <property>sim/weight[0]/selected</property>
+          <value>BC250 Bomb</value>
+        </equals>
+        <equals>
+          <property>controls/armament/station[0]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
+  </condition>
+ </animation>
+
 
 	<model>
 		<name>cockpit</name>

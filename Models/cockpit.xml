@@ -10,24 +10,33 @@
     </effect>
 
  <!-- panel models -->
+
+<model>
+  <path>Aircraft/bf109/Models/Instruments/switches/masterarm-ger.xml</path>
+  <offsets>
+   <x-m>2.981</x-m>
+   <y-m>-0.08</y-m>
+   <z-m>0.519</z-m>
+  </offsets>
+ </model>
  <model>
-  <path>Aircraft/bf109/Models/Instruments/shotcounter-ger/shotcounter-ger.xml</path>
+  <path>Aircraft/bf109/Models/Instruments/shotcounter-ger/shotcounter-ger-l.xml</path>
   <offsets>
    <x-m>2.98</x-m>
    <y-m>-0.063</y-m>
    <z-m>0.519</z-m>
   </offsets>
  </model>
-<model>
-  <path>Aircraft/bf109/Models/Instruments/masterarm-ger/masterarm-ger.xml</path>
+ <model>
+  <path>Aircraft/bf109/Models/Instruments/shotcounter-ger/shotcounter-ger-m.xml</path>
   <offsets>
-   <x-m>2.988</x-m>
-   <y-m>-0.041</y-m>
-   <z-m>0.517</z-m>
+   <x-m>2.98</x-m>
+   <y-m>-0.047</y-m>
+   <z-m>0.519</z-m>
   </offsets>
  </model>
  <model>
-  <path>Aircraft/bf109/Models/Instruments/shotcounter-ger/shotcounter-ger.xml</path>
+  <path>Aircraft/bf109/Models/Instruments/shotcounter-ger/shotcounter-ger-r.xml</path>
   <offsets>
    <x-m>2.98</x-m>
    <y-m>-0.03</y-m>
@@ -262,8 +271,57 @@
   </offsets>
  </model>
 
+<animation>
+  <type>select</type>
+  <object-name>zsk244</object-name>
+  <condition>
+        <equals>
+          <property>controls/armament/fuse-control</property>
+          <value>true</value>
+        </equals>
+  </condition>
+ </animation>
+<model>
+	<name>zsk244</name>
+  <path>Aircraft/bf109/Models/Instruments/zsk244/zsk244.xml</path>
+  <offsets>
+   <x-m>3.001</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.195</z-m>
+	 <pitch-deg>-20</pitch-deg>
+  </offsets>
+ </model>
+
+<model>
+  <path>Aircraft/bf109/Models/Instruments/switches/mw50.xml</path>
+  <offsets>
+   <x-m>2.981</x-m>
+   <y-m>-0.127</y-m>
+   <z-m>0.252</z-m>
+	 <roll-deg>-90</roll-deg>
+  </offsets>
+ </model>
+<model>
+  <path>Aircraft/bf109/Models/Instruments/switches/wgr-drop.xml</path>
+  <offsets>
+   <x-m>2.981</x-m>
+   <y-m>-0.127</y-m>
+   <z-m>0.224</z-m>
+	 <roll-deg>-90</roll-deg>
+  </offsets>
+ </model>
  <!-- non-panel models -->
 
+ <model>
+  <path>Aircraft/bf109/Models/Instruments/load-jett/load-jett.xml</path>
+  <offsets>
+   <x-m>3.048</x-m>
+   <y-m>-0.259</y-m>
+   <z-m>0.031</z-m>
+	 <pitch-deg>-50.0</pitch-deg>
+	 <heading-deg>30</heading-deg>
+  </offsets>
+ </model>
 <model>
   <path>Aircraft/bf109/Models/Instruments/throttle-109/throttle-ger.xml</path>
   <offsets>
@@ -274,7 +332,7 @@
  </model>
 
 <model>
-  <path>Aircraft/bf109/Models/taillock-ger/taillock.xml</path>
+  <path>Aircraft/bf109/Models/Instruments/taillock-ger/taillock.xml</path>
   <offsets>
    <x-m>3.495</x-m>
    <y-m>-0.27</y-m>

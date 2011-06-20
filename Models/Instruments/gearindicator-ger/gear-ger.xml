@@ -15,7 +15,7 @@
 
   <animation>
     <type>select</type>
-    <object-name>red</object-name>
+    <object-name>red.R</object-name>
     <condition>
      <less-than>
       <property>/gear/gear[1]/position-norm</property>
@@ -25,7 +25,7 @@
    </animation>
    <animation>
     <type>select</type>
-    <object-name>green</object-name>
+    <object-name>green.R</object-name>
     <condition>
      <greater-than>
       <property>/gear/gear[1]/position-norm</property>
@@ -33,10 +33,32 @@
      </greater-than>
     </condition>
    </animation>
-   
+  
+  <animation>
+    <type>select</type>
+    <object-name>red.L</object-name>
+    <condition>
+     <less-than>
+      <property>/gear/gear[0]/position-norm</property>
+      <value>0.2</value>
+     </less-than>
+    </condition>
+   </animation>
+   <animation>
+    <type>select</type>
+    <object-name>green.L</object-name>
+    <condition>
+     <greater-than>
+      <property>/gear/gear[0]/position-norm</property>
+      <value>0.9</value>
+     </greater-than>
+    </condition>
+   </animation>
+ 
  <animation>
   <type>material</type>
-  <object-name>red</object-name>
+  <object-name>red.R</object-name>
+  <object-name>red.L</object-name>
   <emission>
     <red>0.6</red>
     <green>0.0</green>
@@ -45,7 +67,8 @@
  </animation>
  <animation>
   <type>material</type>
-  <object-name>green</object-name>
+  <object-name>green.L</object-name>
+  <object-name>green.R</object-name>
   <emission>
     <red>0.0</red>
     <green>0.6</green>

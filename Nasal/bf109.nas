@@ -26,6 +26,7 @@ var blower = props.globals.getNode("controls/engines/engine[0]/blower");
 var lowblower = 0.7;
 var manpress = props.globals.getNode("engines/engine[0]/mp-osi");
 
+
 var init = func {
 
   if (getprop("/controls/engines/engine[0]/on-startup-running") == 1) {
@@ -69,14 +70,14 @@ var main_loop = func {
 
   if (getprop("/controls/engines/engine[0]/prop-auto") == 1) {  
 
-    ppitch = getprop("/controls/engines/engine[0]/propeller-pitch");
+    ppitch = getprop("/controls/engines/engine[0]/propeller-adjust");
     mpress = getprop("/engines/engine/mp-osi");  
 
       if (revs / mpress < 68.0)  {
-          setprop("/controls/engines/engine[0]/propeller-pitch", ppitch + 0.003);
+          setprop("/controls/engines/engine[0]/propeller-adjust", ppitch + 0.003);
           }
       if (revs / mpress > 68.0)  {
-          setprop("/controls/engines/engine[0]/propeller-pitch", ppitch - 0.003);
+          setprop("/controls/engines/engine[0]/propeller-adjust", ppitch - 0.003);
           }
     
 ### kill engine when overreved
@@ -95,14 +96,17 @@ var main_loop = func {
     setprop("/engines/engine[0]/rev-strain", rstrain + strain);
   }
   
-### check fuel state for reserve light
+### check fuel state for reserve light and 
 
-			if (getprop ("consumables/fuel/total-fuel-norm") < 0.2 ) {
+			if (getprop ("consumables/fuel/tank[0]/level-norm") < 0.2 ) {
 					setprop ("consumables/fuel/on-reserve", 1);
 			} else {
 					if (getprop ("consumables/fuel/on-reserve") == 1 ) {
 							setprop ("consumables/fuel/on-reserve", 0);
 					}
+			}
+			if (getprop ("consumables/fuel/tank[1]/level-norm") < 0.1 and ("consumables/fuel/tank[1]/selected") == 1 ) {
+					setprop ("consumables/fuel/tank[1]/selected", 0 );
 			}
 
 ### coolant temp
@@ -231,26 +235,29 @@ var fire_wgr = func {
  }
 }
 
-var drop_bomb = func {
- if (getprop("/controls/armament/master-arm") == 1)  {
-  rcount=getprop("/sim/weight[0]/weight-lb");
-  if(rcount > 49){
-     setprop("/controls/armament/station/release-all", 1);
-     setprop("/sim/weight[0]/selected","none");
-     } 
- }
+var jett_center_stores = func {
+		var center_load = getprop("sim/weight[0]/selected");
+		print (center_load);
+		if (center_load == "Droptank") {
+			 print ("dropping tank");
+   	   setprop("/controls/armament/station/release-tank", 1);
+  	   setprop("/sim/weight[0]/selected","none");
+ 	     setprop("/consumables/fuel/tank[1]/selected",0);
+ 	     setprop("/consumables/fuel/tank[1]/level-gal_us",0);
+   		 setprop("/consumables/fuel/tank[1]/level-lbs",0);
+   		 setprop("/consumables/fuel/tank[1]/capacity-gal_us",0);
+		} 
+		if (center_load != "none") {
+				print ("dropping everything else");
+				setprop("/controls/armament/station/release", 1);
+		}
 }
 
 
 var drop_tank = func {
   rcount=getprop("/sim/weight[0]/weight-lb");
   if(rcount > 49){
-     setprop("/controls/armament/station/release-tank", 1);
-     setprop("/sim/weight[0]/selected","none");
-     setprop("/consumables/fuel/tank[1]/selected",0);
-    setprop("/consumables/fuel/tank[1]/level-gal_us",0);
-    setprop("/consumables/fuel/tank[1]/level-lbs",0);
-    setprop("/consumables/fuel/tank[1]/capacity-gal_us",0);
+
      } 
  }
 
@@ -291,7 +298,7 @@ var magicstart = func {
     setprop("/controls/engines/engine[0]/magnetos",3);
     setprop("/controls/engines/engine[0]/coolflap-auto",1);
     setprop("/controls/engines/engine[0]/radlever",1);
-    setprop("/controls/engines/engine[0]/propeller-pitch",0.5);
+    setprop("/controls/engines/engine[0]/propeller-adjust",0.5);
     setprop("/engines/engine[0]/oil-visc",1);
     setprop("/engines/engine[0]/rpm",800);
     setprop("/engines/engine[0]/engine-running",1);
@@ -352,6 +359,23 @@ var magicstart = func {
       		open_coolflaps();
    		 };
    },1);
+
+    setlistener("sim/weight[0]/selected", func(n) {
+	pos4=n.getValue();
+	dropped = getprop("controls/armament/station[0]/release");
+#	print (dropped , pos4 );
+		if (pos4 !="none") {
+				if ( pos4 != "Droptank") {
+					setprop ("controls/armament/fuse-control", 1);
+				}
+				if (dropped == 0 ) { 
+		        if(pos4 == "Droptank"){
+								setprop ("consumables/fuel/tank[1]/level-gal_us",86);						
+						}
+				}
+    };
+   },0,0);
+
 
 setlistener("/sim/signals/fdm-initialized",init);
 

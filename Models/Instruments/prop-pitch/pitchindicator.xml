@@ -20,7 +20,7 @@
  <animation>
   <type>rotate</type>
   <object-name>HourHand</object-name>
-  <property>/controls/engines/engine[0]/propeller-pitch</property>
+  <property>/controls/engines/engine[0]/propeller-adjust</property>
   <factor>120.0</factor>
   <axis>
    <x>-1</x>
@@ -32,7 +32,7 @@
  <animation>
   <type>rotate</type>
   <object-name>MinuteHand</object-name>
-  <property>/controls/engines/engine[0]/propeller-pitch</property>
+  <property>/controls/engines/engine[0]/propeller-adjust</property>
   <factor>1440.0</factor>
   <axis>
    <x>-1</x>

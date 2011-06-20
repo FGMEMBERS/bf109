@@ -43,7 +43,7 @@
 
   <submodel>
     <name>Hispano MkV impact smoke</name>
-    <model>Aircraft/bf109/Models/impact.xml</model>
+    <model>Aircraft/bf109/Models/Effects/incendiary.xml</model>
     <!--<trigger>ai/submodels/trigger</trigger>-->
     <speed>0</speed>
     <repeat>true</repeat>

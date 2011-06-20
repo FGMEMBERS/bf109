@@ -20,7 +20,30 @@ February 2006,  Detlef Faber
   
   <flight-model>yasim</flight-model>
   <aero>bf109g-yasim</aero>
-
+	<failure-manager>
+			<controls-failure-drag type="double">1.0</controls-failure-drag>
+			<controls-failure-roll type="double">0.7</controls-failure-roll>
+			<engines>
+					<engine n="0">
+						<propstrike type="bool">false</propstrike>
+						<propstrike-force type="float">0</propstrike-force>
+					</engine>
+			</engines>
+			<flaps type="bool">false</flaps>
+			<left-wing-torn type="bool">false</left-wing-torn>
+			<right-wing-torn type="bool">false</right-wing-torn>
+			<gear>
+					<gear n="0">
+							<jammed type="bool">false</jammed>
+					</gear>
+					<gear n="1">
+							<jammed type="bool">false</jammed>
+					</gear>
+					<gear n="2">
+							<jammed type="bool">false</jammed>
+					</gear>
+			</gear>
+	</failure-manager>
   <systems>
    <electrical>
     <path>Aircraft/Generic/generic-electrical.xml</path>
@@ -39,10 +62,6 @@ February 2006,  Detlef Faber
     <path>Aircraft/bf109/Models/submodels.xml</path>
   </submodels>
 
-  <panel>
-  <path>Aircraft/Generic/Panels/generic-vfr-panel.xml</path>
-  <visibility>false</visibility>
-  </panel>
 
   <model>
    <path>Aircraft/bf109/Models/Bf-109g.xml</path>
@@ -124,44 +143,49 @@ February 2006,  Detlef Faber
    <config>
     <x-offset-m archive="y" type="double">0.0</x-offset-m>
     <y-offset-m archive="y" type="double">0.65</y-offset-m>
-    <z-offset-m archive="y" type="double">3.75</z-offset-m>
+    <z-offset-m archive="y" type="double">0.751</z-offset-m>
     <pitch-offset-deg>-7.5</pitch-offset-deg>
    </config>
   </view>
 
   <view n="1">
    <config>
-    <target-z-offset-m archive="y" type="double">3.349</target-z-offset-m>
+    <target-z-offset-m archive="y" type="double">0.35</target-z-offset-m>
    </config>
   </view>
 
   <view n="2">
    <config>
-    <target-z-offset-m archive="y" type="double">3.349</target-z-offset-m>
+    <target-z-offset-m archive="y" type="double">0.35</target-z-offset-m>
    </config>
   </view>
 
   <view n="3">
    <config>
-    <target-z-offset-m archive="y" type="double">3.349</target-z-offset-m>
+    <target-z-offset-m archive="y" type="double">0.35</target-z-offset-m>
    </config>
   </view>
 
   <view n="4">
    <config>
-    <target-z-offset-m archive="y" type="double">3.349</target-z-offset-m>
+    <target-z-offset-m archive="y" type="double">0.35</target-z-offset-m>
    </config>
   </view>
 
   <view n="5">
    <config>
-    <target-z-offset-m archive="y" type="double">3.349</target-z-offset-m>
+    <target-z-offset-m archive="y" type="double">0.35</target-z-offset-m>
    </config>
   </view>
 
   <view n="6">
    <config>
-    <target-z-offset-m archive="y" type="double">3.349</target-z-offset-m>
+    <target-z-offset-m archive="y" type="double">0.35</target-z-offset-m>
+   </config>
+  </view>
+  <view n="7">
+   <config>
+    <target-z-offset-m archive="y" type="double">0.35</target-z-offset-m>
    </config>
   </view>
 
@@ -259,13 +283,26 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
       <tank>1</tank>
       <weight-lb>0</weight-lb>
       <selected>none</selected>
-      <opt><name>none</name><lbs>0</lbs></opt>
-      <opt><name>Droptank</name>
-      <lbs>50.0</lbs>
-	<gals>86</gals>
+      <opt>
+					<name>none</name>
+					<lbs>0</lbs>
+			</opt>
+      <opt>
+					<name>Droptank</name>
+		      <lbs>50.0</lbs>
+					<gals>86</gals>
       </opt>
-      <opt><name>SC250 Bomb</name>
-      <lbs>552.0</lbs>
+      <opt>
+					<name>SC250 Bomb</name>
+		      <lbs>552.0</lbs>
+      </opt>
+      <opt>
+					<name>BC250 Bomb</name>
+		      <lbs>552.0</lbs>
+      </opt>
+      <opt>
+					<name>NC250 Bomb</name>
+		      <lbs>552.0</lbs>
       </opt>
   </weight>
 
@@ -366,6 +403,22 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
 
  <!-- set up control properties for YASim -->
  <controls>
+	 <armament>
+				<fuse-control type ="bool">false</fuse-control>
+				<gun n="0">
+						<serviceable type="bool">true</serviceable>
+						<fire type="bool">false</fire>
+				</gun>
+		<revi>
+			<shadeup type="bool">false</shadeup>
+		</revi>
+		<station n="0">
+				<fused type="bool">false</fused>
+				<fuse-type type="int">2</fuse-type>
+				<release type="bool">false</release>
+		</station>
+      <trigger type="bool">false</trigger>
+	 </armament>
 	 <canopy>
 			<jetthandle-pulled type="bool">false</jetthandle-pulled>
 			<release type="bool">false</release>
@@ -377,6 +430,7 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
         <boost type="float">0.7</boost>
 				<blower type="int">0</blower>
         <prop-auto type="bool">false</prop-auto>
+				<prop-adjust type="float">1.0</prop-adjust>
 				<fueldump-pulled type="bool">false</fueldump-pulled>
         <primer type="double">0.0</primer>
         <primer-pressed type="bool">0.0</primer-pressed>
@@ -389,18 +443,18 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
    </engines>
 
    <gear>
+			<gear n="0">
+					<gear-down type="bool">true</gear-down>
+			</gear>
+			<gear n="1">
+					<gear-down type="bool">true</gear-down>
+			</gear>
       <tailwheel-lock>true</tailwheel-lock>
       <bellybrake type="float">1.0</bellybrake>
 			<emergency-extension type="bool">false</emergency-extension>
 			<emergency-extension-pulled type="bool">false</emergency-extension-pulled>
    </gear>
 
-   <armament>
-		<revi>
-			<shadeup type="bool">false</shadeup>
-		</revi>
-      <trigger type="bool">false</trigger>
-   </armament>
    <!-- The Bf 109 has no aileron or rudder trim controls -->
    <flight>
       <aileron-trim>0.045</aileron-trim>
@@ -421,6 +475,7 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
 
 
  </controls>
+
  <!-- Map Keys -->
  <input>
     <keyboard>
@@ -457,6 +512,31 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
           <script>bf109.toggle_revi()</script>
         </binding>
       </key>
+
+		  <key n="110">
+ 		 	 <name>n</name>
+ 			 <desc>Propeller Finer</desc>
+ 			 <repeatable type="bool">true</repeatable>
+		   <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[0]/propeller-adjust</property>
+          <step type="double">0.01</step>
+          <min type="double">0</min>
+          <max type="double">1</max>
+  		 </binding>
+ 			</key>
+ 			<key n="78">
+  			<name>N</name>
+  			<desc>Propeller Coarser</desc>
+  			<repeatable type="bool">true</repeatable>
+  			<binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[0]/propeller-adjust</property>
+          <step type="double">-0.01</step>
+          <min type="double">0</min>
+          <max type="double">1</max>
+  			</binding>
+ 			</key>
 
       <key n="4">
         <name>Ctrl-d</name>
@@ -523,7 +603,7 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
         <desc>drop Center Load</desc>
         <binding>
           <command>nasal</command>
-          <script>bf109.drop_bomb()</script>
+          <script>weapons.drop_bomb()</script>
         </binding>
       </key>  
       <key n="102">
@@ -564,8 +644,12 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
     <bf109>
       <file>Aircraft/bf109/Nasal/bf109.nas</file>
     </bf109>
-
-
+		<weapons>
+				<file>Aircraft/bf109/Nasal/weapons.nas</file>
+		</weapons>
+		<failure>
+			<file>Aircraft/bf109/Nasal/failure.nas</file>
+		</failure>
   </nasal>
 
 

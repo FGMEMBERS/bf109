@@ -1,14 +1,14 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
-MATERIAL "trail" rgb 0.325583 0.338106 0.325583 amb 0 0 0 emis 0.433333 0.433333 0.433333 spec 0 0 0 shi 0 trans 0.250449
-MATERIAL "red" rgb 0.824686 0.601077 0.538465 amb 0 0 0 emis 0.433333 0.433333 0.433333 spec 1 1 1 shi 0 trans 0.363151
+MATERIAL "trail" rgb 0.325583 0.338106 0.325583 amb 0.325583 0.338106 0.325583 emis 0.433333 0.433333 0.433333 spec 0 0 0 shi 0 trans 0.250449
+MATERIAL "red" rgb 0.824686 0.601077 0.538465 amb 0.824686 0.601077 0.538465 emis 0.433333 0.433333 0.433333 spec 1 1 1 shi 0 trans 0.363151
 OBJECT world
 kids 2
 OBJECT poly
 name "trail"
 data 8
 Mesh.001
-texture "puff.rgb"
+texture "puff.png"
 texrep 1 1
 crease 30
 numvert 14

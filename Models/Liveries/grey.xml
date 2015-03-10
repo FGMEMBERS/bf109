@@ -8,13 +8,13 @@
 
 	<material>
 			 <cowlunderside>
-			   <texture>Liveries/special.png</texture>
+			   <texture>Liveries/bf109-1e.png</texture>
 			 </cowlunderside>
          <fuselage>
            <texture>Liveries/bf109-1e.png</texture>
          </fuselage>
          <fwdband>
-          <texture>Liveries/special.png</texture>
+          <texture>Liveries/bf109-1e.png</texture>
          </fwdband>
 				 <prophub>
           <texture>Liveries/bf109-1e.png</texture>
@@ -49,7 +49,7 @@
 
          </rearband>
 				 <rudder>
-          <texture>Liveries/special.png</texture>		
+          <texture>Liveries/bf109-1e.png</texture>		
 				 </rudder>
          <wingtip>
           <texture>Liveries/bf109-1e.png</texture>		

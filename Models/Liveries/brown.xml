@@ -14,7 +14,7 @@
            <texture>Liveries/bf109-1c.png</texture>
          </fuselage>
          <fwdband>
-          <texture>Liveries/special.png</texture>
+          <texture>Liveries/bf109-1c.png</texture>
          </fwdband>
 				 <prophub>
           <texture>Liveries/bf109-1c.png</texture>
@@ -52,7 +52,7 @@
           <texture>Liveries/bf109-1c.png</texture>		
 				 </rudder>
          <wingtip>
-          <texture>Liveries/special.png</texture>		
+          <texture>Liveries/bf109-1c.png</texture>		
          </wingtip>
 	</material>
    </livery>

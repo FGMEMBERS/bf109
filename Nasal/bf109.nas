@@ -388,4 +388,4 @@ aircraft.light.new("sim/model/bf109/lighting/flash-f", [0.05, 0.052], flash1_tri
 
 aircraft.livery.init("Aircraft/bf109/Models/Liveries", "sim/model/livery/variant");
 
-var logo_dialog = gui.OverlaySelector.new("Select Logo", "Aircraft/Generic/Logos", "sim/model/logo/name", nil, "sim/multiplay/generic/string");
+

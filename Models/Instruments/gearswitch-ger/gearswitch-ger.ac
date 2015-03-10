@@ -1,6 +1,6 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
-MATERIAL "Material" rgb 0.8 0.8 0.8 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material" rgb 0.8 0.8 0.8 amb 0.8 0.8 0.8 emis 0 0 0 spec 1 1 1 shi 32 trans 0
 OBJECT world
 kids 3
 OBJECT group
@@ -10,7 +10,7 @@ OBJECT poly
 name "gear_in_0"
 data 10
 Circle.001
-texture "../../bf109-5.rgb"
+texture "../../bf109-5.png"
 texrep 1 1
 crease 30
 numvert 45
@@ -391,7 +391,7 @@ OBJECT poly
 name "springs"
 data 9
 Plane.003
-texture "../../bf109-5.rgb"
+texture "../../bf109-5.png"
 texrep 1 1
 crease 30
 numvert 72
@@ -700,7 +700,7 @@ OBJECT poly
 name "gear_out_0"
 data 10
 Circle.002
-texture "../../bf109-5.rgb"
+texture "../../bf109-5.png"
 texrep 1 1
 crease 30
 numvert 45

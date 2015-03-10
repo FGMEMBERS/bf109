@@ -8,7 +8,7 @@
 
 	<material>
 			 <cowlunderside>
-			   <texture>Liveries/special.png</texture>
+			   <texture>Liveries/bf109-1f.png</texture>
 			 </cowlunderside>
          <fuselage>
            <texture>Liveries/bf109-1f.png</texture>
@@ -52,7 +52,7 @@
           <texture>Liveries/bf109-1f.png</texture>		
 				 </rudder>
          <wingtip>
-          <texture>Liveries/special.png</texture>		
+          <texture>Liveries/bf109-1f.png</texture>		
          </wingtip>
 	</material>
    </livery>

@@ -6,7 +6,7 @@ OBJECT poly
 name "fpdisk"
 data 6
 Circle
-texture "fastpdisk.rgb"
+texture "fastpdisk.png"
 texrep 1 1
 crease 30
 numvert 34
@@ -434,7 +434,7 @@ OBJECT poly
 name "spdisk"
 data 10
 Circle.082
-texture "slowpdisk.rgb"
+texture "slowpdisk.png"
 texrep 1 1
 crease 30
 numvert 34

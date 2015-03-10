@@ -5,6 +5,14 @@
 <PropertyList>
 
  <path>bf109g14.ac</path>
+<nasal>
+    <load>
+      var livery_update = aircraft.livery_update.new("Aircraft/bf109/Models/Liveries", 10);
+    </load>
+    <unload>
+      livery_update.stop();
+    </unload>
+  </nasal>
  <offsets>
    <x-m>-2.999</x-m>
  </offsets>
@@ -278,7 +286,7 @@
    <z>-0.41</z>
   </axis>
  </animation>
-
+<!--
  <animation>
   <type>rotate</type>
   <object-name>canopy</object-name>
@@ -317,7 +325,7 @@
    </equals>
   </condition>
  </animation>
-
+-->
 <animation>
   <type>rotate</type>
   <object-name>rightcoolflap</object-name>
@@ -785,77 +793,5 @@
     <texture>bf109-1.png</texture>
   </animation>
 
-	<animation>
-		<type>material</type>
-		<object-name>rearband</object-name>
-		<property-base>sim/model/livery/material/rearband/colour</property-base>
-		<diffuse>
-			<red-prop>diffuse/red</red-prop>
-			<green-prop>diffuse/green</green-prop>
-			<blue-prop>diffuse/blue</blue-prop>
-		</diffuse>
-		<ambient>
-			<red-prop>ambient/red</red-prop>
-			<green-prop>ambient/green</green-prop>
-			<blue-prop>ambient/blue</blue-prop>
-		</ambient>
-		<specular>
-			<red-prop>specular/red</red-prop>
-			<green-prop>specular/green</green-prop>
-			<blue-prop>specular/blue</blue-prop>
-		</specular>
-		<emission>
-			<red-prop>emission/red</red-prop>
-			<green-prop>emission/green</green-prop>
-			<blue-prop>emission/blue</blue-prop>
-		</emission>
-		<transparency>
-			<alpha-prop>transparency/alpha</alpha-prop>
-		</transparency>
-		<shininess-prop>shininess</shininess-prop>
-	</animation>
-	<animation>
-		<type>material</type>
-		<object-name>wingtip.L</object-name>
-		<object-name>wingtip.R</object-name>
-    <property-base>sim/model/livery/material/wingtip</property-base>
-    <texture-prop>texture</texture-prop>
-    <texture>Liveries/special.png</texture>
-	</animation>
-  <animation>
-    <type>material</type>
-    <object-name>cowlunderside</object-name>
-    <property-base>sim/model/livery/material/cowlunderside</property-base>
-    <texture-prop>texture</texture-prop>
-    <texture>bf109-1.png</texture>
-  </animation>
- <animation>
-    <type>material</type>
-      <object-name>logo.L</object-name>
-      <object-name>logo.R</object-name>
-        <texture-prop>sim/model/logo/texture</texture-prop>
-  </animation>
- <animation>
-  <type>select</type>
-      <object-name>logo.L</object-name>
-  <condition>
-   <greater-than>
-    <property>sim/model/logo/display</property>
-    <value>0</value>
-   </greater-than>
-  </condition>
- </animation>
- <animation>
-  <type>select</type>
-      <object-name>logo.R</object-name>
-  <condition>
-   <greater-than>
-    <property>sim/model/logo/display</property>
-    <value>1</value>
-   </greater-than>
-  </condition>
- </animation>
-
-
-
+	
 </PropertyList>

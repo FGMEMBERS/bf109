@@ -14,12 +14,6 @@ February 2006,  Detlef Faber
   <description>Messerschmitt BF-109 G14</description>
   <author>Detlef Faber</author>
   <status>production</status>
- <rating>
-    <FDM type="int">4</FDM>
-    <systems type="int">4</systems>
-    <model type="int">4</model>
-    <cockpit type="int">5</cockpit>
-  </rating>
   <startup>
     <splash-texture>Aircraft/bf109/bf109-splash.rgb</splash-texture>
   </startup>
@@ -54,13 +48,16 @@ February 2006,  Detlef Faber
    <electrical>
     <path>Aircraft/Generic/generic-electrical.xml</path>
    </electrical>
+   <autopilot>
+        <path>Aircraft/bf109/autopilot.xml</path>
+  </autopilot>
   </systems> 
  
   <virtual-cockpit archive="y">true</virtual-cockpit>
   <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
 
   <sound>
-   <path>Aircraft/p51d/p51d-sound.xml</path>
+   <path>Aircraft/bf109/Sounds/p51d-sound.xml</path>
   </sound>
 
   <submodels> 
@@ -68,74 +65,20 @@ February 2006,  Detlef Faber
     <path>Aircraft/bf109/Models/submodels.xml</path>
   </submodels>
 
-
-  <model>
+<model>
    <path>Aircraft/bf109/Models/Bf-109g.xml</path>
    <livery>
-		 <trop type="bool">false</trop>
-     <variant type="string">Default</variant>
-     <material>
-			 <cowlunderside>
-			   <texture>Liveries/special.png</texture>
-			 </cowlunderside>
-       <fuselage>
-         <texture>bf109-1.png</texture>
-       </fuselage>
-         <fwdband>
-          <texture>Liveries/special.png</texture>
-         </fwdband>
-				 <prophub>
-          <texture>bf109-1.png</texture>
-				 </prophub>
-         <rearband>
-					<colour>
-					  <diffuse>
-					   <red>0.9</red>
-					   <green>0.0</green>
-					   <blue>0.0</blue>
-					  </diffuse>
-					  <ambient>
-			 			  <red>0.9</red>
-					   <green>0.0</green>
-					   <blue>0.0</blue>
-					  </ambient>
-					  <specular>
-					   <red>0.9</red>
-					   <green>0.0</green>
-					   <blue>0.0</blue>
-					  </specular>
-					  <emission>
-					   <red>0.0</red>
-					   <green>0.0</green>
-					   <blue>0.0</blue>
-					  </emission>
-					  <transparency>
-				   <alpha>1.0</alpha>
-					  </transparency>	
-					  <shininess>2</shininess>
-					</colour>
-
-
-         </rearband>
-				 <rudder>
-          <texture>Liveries/special.png</texture>		
-				 </rudder>
-         <wingtip>
-          <texture>Liveries/special.png</texture>		
-         </wingtip>
-     </material>
-   </livery>
-		<logo>
-			<display type="int" userarchive="y">2</display>
-			<name>FlightGear</name>
-			<texture>../../Generic/Logos/FlightGear.png</texture>
-		</logo>
-   <crew>
+     <name type="string">default</name>
+	 <texture type="string">bf109-1.png</texture>
+  </livery>
+  <crew>
       <pilot>
         <visible>1.0</visible>
       </pilot>
-   </crew>
+  </crew>
+
   </model> 
+   
 	<multiplay>
 		<generic>
 			<string/>
@@ -195,20 +138,7 @@ February 2006,  Detlef Faber
    </config>
   </view>
 
- <autopilot>
-   <config>
-     <min-climb-speed-kt type="float">70.0</min-climb-speed-kt>
-     <best-climb-speed-kt type="float">75.0</best-climb-speed-kt>
-     <target-climb-rate-fpm type="float">500.0</target-climb-rate-fpm>
-     <target-descent-rate-fpm type="float">1000.0</target-descent-rate-fpm>
-     <elevator-adj-factor type="float">4000.0</elevator-adj-factor>
-     <integral-contribution type="float">0.01</integral-contribution>
-     <zero-pitch-throttle type="float">0.45</zero-pitch-throttle>
-     <zero-pitch-trim-full-throttle type="float">0.14</zero-pitch-trim-full-throttle>
-   </config>
- </autopilot>
-
-  <hud>
+   <hud>
    <enable3d>false</enable3d>
   </hud>  
 
@@ -356,14 +286,7 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
                 <script>aircraft.livery.dialog.toggle()</script>
               </binding>
 					</item>
-				<item>
-						<label>Select Logo</label>
-              <binding>
-                <command>nasal</command>
-                <script>bf109.logo_dialog.toggle()</script>
-              </binding>
-					</item>
-			</menu>
+				</menu>
 		</default>
 	</menubar>
  </sim>

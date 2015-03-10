@@ -131,7 +131,7 @@ OBJECT poly
 name "Circle_1"
 data 10
 Circle.002
-texture "../../bf109-5.rgb"
+texture "../../bf109-5.png"
 texrep 1 1
 crease 30
 numvert 126

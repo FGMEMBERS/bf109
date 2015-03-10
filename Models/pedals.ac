@@ -1,18 +1,18 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
-MATERIAL "Material.001" rgb 0.42 0.42 0.42 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.002" rgb 0.42 0.42 0.42 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.003" rgb 0.42 0.42 0.42 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.004" rgb 0.7 0.7 0.7 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.007" rgb 0.42 0.42 0.42 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.009" rgb 0.366661 0.123977 0.123977 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.005" rgb 0.8 0.8 0.8 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.006" rgb 0.8 0.8 0.8 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.011" rgb 0.8 0.8 0.8 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.013" rgb 0.8 0.8 0.8 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.014" rgb 0.007843 0.164706 0.027451 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.016" rgb 0.007843 0.164706 0.027451 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.015" rgb 0.007843 0.164706 0.027451 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.001" rgb 0.42 0.42 0.42 amb 0.42 0.42 0.42 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.002" rgb 0.42 0.42 0.42 amb 0.42 0.42 0.42 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.003" rgb 0.42 0.42 0.42 amb 0.42 0.42 0.42 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.004" rgb 0.7 0.7 0.7 amb 0.7 0.7 0.7 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.007" rgb 0.42 0.42 0.42 amb 0.42 0.42 0.42 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.009" rgb 0.366661 0.123977 0.123977 amb 0.366661 0.123977 0.123977 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.005" rgb 0.8 0.8 0.8 amb 0.8 0.8 0.8 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.006" rgb 0.8 0.8 0.8 amb 0.8 0.8 0.8 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.011" rgb 0.8 0.8 0.8 amb 0.8 0.8 0.8 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.013" rgb 0.8 0.8 0.8 amb 0.8 0.8 0.8 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.014" rgb 0.007843 0.164706 0.027451 amb 0.007843 0.164706 0.027451 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.016" rgb 0.007843 0.164706 0.027451 amb 0.007843 0.164706 0.027451 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.015" rgb 0.007843 0.164706 0.027451 amb 0.007843 0.164706 0.027451 emis 0 0 0 spec 1 1 1 shi 32 trans 0
 OBJECT world
 kids 5
 OBJECT poly

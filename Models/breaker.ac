@@ -1,14 +1,14 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
-MATERIAL "Material.004" rgb 0.8 0.8 0.8 amb 1 1 1 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.006" rgb 0.56 0.56 0.56 amb 1 1 1 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.007" rgb 0.42 0.42 0.42 amb 1 1 1 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.001" rgb 0.8 0.8 0.8 amb 1 1 1 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "interiour.001" rgb 0.536774 0.535423 0.535423 amb 1 1 1 emis 0 0 0 spec 0.398923 0.361356 0.350628 shi 32 trans 0
+MATERIAL "Material.004" rgb 0.8 0.8 0.8 amb 0.8 0.8 0.8 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.006" rgb 0.56 0.56 0.56 amb 0.56 0.56 0.56 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.007" rgb 0.42 0.42 0.42 amb 0.42 0.42 0.42 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.001" rgb 0.8 0.8 0.8 amb 0.8 0.8 0.8 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "interiour.001" rgb 0.536774 0.535423 0.535423 amb 0.536774 0.535423 0.535423 emis 0 0 0 spec 0.398923 0.361356 0.350628 shi 32 trans 0
 MATERIAL "DefaultWhite.004" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 64 trans 0
-MATERIAL "Material.002" rgb 0 0 0 amb 1 1 1 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.003" rgb 0.930747 0.081292 0.081292 amb 1 1 1 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "black" rgb 0.2 0.2 0.2 amb 1 1 1 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.002" rgb 0 0 0 amb 0 0 0 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.003" rgb 0.930747 0.081292 0.081292 amb 0.930747 0.081292 0.081292 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "black" rgb 0.2 0.2 0.2 amb 0.2 0.2 0.2 emis 0 0 0 spec 1 1 1 shi 32 trans 0
 MATERIAL "DefaultWhite.001" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 64 trans 0
 OBJECT world
 kids 30
@@ -3913,7 +3913,7 @@ OBJECT poly
 name "rightpanel_0"
 data 12
 fuselage.004
-texture "bf109-5.rgb"
+texture "bf109-5.png"
 texrep 1 1
 crease 30.000000
 numvert 16

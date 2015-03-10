@@ -1,21 +1,21 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
-MATERIAL "interiour" rgb 0.37 0.56 0.61 amb 1 1 1 emis 0 0 0 spec 0.398923 0.361356 0.350628 shi 32 trans 0
+MATERIAL "interiour" rgb 0.37 0.56 0.61 amb 0.37 0.56 0.61 emis 0 0 0 spec 0.398923 0.361356 0.350628 shi 32 trans 0
 MATERIAL "Material.004" rgb 0.42 0.42 0.42 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.005" rgb 0.37 0.56 0.61 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "DefaultWhite.001" rgb 0.56 0.56 0.56 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 64 trans 0
-MATERIAL "Material.025" rgb 0.37 0.56 0.61 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.008" rgb 0.37 0.56 0.61 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.010" rgb 0.37 0.56 0.61 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.003" rgb 0.37 0.56 0.61 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.001" rgb 0.7 0.7 0.7 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.002" rgb 0.509303 0.129321 0.02467 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.026" rgb 0.37 0.56 0.61 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.027" rgb 0.37 0.56 0.61 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.028" rgb 0.37 0.56 0.61 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.029" rgb 0.052159 0.025738 0.956681 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.030" rgb 0.37 0.56 0.61 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.031" rgb 0.37 0.56 0.61 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.005" rgb 0.37 0.56 0.61 amb 0.37 0.56 0.61 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "DefaultWhite.001" rgb 0.56 0.56 0.56 amb 0.56 0.56 0.56 emis 0 0 0 spec 0.5 0.5 0.5 shi 64 trans 0
+MATERIAL "Material.025" rgb 0.37 0.56 0.61 amb 0.37 0.56 0.61 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.008" rgb 0.37 0.56 0.61 amb 0.37 0.56 0.61 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.010" rgb 0.37 0.56 0.61 amb 0.37 0.56 0.61 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.003" rgb 0.37 0.56 0.61 amb 0.37 0.56 0.61 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.001" rgb 0.7 0.7 0.7 amb 0.7 0.7 0.7 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.002" rgb 0.509303 0.129321 0.02467 amb 0.509303 0.129321 0.02467 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.026" rgb 0.37 0.56 0.61 amb 0.37 0.56 0.61 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.027" rgb 0.37 0.56 0.61 amb 0.37 0.56 0.61 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.028" rgb 0.37 0.56 0.61 amb 0.37 0.56 0.61 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.029" rgb 0.052159 0.025738 0.956681 amb 0.052159 0.025738 0.956681 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.030" rgb 0.37 0.56 0.61 amb 0.37 0.56 0.61 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.031" rgb 0.37 0.56 0.61 amb 0.37 0.56 0.61 emis 0 0 0 spec 1 1 1 shi 32 trans 0
 OBJECT world
 kids 51
 OBJECT group
@@ -25,7 +25,7 @@ OBJECT poly
 name "rightpanel_0"
 data 12
 fuselage.006
-texture "bf109-5.rgb"
+texture "bf109-5.png"
 texrep 1 1
 crease 30.000000
 numvert 36

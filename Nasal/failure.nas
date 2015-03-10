@@ -1,9 +1,9 @@
 var emptyw = 6502;
 var breakload = 9;
-var breakspeed = 415;
-var bendload = 7;
+var breakspeed = 495;
+var bendload = 8;
 var looptime = 0.2;
-var flapoverspeed= 195;
+var flapoverspeed= 250;
 var airspeed = props.globals.getNode("velocities/airspeed-kt");
 var gload = props.globals.getNode("accelerations/pilot-g",1);
 var weight = props.globals.getNode("yasim/gross-weight-lbs",1);
@@ -50,8 +50,8 @@ var check_airframe = func {
 						print ("flaps overspeed!");
 						var load = as - flapoverspeed;
 						print (load*flappos.getValue());
-						if (load * flappos.getValue() > 20 ) {
-								if (flappos.getValue() >= 0.5 ) {
+						if (load * flappos.getValue() > 30 ) {
+								if (flappos.getValue() >= 0.6 ) {
 										flappos.setValue(0);
 										flappos.setAttribute("writable",0);
 										setprop ("/sim/failure-manager/flaps", "1");

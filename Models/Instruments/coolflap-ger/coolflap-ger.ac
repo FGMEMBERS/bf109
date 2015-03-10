@@ -1,8 +1,8 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
-MATERIAL "Material.002" rgb 0.14 0.14 0.14 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "lever" rgb 0.454379 0.479066 0.503753 amb 0.5 0.5 0.5 emis 0 0 0 spec 0.975313 0.925938 1 shi 32 trans 0
-MATERIAL "DefaultWhite.002" rgb 0.42 0.42 0.42 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 64 trans 0
+MATERIAL "Material.002" rgb 0.14 0.14 0.14 amb 0.14 0.14 0.14 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "lever" rgb 0.454379 0.479066 0.503753 amb 0.454379 0.479066 0.503753 emis 0 0 0 spec 0.975313 0.925938 1 shi 32 trans 0
+MATERIAL "DefaultWhite.002" rgb 0.42 0.42 0.42 amb 0.42 0.42 0.42 emis 0 0 0 spec 0.5 0.5 0.5 shi 64 trans 0
 OBJECT world
 kids 6
 OBJECT poly
@@ -691,7 +691,7 @@ OBJECT poly
 name "Cylinder.001"
 data 12
 Cylinder.001
-texture "coolflap.rgb"
+texture "coolflap.png"
 texrep 1 1
 crease 30.000000
 numvert 8

@@ -1,9 +1,9 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
-MATERIAL "screw" rgb 0.631263 0.666888 0.692512 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 64 trans 0
-MATERIAL "plastic" rgb 0.199123 0.224168 0.199342 amb 1 1 1 emis 0 0 0 spec 1 1 1 shi 33 trans 0
-MATERIAL "redlight" rgb 0.950198 0.046026 0.046026 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "interiour" rgb 0.298023 0.33437 0.397199 amb 1 1 1 emis 0 0 0 spec 0.336094 0.487014 0.589379 shi 32 trans 0
+MATERIAL "screw" rgb 0.631263 0.666888 0.692512 amb 0.631263 0.666888 0.692512 emis 0 0 0 spec 0.5 0.5 0.5 shi 64 trans 0
+MATERIAL "plastic" rgb 0.199123 0.224168 0.199342 amb 0.199123 0.224168 0.199342 emis 0 0 0 spec 1 1 1 shi 33 trans 0
+MATERIAL "redlight" rgb 0.950198 0.046026 0.046026 amb 0.950198 0.046026 0.046026 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "interiour" rgb 0.298023 0.33437 0.397199 amb 0.298023 0.33437 0.397199 emis 0 0 0 spec 0.336094 0.487014 0.589379 shi 32 trans 0
 OBJECT world
 kids 5
 OBJECT poly

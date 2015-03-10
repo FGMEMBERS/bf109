@@ -1,13 +1,13 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
-MATERIAL "smoke" rgb 0.974892 0.811692 0.235077 amb 0.5 0.5 0.5 emis 0.926098 0.926098 0.926098 spec 1 0.824246 0.577477 shi 113 trans 0.376615
+MATERIAL "smoke" rgb 0.974892 0.811692 0.235077 amb 0.974892 0.811692 0.235077 emis 0.926098 0.926098 0.926098 spec 1 0.824246 0.577477 shi 113 trans 0.376615
 OBJECT world
 kids 1
 OBJECT poly
 name "smoke"
 data 6
 Sphere
-texture "blaze.rgb"
+texture "blaze.png"
 texrep 1 1
 crease 30
 numvert 13

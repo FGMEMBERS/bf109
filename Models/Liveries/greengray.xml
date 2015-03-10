@@ -8,7 +8,7 @@
 
 	<material>
 			 <cowlunderside>
-			   <texture>Liveries/special.png</texture>
+			   <texture>Liveries/bf109-1b.png</texture>
 			 </cowlunderside>
          <fuselage>
            <texture>Liveries/bf109-1b.png</texture>

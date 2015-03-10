@@ -65,7 +65,7 @@ OBJECT poly
 name "quadrant_1"
 data 9
 Plane.001
-texture "../../bf109-5.rgb"
+texture "../../bf109-5.png"
 texrep 1 1
 crease 30.000000
 numvert 66
@@ -515,7 +515,7 @@ OBJECT poly
 name "Circle"
 data 6
 Circle
-texture "../../bf109-5.rgb"
+texture "../../bf109-5.png"
 texrep 1 1
 crease 30.000000
 numvert 49
@@ -898,7 +898,7 @@ OBJECT poly
 name "cutoff"
 data 8
 Cube.004
-texture "../../bf109-5.rgb"
+texture "../../bf109-5.png"
 texrep 1 1
 crease 30.000000
 numvert 42
@@ -1394,7 +1394,7 @@ OBJECT poly
 name "lever3"
 data 6
 lever3
-texture "../../bf109-5.rgb"
+texture "../../bf109-5.png"
 texrep 1 1
 crease 30.000000
 numvert 42
@@ -1852,7 +1852,7 @@ OBJECT poly
 name "propauto"
 data 9
 Plane.002
-texture "../../bf109-5.rgb"
+texture "../../bf109-5.png"
 texrep 1 1
 crease 30.000000
 numvert 12
@@ -1944,7 +1944,7 @@ OBJECT poly
 name "throttle"
 data 8
 Cube.002
-texture "../../bf109-5.rgb"
+texture "../../bf109-5.png"
 texrep 1 1
 crease 30.000000
 numvert 59

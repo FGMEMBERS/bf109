@@ -1,12 +1,12 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
 MATERIAL "DefaultWhite.001" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 64 trans 0
-MATERIAL "Material.003" rgb 0.288856 0.165418 0.103889 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.002" rgb 0 0 0 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.001" rgb 0.415686 0.415686 0.415686 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "crosshair" rgb 0.003974 0 0.016412 amb 0.5 0.5 0.5 emis 0.704335 0.704335 0.704335 spec 1 1 1 shi 32 trans 0.074627
-MATERIAL "lens2" rgb 0.8 0.8 0.8 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0.758712
-MATERIAL "lens1" rgb 0.414425 0.302484 0.202981 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0.733836
+MATERIAL "Material.003" rgb 0.288856 0.165418 0.103889 amb 0.288856 0.165418 0.103889 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.002" rgb 0 0 0 amb 0 0 0 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.001" rgb 0.415686 0.415686 0.415686 amb 0.415686 0.415686 0.415686 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "crosshair" rgb 0.003974 0 0.016412 amb 0.003974 0 0.016412 emis 0.704335 0.704335 0.704335 spec 1 1 1 shi 32 trans 0.074627
+MATERIAL "lens2" rgb 0.8 0.8 0.8 amb 0.8 0.8 0.8 emis 0 0 0 spec 1 1 1 shi 32 trans 0.758712
+MATERIAL "lens1" rgb 0.414425 0.302484 0.202981 amb 0.414425 0.302484 0.202981 emis 0 0 0 spec 1 1 1 shi 32 trans 0.733836
 OBJECT world
 kids 6
 OBJECT group
@@ -47137,7 +47137,7 @@ OBJECT poly
 name "casing.001_1_1"
 data 8
 Cube.001
-texture "../../bf109-5.rgb"
+texture "../../bf109-5.png"
 texrep 1 1
 crease 30.000000
 numvert 4934
@@ -86017,7 +86017,7 @@ OBJECT poly
 name "crosshair"
 data 8
 Cube.004
-texture "cross.rgb"
+texture "cross.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -86038,7 +86038,7 @@ OBJECT poly
 name "fixture"
 data 8
 Cube.003
-texture "../../bf109-5.rgb"
+texture "../../bf109-5.png"
 texrep 1 1
 crease 30.000000
 numvert 35
@@ -86386,7 +86386,7 @@ OBJECT poly
 name "plate"
 data 8
 Cube.005
-texture "../../bf109-5.rgb"
+texture "../../bf109-5.png"
 texrep 1 1
 crease 30.000000
 numvert 27

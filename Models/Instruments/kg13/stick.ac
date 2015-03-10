@@ -1,10 +1,10 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
-MATERIAL "interiour" rgb 0.536774 0.535423 0.535423 amb 1 1 1 emis 0 0 0 spec 0.398923 0.361356 0.350628 shi 32 trans 0
-MATERIAL "Material.004" rgb 0.963165 0.027919 0.027919 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.001" rgb 0.8 0.8 0.8 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.002" rgb 0.950198 0.046026 0.046026 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material.003" rgb 0.8 0.8 0.8 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "interiour" rgb 0.536774 0.535423 0.535423 amb 0.536774 0.535423 0.535423 emis 0 0 0 spec 0.398923 0.361356 0.350628 shi 32 trans 0
+MATERIAL "Material.004" rgb 0.963165 0.027919 0.027919 amb 0.963165 0.027919 0.027919 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.001" rgb 0.8 0.8 0.8 amb 0.8 0.8 0.8 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.002" rgb 0.950198 0.046026 0.046026 amb 0.950198 0.046026 0.046026 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material.003" rgb 0.8 0.8 0.8 amb 0.8 0.8 0.8 emis 0 0 0 spec 1 1 1 shi 32 trans 0
 OBJECT world
 kids 1
 OBJECT group
@@ -26,7 +26,7 @@ OBJECT poly
 name "Stick"
 data 8
 fuselage
-texture "../../bf109-5.rgb"
+texture "../../bf109-5.png"
 texrep 1 1
 crease 30.000000
 numvert 1451
@@ -13215,7 +13215,7 @@ OBJECT poly
 name "trigger"
 data 12
 fuselage.003
-texture "../../bf109-5.rgb"
+texture "../../bf109-5.png"
 texrep 1 1
 crease 30.000000
 numvert 246

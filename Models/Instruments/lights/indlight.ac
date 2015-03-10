@@ -1,8 +1,8 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
-MATERIAL "case.001" rgb 0.199123 0.224168 0.199342 amb 1 1 1 emis 0 0 0 spec 1 1 1 shi 33 trans 0
-MATERIAL "case" rgb 0.099821 0.124865 0.124865 amb 1 1 1 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Material" rgb 0.824826 0.905683 1 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "case.001" rgb 0.199123 0.224168 0.199342 amb 0.199123 0.224168 0.199342 emis 0 0 0 spec 1 1 1 shi 33 trans 0
+MATERIAL "case" rgb 0.099821 0.124865 0.124865 amb 0.099821 0.124865 0.124865 emis 0 0 0 spec 1 1 1 shi 32 trans 0
+MATERIAL "Material" rgb 0.824826 0.905683 1 amb 0.824826 0.905683 1 emis 0 0 0 spec 1 1 1 shi 32 trans 0
 OBJECT world
 kids 3
 OBJECT poly

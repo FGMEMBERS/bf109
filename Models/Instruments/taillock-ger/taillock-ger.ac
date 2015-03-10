@@ -110,7 +110,7 @@ OBJECT poly
 name "lever_1"
 data 12
 Cylinder.002
-texture "../../bf109-5.rgb"
+texture "../../bf109-5.png"
 texrep 1 1
 crease 30
 numvert 39
@@ -454,7 +454,7 @@ OBJECT poly
 name "tube"
 data 12
 Cylinder.001
-texture "../../bf109-5.rgb"
+texture "../../bf109-5.png"
 texrep 1 1
 crease 30
 numvert 63

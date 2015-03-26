@@ -446,7 +446,7 @@
  </model>
 
 <model>
-  <path>Aircraft/bf109/Models/Instruments/simpleclock/simpleclock-ger.xml</path>
+  <path>Aircraft/bf109/Models/Instruments/simpleclock-ger/simpleclock-ger.xml</path>
   <offsets>
    <x-m>2.975</x-m>
    <y-m>-0.05</y-m>

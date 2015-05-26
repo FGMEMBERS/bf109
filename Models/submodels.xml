@@ -53,7 +53,7 @@
 
   <submodel>
     <name>left-tracer</name>
-    <model>Aircraft/spitfireIX/Models/Effects/tracer.xml</model>
+    <model>Aircraft/bf109/Models/Effects/tracer.xml</model>
     <trigger>controls/armament/gun[0]/tracer0</trigger>
     <speed>2460.0</speed>
     <repeat>true</repeat>

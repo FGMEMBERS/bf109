@@ -21,7 +21,7 @@ February 2006,  Detlef Faber
     <cockpit type="int">5</cockpit>
   </rating>
   <startup>
-    <splash-texture>Aircraft/bf109/bf109-splash.rgb</splash-texture>
+    <splash-texture>Aircraft/bf109/bf109-splash.png</splash-texture>
   </startup>
   
   <flight-model>yasim</flight-model>

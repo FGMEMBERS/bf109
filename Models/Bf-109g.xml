@@ -1,13 +1,97 @@
 <?xml version="1.0"?>
 
-<!-- Messerschmitt Bf 109 G14 by Detlef Faber -->
-
 <PropertyList>
 
  <path>bf109g14.ac</path>
  <offsets>
    <x-m>-2.999</x-m>
  </offsets>
+  <nasal>
+    <load>
+      var update = aircraft.overlay_update.new();
+      update.add("Aircraft/bf109/Models/Liveries", "sim/model/livery/file");
+
+				var self = cmdarg();
+		#	var pilot_node = self.getNode("sim/model/crew/pilot");
+		#	io.read_properties("Aircraft/F-86/Models/Human/fighterpilot50_pose.xml", pilot_node);
+
+      var target_in = self.getNode("sim/multiplay/generic/string[1]", 1);
+      var pylon0_in = self.getNode("sim/multiplay/generic/int[0]", 1);
+      var pylon1_in = self.getNode("sim/multiplay/generic/int[1]", 1);
+      var pylon2_in = self.getNode("sim/multiplay/generic/int[2]", 1);
+
+			var failure_in = self.getNode("sim/multiplay/generic/int[10]", 1);
+
+			var pylon0_out = self.getNode("sim/armament/pylon[0]/type",1);
+			var pylon1_out = self.getNode("sim/armament/pylon[1]/type",1);
+			var pylon2_out = self.getNode("sim/armament/pylon[2]/type",1);
+
+			var failure_out = self.getNode("sim/failure-manager/fail-type", 1);
+
+
+			var hitcount = self.getNode("hitcount",1);
+			var MPmodel = self.getNode("sim/model/MPmodel",1);
+			MPmodel.setValue(1);
+			var hit_x = self.getNode("combat/hit/hit_x",1);
+			var hit_y = self.getNode("combat/hit/hit_y",1);
+			var hit_z = self.getNode("combat/hit/hit_z",1);
+
+			hitcount.setValue(0);
+      var hitcount_in = self.getNode("sim/multiplay/generic/float[0]", 1);
+      var hitx_in = self.getNode("sim/multiplay/generic/float[1]", 1);
+      var hity_in = self.getNode("sim/multiplay/generic/float[2]", 1);
+      var hitz_in = self.getNode("sim/multiplay/generic/float[3]", 1);
+			
+			var combat = self.getNode("combat",1);
+			combat.setValue("true");
+			var size = self.getNode("size",1);
+			size.setValue(9);
+
+			var loopid = 0;
+			var loop = func(id) {
+			pylon0_out.setValue(pylon0_in.getValue());
+			pylon1_out.setValue(pylon1_in.getValue());
+			pylon2_out.setValue(pylon2_in.getValue());
+
+			failure_out.setValue(failure_in.getValue());
+
+			var ownsign = getprop ("/sim/multiplay/callsign");
+			if (target_in.getValue() == ownsign ) {
+					var hits0 = getprop("/hitcount" );
+					var hits1 = hitcount_in.getValue();
+
+					if (hits1 > hits0) {
+						#	var hitx = hitx_in.getValue();
+						#	var hity = hity_in.getValue();
+						#	var hitz = hitz_in.getValue();
+							print ("Damn, I'm hit!", hits0," ",hits1);
+							setprop("/hitcount" , hits1);
+						#	setprop("combat/hit/hit_x", hitx);
+						#	setprop("combat/hit/hit_y", hity);
+						#	setprop("combat/hit/hit_z", hitz);
+							
+							failure.process_hit();				
+					}
+			}
+
+				id == loopid or return;
+#				var v = hitcount.getValue();
+#				print ("Hitcount: ",v);			# debug output
+#				if (v != nil and 0 > v) {	# 
+#					print ("Ouch!");					# debug output
+
+#					loopid += 1;							# end loop
+#				}
+				settimer(func { loop(id) }, 0);
+			}
+			settimer(func { loop(loopid) }, 0);
+
+    </load>
+    <unload>
+			print ("bye");
+			loopid += 1;
+    </unload>
+  </nasal>
 
 	<animation>
 		<type>shader</type>
@@ -18,13 +102,15 @@
 	</animation>
 
 	<model>
-		<path>Aircraft/bf109/Models/equipment.xml</path>
+		<path>Aircraft/bf109/Models/Loads/loads.xml</path>
    		<nopreview/>
 	</model>
 
    <effect>
  			<inherits-from>Aircraft/bf109/Models/Effects/109_bumpspec</inherits-from>
   	  <object-name>Fuselage</object-name>
+  	  <object-name>canopy</object-name>
+  	  <object-name>rearband</object-name>
   	  <object-name>fwdband</object-name>
   	  <object-name>cowlunderside</object-name>
   	  <object-name>rearband</object-name>
@@ -46,44 +132,23 @@
 			<object-name>rightcoolflap</object-name>
 			<object-name>Rudder</object-name>
     </effect>
-    <model>
-		<name>bc250</name>
-		<path>Aircraft/bf109/Models/sc250.ac</path>
-		<offsets>
-			<x-m>2.5</x-m>
-			<y-m>0.0</y-m>
-			<z-m>-0.47</z-m>
-			<pitch-deg>0.0</pitch-deg>
-		</offsets>
-	</model>	
+
+
+
+	<model> 
+      <path>Aircraft/bf109/Models/cockpit.xml</path>
+			<name>cockpit</name>
+    </model>
  <animation>
   <type>select</type>
-  <object-name>bc250</object-name>
+	<object-name>cockpit</object-name>
   <condition>
-     <and>
-        <equals>
-          <property>sim/weight[0]/selected</property>
-          <value>BC250 Bomb</value>
-        </equals>
-        <equals>
-          <property>controls/armament/station[0]/release</property>
-          <value>false</value>
-        </equals>
-      </and>
+   <not-equals>
+    <property>sim/model/MPmodel</property>
+    <value>1</value>
+   </not-equals>
   </condition>
  </animation>
-
-
-	<model>
-		<name>cockpit</name>
-		<path>Aircraft/bf109/Models/cockpit.xml</path>
-	</model>
-	<animation>
-  <object-name>cockpit</object-name>
-		<type>range</type>
-		<min-m>0</min-m>
-		<max-m>40</max-m>
-	</animation>
 
  <animation>
   <type>select</type>
@@ -311,10 +376,10 @@
   <object-name>canopy</object-name>
 	<object-name>canopyglass</object-name>
   <condition>
-   <equals>
+   <not-equals>
     <property>controls/canopy/release</property>
-    <value>false</value>
-   </equals>
+    <value>true</value>
+   </not-equals>
   </condition>
  </animation>
 
@@ -672,7 +737,7 @@
  </animation>
 
     <model> 
-      <path>Aircraft/bf109/Models/pilot.xml</path>
+      <path>Aircraft/Generic/Human/Models/pilot.xml</path>
 	  <name>pilot</name>
    <nopreview/>
       <offsets> 
@@ -695,25 +760,46 @@
 
 
   <model> 
-   <path>Aircraft/bf109/Models/Effects/blaze-l.xml</path>
+   <path>Aircraft/bf109/Models/Effects/blaze.xml</path>
    <name>Blaze-l</name>
    <nopreview/>
     <offsets> 
      <x-m>2.0</x-m>
-     <y-m>0.2000</y-m>
+     <y-m>0.4000</y-m>
      <z-m>0.506</z-m>
     </offsets>
   </model>
+ <animation>
+  <type>select</type>
+  <object-name>Blaze-l</object-name>
+  <condition>
+   <equals>
+    <property>sim/armament/gun[0]/fire</property>
+    <value>true</value>
+   </equals>
+  </condition>
+ </animation>
+
   <model> 
-   <path>Aircraft/bf109/Models/Effects/blaze-r.xml</path>
-   <name>Blaze-l</name>
+   <path>Aircraft/bf109/Models/Effects/blaze.xml</path>
+   <name>Blaze-r</name>
    <nopreview/>
     <offsets> 
      <x-m>2.0</x-m>
-     <y-m>-0.2000</y-m>
+     <y-m>-0.4000</y-m>
      <z-m>0.506</z-m>
     </offsets>
   </model>
+ <animation>
+  <type>select</type>
+  <object-name>Blaze-r</object-name>
+  <condition>
+   <equals>
+    <property>sim/armament/gun[1]/fire</property>
+    <value>true</value>
+   </equals>
+  </condition>
+ </animation>
 
   <model> 
    <path>Aircraft/bf109/Models/Effects/blaze.xml</path>
@@ -725,6 +811,17 @@
      <z-m>0.0</z-m>
     </offsets>
   </model>
+ <animation>
+  <type>select</type>
+  <object-name>Blaze-f</object-name>
+  <condition>
+   <equals>
+    <property>sim/armament/cannon[0]/fire</property>
+    <value>true</value>
+   </equals>
+  </condition>
+ </animation>
+
   <model> 
    <path>Aircraft/bf109/Models/pdisk.xml</path>
    <name>pdisk</name>
@@ -856,6 +953,58 @@
   </condition>
  </animation>
 
+<!-- Failure Effects -->
+		<model> 
+				<path>Aircraft/bf109/Models/Effects/fire.xml</path>
+				<name>fire</name>
+				<offsets> 
+			<x-m>202</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.1</z-m>
+				</offsets>
+		</model>
 
+ <animation>
+  <type>select</type>
+	<object-name>fire</object-name>
+  <condition>
+		<or>
+		   <equals>
+    		<property>sim/failure-manager/fail-type</property>
+    		<value>1</value>
+   		</equals>
+		   <equals>
+    		<property>sim/failure-manager/fail-type</property>
+    		<value>3</value>
+   		</equals>
+		</or>
+  </condition>
+ </animation>
+
+		<model> 
+				<path>Aircraft/bf109/Models/Effects/firesmoke.xml</path>
+				<name>firesmoke</name>
+				<offsets> 
+			<x-m>2.0</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.13</z-m>
+				</offsets>
+		</model>
+ <animation>
+  <type>select</type>
+	<object-name>firesmoke</object-name>
+ <condition>
+		<or>
+		   <equals>
+    		<property>sim/failure-manager/fail-type</property>
+    		<value>2</value>
+   		</equals>
+		   <equals>
+    		<property>sim/failure-manager/fail-type</property>
+    		<value>3</value>
+   		</equals>
+		</or>
+  </condition>
+ </animation>
 
 </PropertyList>

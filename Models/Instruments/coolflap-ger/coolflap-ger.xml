@@ -41,7 +41,7 @@
  <value type="int">0</value>
  <value type="int">1</value>
  <value type="int">2</value>
- <wrap>0</wrap>
+ <wrap>1</wrap>
 </binding>
 
   </action>

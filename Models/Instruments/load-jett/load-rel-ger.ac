@@ -7,7 +7,7 @@ OBJECT poly
 name "Cylinder"
 data 8
 Cylinder
-texture "ignswitch.rgb"
+texture "../common/ignswitch.png"
 texrep 1 1
 crease 30.000000
 numvert 64

@@ -11,6 +11,7 @@ var flappos = props.globals.getNode("controls/flight/flaps",1);
 var turn = props.globals.getNode("instrumentation/turn-indicator/indicated-turn-rate");
 var fail_r = props.globals.getNode("sim/failure-manager/controls-failure-roll");
 var fail_d = props.globals.getNode("sim/failure-manager/controls-failure-drag");
+var aileron = props.globals.getNode("controls/flight/aileron");
 var gear0 = props.globals.getNode("controls/gear/gear[0]/gear-down");
 var gear1 = props.globals.getNode("controls/gear/gear[1]/gear-down");
 var gear2 = props.globals.getNode("controls/gear/gear[2]/gear-down");
@@ -94,26 +95,42 @@ var kill_engine = func {
 
 
 var process_hit = func {
-		var hit1x = hitx.getValue();
-		var hit1y = hity.getValue();
-		var hit1z = hitz.getValue();
 
-		print ("hit X: ", hitx.getValue(), " hit_y: ", hity.getValue(), "hit_Z: ", hitz.getValue());
-	
-		var count = 0;
-		var zone = 1;
-		while ( zone > 0 ) {
-				if ( hit1x >= hitZones[count][2] and hit1x <= hitZones[count][3] ) {
-						print ( hitZones[count][0], " was hit!");
+		if (getprop("/hitcount" ) > 5 ) {
+				var fail_prob = getprop ("/hitcount") + rand()*25;
+				print ("Faliure Probability: ", fail_prob);
+				if (fail_prob >= 40 ) {
+						
+						var fail_type = rand()*10;
+						print ("Failure Type: ",fail_type);
+						var state = getprop ("sim/failure-manager/fail-type");
+						if (fail_type >= 6 ) {
+								print ("Engine failure");
+								kill_engine();
+								setprop ("sim/failure-manager/smoking",1);
+						} else if (fail_type >= 3 ) {
+								print ("Fire");
+								setprop ("sim/failure-manager/burning",2);
+						} else {
+								print ("Structural failure");
+								tear_wing();
+								# setprop ("sim/failure-manager/fail-type",3);
 						}
-				zone = hitZones[count][1];
-				print (zone);
-				count = count+1;
+				}
 		}
 	
 }
 
-
+var tear_wing = func {
+									var slip = turn.getValue();
+										if (slip < 0) {
+												aileron.setValue(1);
+												aileron.setAttribute("writable", 0);
+										} else {
+												aileron.setValue(-1);
+												aileron.setAttribute("writable", 0);
+										}
+}
 
 # lower gear
 setlistener("/controls/gear/gear-down", func(n) {
@@ -121,14 +138,21 @@ setlistener("/controls/gear/gear-down", func(n) {
 		if (n.getValue() == "1") {
 				gear0.setValue("true");
 				gear1.setValue("true"); 
+				if (getprop ("controls/gear/tailwheel-steerable")) {
+						gear3.setValue("true");
+				} else {
+						gear2.setValue("true");
+				}
 		} else {
 				gear0.setValue("false");
 				gear1.setValue("false"); 
+				gear2.setValue("false");
+	#			gear3.setValue("false");
 		}
 });
 
 # check for propstrike
-setlistener("/gear/gear[3]/compression-norm", func(n) {
+setlistener("/gear/gear[4]/compression-norm", func(n) {
 		if (n.getValue() >=0.1 ) {
 			if (getprop ("sim/failure-manager/engines/engine[0]/propstrike") != 1) {
 				kill_engine();

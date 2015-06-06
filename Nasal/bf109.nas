@@ -1,3 +1,5 @@
+var looptime = 0.2;
+var mp_loop = 0.3;
 var position = nil;
 var pos2 = nil;
 var pos3 = nil;
@@ -25,14 +27,17 @@ var boost = props.globals.getNode("controls/engines/engine[0]/boost");
 var blower = props.globals.getNode("controls/engines/engine[0]/blower");
 var lowblower = 0.7;
 var manpress = props.globals.getNode("engines/engine[0]/mp-osi");
-
+var throttle = "controls/engines/engine[0]/throttle";
+var throttle_c ="controls/engines/engine[0]/throttle-c";
+var mp_max = 49;
+var mp_idle = 3;
 
 var init = func {
 
   if (getprop("/controls/engines/engine[0]/on-startup-running") == 1) {
 		magicstart();
 	}
- 
+ 	 update_mp_props();
    main_loop();
    }
 
@@ -47,16 +52,22 @@ var main_loop = func {
 		blower.setValue(0);
 		}
 
-#### set throttle
-		if ( getprop("engines/engine[0]/running" )){
-				var tmp = getprop("controls/engines/engine[0]/target-mp");
-				var diffmp = ( tmp - manpress.getValue())/52;
-				if (getprop("controls/engines/engine[0]/throttle-c") >= 0) {
-						interpolate("controls/engines/engine[0]/throttle-c",getprop("controls/engines/engine[0]/throttle-c") + diffmp, 0.1);
-				} else {
-						setprop ("controls/engines/engine[0]/throttle-c", 0);
-				}
-		}
+# adjust throttle
+
+	var throttle_s = getprop(throttle) * mp_max;
+	#print (throttle_s," ", getprop (throttle_c));
+
+	if (getprop (throttle_c) > 1) {
+		setprop (throttle_c,1);
+	}
+	if (getprop (throttle_c) < 0) {
+		setprop (throttle_c,0);
+	}
+
+	var xx = getprop (throttle_c)  + ((throttle_s - manpress.getValue())*0.0015);
+
+	interpolate (throttle_c, xx, looptime);
+
 
 #### automatic slats
   airspeed = getprop("/velocities/airspeed-kt");
@@ -84,8 +95,8 @@ var main_loop = func {
   }
 #  rev2 = getprop("/engines/engine[0]/rpm");
   rstrain = getprop("/engines/engine[0]/rev-strain");
-  if (rstrain > 350000) {
-    setprop("/engines/engine[0]/overrev", 1);
+  if (rstrain > 2000000) {
+    setprop("sim/failure-manager/fail-type", 2);
     setprop("/engines/engine[0]/running", 0);
     setprop("/engines/engine[0]/out-of-fuel", 1);
     setprop("/consumables/fuel/tank[0]/selected",0);
@@ -151,7 +162,7 @@ var main_loop = func {
 ### kill engine when overheated
 
     if (newtemp > 135) {
-      setprop("/engines/engine[0]/overheat", 1);
+      setprop("sim/failure-manager/fail-type", 1);
       setprop("/engines/engine[0]/running", 0);
       setprop("/engines/engine[0]/out-of-fuel", 1);
    		setprop("/consumables/fuel/tank[0]/selected",0);
@@ -175,7 +186,7 @@ var main_loop = func {
     interpolate ("/controls/engines/engine[0]/cowl-flaps-norm" , npos, 0.5 );
   }
   
-  settimer(main_loop, 0.2)
+  settimer(main_loop, looptime)
   
 } 
 
@@ -376,6 +387,25 @@ var magicstart = func {
     };
    },0,0);
 
+var update_mp_props = func {
+	# print ("updating...");
+	setprop("sim/multiplay/generic/int[0]", getprop ("/sim/armament/pylon[0]/type"));
+	setprop("sim/multiplay/generic/int[1]", getprop ("/sim/armament/pylon[1]/type"));
+	setprop("sim/multiplay/generic/int[2]", getprop ("/sim/armament/pylon[2]/type"));
+
+	var state = 0;
+	if (getprop ("sim/failure-manager/burning")) {
+			state = state +1;
+	}
+	if (getprop ("sim/failure-manager/smoking")) {
+			state = state +2;
+	}
+	setprop ("sim/failure-manager/fail-type",state);
+	# print ("State: ", state);
+	setprop("sim/multiplay/generic/int[10]", getprop ("/sim/failure-manager/fail-type"));
+
+ 	settimer(update_mp_props, mp_loop);
+}
 
 setlistener("/sim/signals/fdm-initialized",init);
 
@@ -385,6 +415,14 @@ aircraft.light.new("sim/model/bf109/lighting/flash-r", [0.024, 0.04], flash_trig
 
 var flash1_trigger = props.globals.getNode("controls/armament/trigger1", 0);
 aircraft.light.new("sim/model/bf109/lighting/flash-f", [0.05, 0.052], flash1_trigger);
+
+var config = gui.Dialog.new("/sim/gui/dialogs/appearance/dialog", "Aircraft/bf109/Dialogs/config.xml");
+var payload = gui.Dialog.new("/sim/gui/dialogs/payload/dialog", "Aircraft/bf109/Dialogs/payload.xml");
+
+var save_list = ["/combat/enabled",
+								"/controls/gear/tailwheel-steerable"];
+
+aircraft.data.add(save_list);
 
 aircraft.livery.init("Aircraft/bf109/Models/Liveries", "sim/model/livery/variant");
 

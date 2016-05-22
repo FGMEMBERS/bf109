@@ -31,6 +31,10 @@ var throttle = "controls/engines/engine[0]/throttle";
 var throttle_c ="controls/engines/engine[0]/throttle-c";
 var mp_max = 49;
 var mp_idle = 3;
+var aim_x = 0.035;
+var aim_y = 0.75;
+var aim_z = 0.55;
+
 
 var init = func {
 
@@ -85,10 +89,10 @@ var main_loop = func {
     mpress = getprop("/engines/engine/mp-osi");  
 
       if (revs / mpress < 68.0)  {
-          setprop("/controls/engines/engine[0]/propeller-adjust", ppitch + 0.003);
+          setprop("/controls/engines/engine[0]/propeller-adjust", ppitch + 0.005);
           }
       if (revs / mpress > 68.0)  {
-          setprop("/controls/engines/engine[0]/propeller-adjust", ppitch - 0.003);
+          setprop("/controls/engines/engine[0]/propeller-adjust", ppitch - 0.005);
           }
     
 ### kill engine when overreved
@@ -202,7 +206,7 @@ var toggle_canopy = func {
 }
 
 var toggle_revi = func {
-  revi = aircraft.door.new ("/controls/armament/revi",2);
+
   if(getprop("/controls/armament/revi/position-norm") > 0) {
       revi.close();
   } else {
@@ -272,6 +276,16 @@ var drop_tank = func {
      } 
  }
 
+var aim = func {
+  setprop ("sim/current-view/x-offset0", getprop ("sim/current-view/x-offset-m"));
+  interpolate ("sim/current-view/x-offset-m", aim_x);
+  setprop ("sim/current-view/y-offset0", getprop ("sim/current-view/y-offset-m"));
+  interpolate ("sim/current-view/y-offset-m", aim_y);
+  setprop ("sim/current-view/z-offset0", getprop ("sim/current-view/z-offset-m"));
+  interpolate ("sim/current-view/z-offset-m", aim_z);
+
+}
+
 var starter = func {
 	starter_power = getprop("/systems/electrical/volts");
 	if(starter_power == nil)
@@ -312,6 +326,7 @@ var magicstart = func {
     setprop("/controls/engines/engine[0]/propeller-adjust",0.5);
     setprop("/engines/engine[0]/oil-visc",1);
     setprop("/engines/engine[0]/rpm",800);
+    setprop("/controls/engines/engine[0]/primer",1);
     setprop("/engines/engine[0]/engine-running",1);
     setprop("/engines/engine[0]/out-of-fuel",0);
     setprop("/engines/engine[0]/coolant-temp-degc",40);
@@ -345,7 +360,7 @@ var magicstart = func {
     setlistener("/controls/engines/engine[0]/throttle", func(n) {
 				pos3=n.getValue();
 				setprop ("controls/engines/engine[0]/target-mp" ,52 * pos3);
-        if(pos3 >= 0.7){
+        if(pos3 >= 0.9){
            setprop("controls/engines/engine[0]/prop-auto",1);
 				};
    },1);
@@ -409,18 +424,22 @@ var update_mp_props = func {
 
 setlistener("/sim/signals/fdm-initialized",init);
 
-var flash_trigger = props.globals.getNode("controls/armament/trigger", 0);
-aircraft.light.new("sim/model/bf109/lighting/flash-l", [0.03, 0.044], flash_trigger);
-aircraft.light.new("sim/model/bf109/lighting/flash-r", [0.024, 0.04], flash_trigger);
+var revi = aircraft.door.new ("/controls/armament/revi",2);
 
-var flash1_trigger = props.globals.getNode("controls/armament/trigger1", 0);
-aircraft.light.new("sim/model/bf109/lighting/flash-f", [0.05, 0.052], flash1_trigger);
+#var flash_trigger = props.globals.getNode("controls/armament/trigger", 0);
+#aircraft.light.new("sim/model/bf109/lighting/flash-l", [0.03, 0.044], flash_trigger);
+#aircraft.light.new("sim/model/bf109/lighting/flash-r", [0.024, 0.04], flash_trigger);
+
+#var flash1_trigger = props.globals.getNode("controls/armament/trigger1", 0);
+#aircraft.light.new("sim/model/bf109/lighting/flash-f", [0.05, 0.052], flash1_trigger);
 
 var config = gui.Dialog.new("/sim/gui/dialogs/appearance/dialog", "Aircraft/bf109/Dialogs/config.xml");
 var payload = gui.Dialog.new("/sim/gui/dialogs/payload/dialog", "Aircraft/bf109/Dialogs/payload.xml");
 
 var save_list = ["/combat/enabled",
-								"/controls/gear/tailwheel-steerable"];
+                 "/controls/startup/idling",
+                 "/controls/startup/config"
+                 "/controls/gear/tailwheel-steerable"];
 
 aircraft.data.add(save_list);
 

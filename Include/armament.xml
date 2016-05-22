@@ -10,6 +10,14 @@
 		<fire type="bool">false</fire>
 	</gun>
 
+	<gun n="2">
+		<serviceable type="bool">false</serviceable>
+		<fire type="bool">false</fire>
+	</gun>
+	<gun n="3">
+		<serviceable type="bool">false</serviceable>
+		<fire type="bool">false</fire>
+	</gun>
 	
 	<cannon n="0">
 		<serviceable type="bool">true</serviceable>

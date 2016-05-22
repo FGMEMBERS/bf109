@@ -9,13 +9,13 @@ February 2006,  Detlef Faber
 
 <PropertyList>
  <combat>
-			<enabled type="bool">true</enabled>
+    	<enabled type="bool">true</enabled>
  </combat>
 	<hitcount type="float">0.0</hitcount>
  <sim>
 
   <description>Messerschmitt BF-109 G14</description>
-  <author>Detlef Faber</author>
+  <author>Detlef Faber, Marco Schüle</author>
   <status>production</status>
  <rating>
     <FDM type="int">4</FDM>
@@ -24,7 +24,8 @@ February 2006,  Detlef Faber
     <cockpit type="int">5</cockpit>
   </rating>
   <startup>
-    <splash-texture>Aircraft/bf109/bf109-splash.rgb</splash-texture>
+    <splash-texture>Aircraft/bf109/Splash/bf109splash-1.png</splash-texture>
+    <splash-texture>Aircraft/bf109/Splash/bf109splash-2.png</splash-texture>
   </startup>
   
   <flight-model>yasim</flight-model>
@@ -33,29 +34,29 @@ February 2006,  Detlef Faber
 	</armament>
 
 	<failure-manager>
-			<controls-failure-drag type="double">1.0</controls-failure-drag>
-			<controls-failure-roll type="double">0.7</controls-failure-roll>
-			<engines>
-					<engine n="0">
-						<propstrike type="bool">false</propstrike>
-						<propstrike-force type="float">0</propstrike-force>
-					</engine>
-			</engines>
-			<flaps type="bool">false</flaps>
-			<left-wing-torn type="bool">false</left-wing-torn>
-			<right-wing-torn type="bool">false</right-wing-torn>
-			<gear>
-					<gear n="0">
-							<jammed type="bool">false</jammed>
-					</gear>
-					<gear n="1">
-							<jammed type="bool">false</jammed>
-					</gear>
-					<gear n="2">
-							<jammed type="bool">false</jammed>
-					</gear>
-			</gear>
-			<fail-type type= "int">0</fail-type>
+    	<controls-failure-drag type="double">1.0</controls-failure-drag>
+    	<controls-failure-roll type="double">0.7</controls-failure-roll>
+    	<engines>
+        	<engine n="0">
+            <propstrike type="bool">false</propstrike>
+            <propstrike-force type="float">0</propstrike-force>
+        	</engine>
+    	</engines>
+    	<flaps type="bool">false</flaps>
+    	<left-wing-torn type="bool">false</left-wing-torn>
+    	<right-wing-torn type="bool">false</right-wing-torn>
+    	<gear>
+        	<gear n="0">
+            	<jammed type="bool">false</jammed>
+        	</gear>
+        	<gear n="1">
+            	<jammed type="bool">false</jammed>
+        	</gear>
+        	<gear n="2">
+            	<jammed type="bool">false</jammed>
+        	</gear>
+    	</gear>
+    	<fail-type type= "int">0</fail-type>
 	</failure-manager>
   <systems>
    <electrical>
@@ -67,7 +68,7 @@ February 2006,  Detlef Faber
   <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
 
   <sound>
-   <path>Aircraft/p51d/p51d-sound.xml</path>
+   <path>Aircraft/bf109/Sounds/bf109-sound.xml</path>
   </sound>
 
   <submodels> 
@@ -78,83 +79,37 @@ February 2006,  Detlef Faber
 
   <model>
    <path>Aircraft/bf109/Models/Bf-109g.xml</path>
-		<map>
-			<default_exit>
-				<x-offset-m>4</x-offset-m>
-				<y-offset-m>-1.0</y-offset-m>
-			</default_exit>
-		</map>
+   <cockpit>
+     <amb_correction type="double">0.2</amb_correction>
+     <refl_correction type="double">0.2</refl_correction>
+   </cockpit>
+    <map>
+    	<default_exit>
+        <x-offset-m>4</x-offset-m>
+        <y-offset-m>-1.0</y-offset-m>
+    	</default_exit>
+    </map>
    <crew>
-<!--
-		 <pilot n="0">
-     <pose include = "Include/ju52_pilot.xml"></pose>
-				<gender>0</gender>
-				<character>0</character>
-				<outfit>2</outfit>
+
+     <pilot n="0">
+     <hair>0</hair>
+     <pose include = "Include/pilot-pose.xml"></pose>
      </pilot>
--->
+
    </crew>
    <livery>
-		 <trop type="bool">false</trop>
+     <trop type="bool">false</trop>
      <variant type="string">Default</variant>
-			<amb_correction type="double">0.1</amb_correction>
-			<refl_correction type="double">-0.8</refl_correction>
-     <material>
-			 <cowlunderside>
-			   <texture>Liveries/special.png</texture>
-			 </cowlunderside>
-       <fuselage>
-         <texture>bf109-1.png</texture>
-       </fuselage>
-         <fwdband>
-          <texture>Liveries/special.png</texture>
-         </fwdband>
-				 <prophub>
-          <texture>bf109-1.png</texture>
-				 </prophub>
-         <rearband>
-					<colour>
-					  <diffuse>
-					   <red>0.9</red>
-					   <green>0.0</green>
-					   <blue>0.0</blue>
-					  </diffuse>
-					  <ambient>
-			 			  <red>0.9</red>
-					   <green>0.0</green>
-					   <blue>0.0</blue>
-					  </ambient>
-					  <specular>
-					   <red>0.9</red>
-					   <green>0.0</green>
-					   <blue>0.0</blue>
-					  </specular>
-					  <emission>
-					   <red>0.0</red>
-					   <green>0.0</green>
-					   <blue>0.0</blue>
-					  </emission>
-					  <transparency>
-				   <alpha>1.0</alpha>
-					  </transparency>	
-					  <shininess>2</shininess>
-					</colour>
+    	<amb_correction type="double">0.1</amb_correction>
+        <dirt_factor type="double">0.5</dirt_factor>
+    	<refl_correction type="double">-0.4</refl_correction>
 
-
-         </rearband>
-				 <rudder>
-          <texture>Liveries/special.png</texture>		
-				 </rudder>
-         <wingtip>
-          <texture>Liveries/special.png</texture>		
-         </wingtip>
-     </material>
    </livery>
-		<logo>
-			<display type="int" userarchive="y">0</display>
-			<name>FlightGear</name>
-			<texture>../../Generic/Logos/FlightGear.png</texture>
-		</logo>
+    <logo>
+    	<display type="int" userarchive="y">0</display>
+    	<name>FlightGear</name>
+    	<texture>../../Generic/Logos/FlightGear.png</texture>
+    </logo>
    <crew>
       <pilot>
         <visible>1.0</visible>
@@ -163,15 +118,15 @@ February 2006,  Detlef Faber
   </model> 
 	<multiplay include="Dialogs/multiplay.xml">
 	</multiplay>
-		<tutorials>
-			<tutorial include="Tutorials/startup_tutorial.xml"/>
-		</tutorials>
+    <tutorials>
+    	<tutorial include="Tutorials/startup_tutorial.xml"/>
+    </tutorials>
   <view n="0">
    <internal archive="y">true</internal>
    <config>
     <x-offset-m archive="y" type="double">0.0</x-offset-m>
-    <y-offset-m archive="y" type="double">0.65</y-offset-m>
-    <z-offset-m archive="y" type="double">0.751</z-offset-m>
+    <y-offset-m archive="y" type="double">0.78</y-offset-m>
+    <z-offset-m archive="y" type="double">0.93</z-offset-m>
     <pitch-offset-deg>-7.5</pitch-offset-deg>
    </config>
   </view>
@@ -215,6 +170,26 @@ February 2006,  Detlef Faber
    <config>
     <target-z-offset-m archive="y" type="double">0.35</target-z-offset-m>
    </config>
+  </view>
+
+  <view n="100">
+   <name>Pilot Cam</name>
+   <type>lookfrom</type>
+   <internal archive="y">true</internal>
+    <config>
+        <from-model type="bool">true</from-model>
+        <from-model-idx type="int">0</from-model-idx>
+        <ground-level-nearplane-m type="double">0.01</ground-level-nearplane-m>
+        <default-field-of-view-deg type="double">70.0</default-field-of-view-deg>
+        <default-pitch-deg type="double">0</default-pitch-deg>
+        <default-heading-deg type="double">0</default-heading-deg>
+        <front-direction-deg type="double">0</front-direction-deg>
+     <x-offset-m archive="y" type="double">-0.14</x-offset-m>
+     <y-offset-m archive="y" type="double">0.55</y-offset-m>
+     <z-offset-m archive="y" type="double">0.235</z-offset-m>
+     <pitch-offset-deg>-1</pitch-offset-deg>
+   <heading-offset-deg>190</heading-offset-deg>
+    </config>
   </view>
 
  <autopilot>
@@ -312,25 +287,25 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
       <weight-lb>0</weight-lb>
       <selected>none</selected>
       <opt>
-					<name>none</name>
-					<lbs>0</lbs>
-			</opt>
+        	<name>none</name>
+        	<lbs>0</lbs>
+    	</opt>
       <opt>
-					<name>Droptank</name>
-		      <lbs>50.0</lbs>
-					<gals>86</gals>
+        	<name>Droptank</name>
+          <lbs>50.0</lbs>
+        	<gals>86</gals>
       </opt>
       <opt>
-					<name>SC250 Bomb</name>
-		      <lbs>552.0</lbs>
+        	<name>SC250 Bomb</name>
+          <lbs>552.0</lbs>
       </opt>
       <opt>
-					<name>BC250 Bomb</name>
-		      <lbs>552.0</lbs>
+        	<name>BC250 Bomb</name>
+          <lbs>552.0</lbs>
       </opt>
       <opt>
-					<name>NC250 Bomb</name>
-		      <lbs>552.0</lbs>
+        	<name>NC250 Bomb</name>
+          <lbs>552.0</lbs>
       </opt>
   </weight>
 
@@ -443,6 +418,7 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
         <fire type="bool">false</fire>
       </gun>
       <revi>
+        <position-norm type="float">1.0</position-norm>
         <shadeup type="bool">false</shadeup>
       </revi>
       <station n="0">
@@ -490,8 +466,9 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
       </gear>
       <tailwheel-lock>true</tailwheel-lock>
       <bellybrake type="float">1.0</bellybrake>
-			<emergency-extension type="bool">false</emergency-extension>
-			<emergency-extension-pulled type="bool">false</emergency-extension-pulled>
+    	<emergency-extension type="bool">false</emergency-extension>
+    	<emergency-extension-pulled type="bool">false</emergency-extension-pulled>
+      <brake-parking type="bool">true</brake-parking>
    </gear>
 
    <!-- The Bf 109 has no aileron or rudder trim controls -->
@@ -512,6 +489,10 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
      </tank>  
    </fuel>
 
+    <startup>
+      <config type="bool" userarchive="y">0</config>
+      <idling type="bool" userarchive="y">1</idling>
+    </startup>
 
  </controls>
 
@@ -543,46 +524,38 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
         </binding>
       </key>
 
-      <key n="68">
-        <name>D</name>
-        <desc>Toggle Revi</desc>
-        <binding n="0">
-          <command>nasal</command>
-          <script>bf109.toggle_revi()</script>
-        </binding>
-      </key>
 
-		  <key n="110">
- 		 	 <name>n</name>
- 			 <desc>Propeller Finer</desc>
- 			 <repeatable type="bool">true</repeatable>
-		   <binding>
+      <key n="110">
+      	 <name>n</name>
+     	 <desc>Propeller Finer</desc>
+     	 <repeatable type="bool">true</repeatable>
+       <binding>
           <command>property-adjust</command>
           <property>/controls/engines/engine[0]/propeller-adjust</property>
           <step type="double">0.01</step>
           <min type="double">0</min>
           <max type="double">1</max>
-  		 </binding>
- 			</key>
- 			<key n="78">
-  			<name>N</name>
-  			<desc>Propeller Coarser</desc>
-  			<repeatable type="bool">true</repeatable>
-  			<binding>
+       </binding>
+     	</key>
+     	<key n="78">
+      	<name>N</name>
+      	<desc>Propeller Coarser</desc>
+      	<repeatable type="bool">true</repeatable>
+      	<binding>
           <command>property-adjust</command>
           <property>/controls/engines/engine[0]/propeller-adjust</property>
           <step type="double">-0.01</step>
           <min type="double">0</min>
           <max type="double">1</max>
-  			</binding>
- 			</key>
+      	</binding>
+     	</key>
 
       <key n="4">
         <name>Ctrl-d</name>
         <desc>drop Tank</desc>
         <binding>
           <command>nasal</command>
-          <script>bf109.drop_tank()</script>
+          <script>weapons.drop_tank()</script>
         </binding>
       </key>  
       <key n="113"> 
@@ -686,18 +659,21 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
 
 <!-- Nasal files/scripts -->
   <nasal>
+    <startup>
+      <file>Aircraft/bf109/Nasal/startup.nas</file>
+    </startup>
     <bf109>
       <file>Aircraft/bf109/Nasal/bf109.nas</file>
     </bf109>
-		<weapons>
-				<file>Aircraft/bf109/Nasal/weapons.nas</file>
-		</weapons>
-		<failure>
-			<file>Aircraft/bf109/Nasal/failure.nas</file>
-		</failure>
-		<hitcheck>
-			<file>Aircraft/bf109/Nasal/hitcheck.nas</file>
-		</hitcheck>
+    <weapons>
+        <file>Aircraft/bf109/Nasal/weapons.nas</file>
+    </weapons>
+    <failure>
+    	<file>Aircraft/bf109/Nasal/failure.nas</file>
+    </failure>
+    <hitcheck>
+    	<file>Aircraft/bf109/Nasal/hitcheck.nas</file>
+    </hitcheck>
   </nasal>
 
 

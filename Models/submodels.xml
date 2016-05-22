@@ -25,7 +25,7 @@
 		<collision-report>ai/models/model-collision</collision-report>
 		<impact>true</impact>
 		<impact-report>ai/models/model-impact</impact-report>
-		<submodel-path>Aircraft/F-86/Models/Effects/subsubmodels.xml</submodel-path>
+		<submodel-path>Aircraft/bf109/Models/Effects/subsubmodels.xml</submodel-path>
   </submodel>
 
   <submodel>
@@ -50,7 +50,7 @@
 		<collision-report>ai/models/model-collision</collision-report>
 		<impact>true</impact>
 		<impact-report>ai/models/model-impact</impact-report>
-		<submodel-path>Aircraft/F-86/Models/Effects/subsubmodels.xml</submodel-path>
+		<submodel-path>Aircraft/bf109/Models/Effects/subsubmodels.xml</submodel-path>
   </submodel>
 
   <submodel>
@@ -199,7 +199,7 @@
   <submodel>
     <name>left-tracer</name>
     <model>Aircraft/bf109/Models/tracer.xml</model>
-    <trigger>controls/armament/trigger2</trigger>
+    <trigger>sim/armament/gun[2]/fire</trigger>
     <speed>2657.48</speed>
     <repeat>true</repeat>
     <delay>0.25</delay>
@@ -225,7 +225,7 @@
   <submodel>
     <name>right-tracer</name>
     <model>Aircraft/bf109/Models/tracer.xml</model>
-    <trigger>controls/armament/trigger2</trigger>
+    <trigger>sim/armament/gun[3]/fire</trigger>
     <speed>2657.48</speed>
     <repeat>true</repeat>
     <delay>0.25</delay>

@@ -21,7 +21,7 @@
 		<name>pylon1</name>
 		<path>Aircraft/bf109/Models/etc.ac</path>
 		<offsets>
-			<x-m>2.7</x-m>
+			<x-m>-1.7244</x-m>
 			<y-m>0.0</y-m>
 			<z-m>-0.47</z-m>
 			<pitch-deg>0.0</pitch-deg>
@@ -43,7 +43,7 @@
 				<name>droptank1</name>
 				<path>Aircraft/bf109/Models/droptank.ac</path>
 				<offsets>
-					<x-m>2.7</x-m>
+					<x-m>-1.7244</x-m>
 					<y-m>0.0</y-m>
 					<z-m>-0.47</z-m>
 					<pitch-deg>0.0</pitch-deg>
@@ -64,7 +64,7 @@
 		<name>sc250</name>
 		<path>Aircraft/bf109/Models/sc250.xml</path>
 		<offsets>
-			<x-m>2.7</x-m>
+			<x-m>-1.7244</x-m>
 			<y-m>0.0</y-m>
 			<z-m>-0.47</z-m>
 			<pitch-deg>0.0</pitch-deg>
@@ -83,11 +83,11 @@
 
 	<model>
 		<name>leftgun</name>
-		<path>Aircraft/bf109/Models/mg151-l.ac</path>
+		<path>Aircraft/bf109/Models/mg151pod.ac</path>
 		<offsets>
-			<x-m>2.8</x-m>
-			<y-m>-1.95</y-m>
-			<z-m>-0.4</z-m>
+			<x-m>-1.8</x-m>
+			<y-m>-2.2</y-m>
+			<z-m>-0.35</z-m>
 			<pitch-deg>0.0</pitch-deg>
 		</offsets>
 	</model>	
@@ -104,11 +104,11 @@
 
 	<model>
 		<name>rightgun</name>
-		<path>Aircraft/bf109/Models/mg151-r.ac</path>
+		<path>Aircraft/bf109/Models/mg151pod.ac</path>
 		<offsets>
-			<x-m>2.8</x-m>
-			<y-m>1.95</y-m>
-			<z-m>-0.4</z-m>
+			<x-m>-1.8</x-m>
+			<y-m>2.2</y-m>
+			<z-m>-0.35</z-m>
 			<pitch-deg>0.0</pitch-deg>
 		</offsets>
 	</model>
@@ -127,7 +127,7 @@
 		<name>leftwgr</name>
 		<path>Aircraft/bf109/Models/wgr21-launcher.ac</path>
 		<offsets>
-			<x-m>2.7</x-m>
+			<x-m>-1.7244</x-m>
 			<y-m>-2.2</y-m>
 			<z-m>-0.52</z-m>
 			<pitch-deg>8.0</pitch-deg>
@@ -154,7 +154,7 @@
 		<name>rightwgr</name>
 		<path>Aircraft/bf109/Models/wgr21-launcher.ac</path>
 		<offsets>
-			<x-m>2.7</x-m>
+			<x-m>-1.7244</x-m>
 			<y-m>2.2</y-m>
 			<z-m>-0.52</z-m>
 			<pitch-deg>8.0</pitch-deg>
@@ -181,7 +181,7 @@
 		<name>leftrocket</name>
 		<path>Aircraft/bf109/Models/wgr21.ac</path>
 		<offsets>
-			<x-m>2.7</x-m>
+			<x-m>-1.7244</x-m>
 			<y-m>-2.2</y-m>
 			<z-m>-0.52</z-m>
 			<pitch-deg>8.0</pitch-deg>
@@ -202,7 +202,7 @@
 		<name>rightrocket</name>
 		<path>Aircraft/bf109/Models/wgr21.ac</path>
 		<offsets>
-			<x-m>2.7</x-m>
+			<x-m>-1.7244</x-m>
 			<y-m>2.2</y-m>
 			<z-m>-0.52</z-m>
 			<pitch-deg>8.0</pitch-deg>

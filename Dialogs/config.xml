@@ -91,7 +91,7 @@
         </checkbox>
 
         <text>
-            <row>4</row>
+            <row>5</row>
             <col>0</col>
             <label>Start Idling</label>
         </text>
@@ -99,7 +99,7 @@
         <checkbox>
 	    <name>idling</name>
             <halign>left</halign>
-            <row>4</row>
+            <row>5</row>
             <col>1</col>	
             <property>/controls/startup/idling</property>
 	    <binding>
@@ -109,7 +109,7 @@
         </checkbox>
 
         <text>
-            <row>5</row>
+            <row>6</row>
             <col>0</col>
             <label>Configure Startup</label>
         </text>
@@ -117,7 +117,7 @@
         <checkbox>
 	    <name>confstart</name>
             <halign>left</halign>
-            <row>5</row>
+            <row>6</row>
             <col>1</col>	
             <property>/controls/startup/config</property>
 	    <binding>

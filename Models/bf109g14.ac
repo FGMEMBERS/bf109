@@ -4358,7 +4358,7 @@ OBJECT poly
 name "canopy_G10"
 loc -3.8326304 0.0873445 -0.0008959
 crease 350.00001201636707
-texture "bf109-1.png"
+texture "bf109g.png"
 texrep 1 1
 numvert 90
 3.4642079 0.3647366 0.3080122

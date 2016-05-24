@@ -96,7 +96,7 @@
 		<collision-report>sim/ai/aircraft/collision/cannon</collision-report>
 		<impact>true</impact>
 		<impact-report>sim/ai/aircraft/impact/cannon</impact-report>
-		<submodel-path>Aircraft/bf109/Models/subsubmodels.xml</submodel-path>
+		<submodel-path>Aircraft/bf109/Models/Effects/subsubmodels.xml</submodel-path>
   </submodel>
 
 
@@ -218,7 +218,7 @@
 		<collision-report>sim/ai/aircraft/collision/cannon</collision-report>
 		<impact>true</impact>
 		<impact-report>sim/ai/aircraft/impact/cannon</impact-report>
-		<submodel-path>Aircraft/bf109/Models/subsubmodels.xml</submodel-path>
+		<submodel-path>Aircraft/bf109/Models/Effects/subsubmodels.xml</submodel-path>
   </submodel>
 
   <!-- right-mg151 -->
@@ -244,7 +244,7 @@
 		<collision-report>sim/ai/aircraft/collision/cannon</collision-report>
 		<impact>true</impact>
 		<impact-report>sim/ai/aircraft/impact/cannon</impact-report>
-
+		<submodel-path>Aircraft/bf109/Models/Effects/subsubmodels.xml</submodel-path>
   </submodel>
 
 </PropertyList>

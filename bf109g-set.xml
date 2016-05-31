@@ -282,57 +282,36 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
 
 
   <weight n="0">
-      <name>Fuselage</name>
+      <name>left wing</name>
       <tank>1</tank>
       <weight-lb>0</weight-lb>
       <selected>none</selected>
-      <opt>
-        	<name>none</name>
-        	<lbs>0</lbs>
-    	</opt>
-      <opt>
-        	<name>Droptank</name>
-          <lbs>50.0</lbs>
-        	<gals>86</gals>
-      </opt>
-      <opt>
-        	<name>SC250 Bomb</name>
-          <lbs>552.0</lbs>
-      </opt>
-      <opt>
-        	<name>BC250 Bomb</name>
-          <lbs>552.0</lbs>
-      </opt>
-      <opt>
-        	<name>NC250 Bomb</name>
-          <lbs>552.0</lbs>
-      </opt>
+    <opt>
+      <name>Select Loadout via the Payload Dialog</name>
+      <lbs>0</lbs>
+    </opt>
+
   </weight>
 
   <weight n="1">
-      <name>left Wing</name>
+      <name>Center</name>
       <weight-lb type="double">0</weight-lb>
       <selected>none</selected>
-      <opt><name>none</name><lbs>0</lbs></opt>
-      <opt><name>MG 151 Machine gun</name>
-      <lbs>110.0</lbs>
-      </opt>
-      <opt><name>WGr 21 Rocket</name>
-      <lbs>270.0</lbs>
-      </opt>
+    <opt>
+      <name>Select Loadout via the Payload Dialog</name>
+      <lbs>0</lbs>
+    </opt>
+
   </weight>
 
   <weight n="2">
       <name>right Wing</name>
       <weight-lb type="double">0</weight-lb>
       <selected>none</selected>
-      <opt><name>none</name><lbs>0</lbs></opt>
-      <opt><name>MG 151 Machine gun</name>
-      <lbs>110.0</lbs>
-      </opt>
-      <opt><name>WGr 21 Rocket</name>
-      <lbs>270.0</lbs>
-      </opt>
+    <opt>
+      <name>Select Loadout via the Payload Dialog</name>
+      <lbs>0</lbs>
+    </opt>
   </weight>
   <menubar>
     <default>
@@ -584,13 +563,13 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
         <name>e</name>
         <desc>Fire MG</desc>
         <binding>
-          <command>nasal</command>
-          <script>bf109.fire_MG()</script>
+            <command>property-toggle</command>
+            <property>controls/armament/trigger</property>
         </binding>
         <mod-up>
           <binding>
-            <command>nasal</command>
-            <script>bf109.stop_MG()</script>
+            <command>property-toggle</command>
+            <property>controls/armament/trigger</property>
           </binding>
         </mod-up>
       </key>
@@ -599,13 +578,13 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
         <name>E</name>
         <desc>fire engine Cannon</desc>
         <binding>
-          <command>nasal</command>
-          <script>bf109.fire_cannon()</script>
+            <command>property-toggle</command>
+            <property>controls/armament/trigger1</property>
         </binding>
         <mod-up>
           <binding>
-            <command>nasal</command>
-            <script>bf109.stop_cannon()</script>
+            <command>property-toggle</command>
+            <property>controls/armament/trigger1</property>
           </binding>
         </mod-up>
       </key>

@@ -478,8 +478,8 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
  <!-- Map Keys -->
  <input>
     <keyboard>
-      <key n="12"> 
-          <name>Ctrl-L</name>
+      <key n="108"> 
+          <name>l</name>
           <desc>Toggle Tailwheel Lock.</desc>
           <binding> 
             <command>property-toggle</command>

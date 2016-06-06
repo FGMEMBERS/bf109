@@ -6,7 +6,7 @@
 		Remove unnedeed settings.
 		WARNING: do not remove the Normalmap include at the end-->
 <PropertyList>
-		<name>109_bumpsrec</name>
+		<name>109_bumpspec</name>
     <inherits-from>Effects/model-combined-deferred</inherits-from>
 		<parameters>
 		<!-- Normal Map -->
@@ -18,11 +18,15 @@
 			</texture>
 		<!-- Reflection -->
 			<reflection-enabled type="int"> 1 </reflection-enabled>
-			<reflect-map-enabled type="int"> 0 </reflect-map-enabled>
+			<reflect-map-enabled type="int"> 1 </reflect-map-enabled>
 			<reflection-correction>
 					<use>sim/model/livery/refl_correction</use>
 			</reflection-correction>
 			<reflection-dynamic type="int"> 1 </reflection-dynamic>
+
+			<texture n="4">
+				<image>Aircraft/bf109/Models/Effects/specmap.png</image>
+			</texture>
 
 			<texture n="5">
 				<type>cubemap</type>
@@ -47,9 +51,11 @@
 			<ambient-correction>
 					<use>sim/model/livery/amb_correction</use>
 			</ambient-correction>
-			<dirt-enabled type="int"> 0 </dirt-enabled>
+			<dirt-enabled type="int"> 1 </dirt-enabled>
 			<dirt-color type="vec3d"> 0.0 0.0 0.0 </dirt-color>
-			<dirt-factor type="float"> 0.0 </dirt-factor>
+			<dirt-factor type="float">
+					<use>sim/model/livery/dirt_factor</use>
+                        </dirt-factor>
 		</parameters>
 
 <!--WARNING: Do not edit below this line -->

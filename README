@@ -6,6 +6,7 @@ don@sol2500.net
 This model is released under the terms of the GPLv2
 
 
+
 The "AFN2" Instrument right of the compass can be adjusted 
 via the "Radio" menu. If works as ADF reciever. The horizontal 
 needle shows if the NDB is recieved, the vertical needle shows 
@@ -21,18 +22,5 @@ show up in the Dialog (Great thanks to AJ for this).
 Photo textures of Instruments were used with kind permission
 from http://www.cockpitinstrumente.de.
 
-Changes:
+Many thanks to Marco Schüle for improving the cockpit.
 
--reworked flight dynamics
-
--added Virtual Cockpit switches for Gear, Flaps, Ignition, Starter, Master Arm,
- gunsight swing, remote compass
- 
--added Livery Select Dialog and 2 more Liveries (darkgrey, winter)
-
--added selectable external stores (tank, bomb, gun-pods) tank and bomb are 
- droppable (thanks to Andy Ross, yasim  is great!)
-
--fixed tailwheel lock bug (thanks to Melchior)
-
--model and cockpit improvements

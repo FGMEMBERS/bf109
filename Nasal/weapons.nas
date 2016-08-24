@@ -28,8 +28,6 @@ var drop_tank = func () {
 		setprop ("sim/armament/pylon[1]/release_tank", 1);
 		setprop ("sim/armament/pylon[1]/type", 0);
 		setprop ("consumables/fuel/tank[1]/capacity-gal_us",0);
-		setprop ("consumables/fuel/tank[1]/selected",0);
-		setprop ("consumables/fuel/tank[0]/selected",1);
 }
 
 var drop_bomb = func () {

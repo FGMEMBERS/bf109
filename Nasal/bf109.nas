@@ -36,16 +36,7 @@ var aim_y = 0.75;
 var aim_z = 0.55;
 
 
-var init = func {
-
-  if (getprop("/controls/engines/engine[0]/on-startup-running") == 1) {
-		magicstart();
-	}
- 	 update_mp_props();
-   main_loop();
-   }
-
-var main_loop = func {
+var main_loop = maketimer(looptime, func {
 #### set blower
 	if (alt.getValue() > 13100 and blower.getValue() == 0 ) {
 		interpolate (boost, 1,30);
@@ -169,7 +160,8 @@ var main_loop = func {
       setprop("sim/failure-manager/fail-type", 1);
       setprop("/engines/engine[0]/running", 0);
       setprop("/engines/engine[0]/out-of-fuel", 1);
-   		setprop("/consumables/fuel/tank[0]/selected",0);
+      setprop("/consumables/fuel/tank[0]/selected",0);
+      setprop("/consumables/fuel/tank[1]/selected",0);
       interpolate ("/engines/engine[0]/fuel-press", 0, 3);
       interpolate ("/engines/engine[0]/oil-press", 0, 1);
     }
@@ -189,18 +181,13 @@ var main_loop = func {
     
     interpolate ("/controls/engines/engine[0]/cowl-flaps-norm" , npos, 0.5 );
   }
-  
-  settimer(main_loop, looptime)
-  
-} 
-
+});
 
 var toggle_canopy = func {
   canopy = aircraft.door.new ("/controls/canopy/",3);
   if(getprop("/controls/canopy/position-norm") > 0) {
       canopy.close();
   } else {
-
       canopy.open();
   }
 }
@@ -319,7 +306,6 @@ var auto_coolflaps = func {
 }
 
 var magicstart = func {
-    setprop("/consumables/fuel/tank[0]/selected",1);
     setprop("/controls/engines/engine[0]/magnetos",3);
     setprop("/controls/engines/engine[0]/coolflap-auto",1);
     setprop("/controls/engines/engine[0]/radlever",1);
@@ -402,7 +388,7 @@ var magicstart = func {
     };
    },0,0);
 
-var update_mp_props = func {
+var update_mp_props = maketimer (mp_loop, func {
 	# print ("updating...");
 	setprop("sim/multiplay/generic/int[0]", getprop ("/sim/armament/pylon[0]/type"));
 	setprop("sim/multiplay/generic/int[1]", getprop ("/sim/armament/pylon[1]/type"));
@@ -418,11 +404,7 @@ var update_mp_props = func {
 	setprop ("sim/failure-manager/fail-type",state);
 	# print ("State: ", state);
 	setprop("sim/multiplay/generic/int[10]", getprop ("/sim/failure-manager/fail-type"));
-
- 	settimer(update_mp_props, mp_loop);
-}
-
-setlistener("/sim/signals/fdm-initialized",init);
+});
 
 var revi = aircraft.door.new ("/controls/armament/revi",2);
 
@@ -446,3 +428,12 @@ aircraft.data.add(save_list);
 aircraft.livery.init("Aircraft/bf109/Models/Liveries", "sim/model/livery/variant");
 
 var logo_dialog = gui.OverlaySelector.new("Select Logo", "Aircraft/Generic/Logos", "sim/model/logo/name", nil, "sim/multiplay/generic/string");
+
+var init = func {
+  if (getprop("/controls/engines/engine[0]/on-startup-running") == 1) {
+     magicstart();
+  }
+  update_mp_props.start();
+  main_loop.start();
+}
+setlistener("/sim/signals/fdm-initialized",init);

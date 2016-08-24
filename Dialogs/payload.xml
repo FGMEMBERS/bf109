@@ -250,18 +250,6 @@
 		    <property>consumables/fuel/tank[1]/level-gal_us</property>
 		    <value>120</value>
 		</binding>
-		<binding> 
-		    <command>property-assign</command>
-		    <property>consumables/fuel/tank[0]/selected</property>
-		    <value>0</value>
-		</binding>
-		<binding> 
-		    <command>property-assign</command>
-		    <property>consumables/fuel/tank[1]/selected</property>
-		    <value>1</value>
-		</binding>
-
-
     </button>
    <button>
 			<legend>250 kg Bomb</legend>

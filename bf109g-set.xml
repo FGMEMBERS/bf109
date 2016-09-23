@@ -423,7 +423,7 @@ Don't forget to release Tailwheel lock (lever on the left cockpitwall) before ta
         <boost type="float">0.7</boost>
 	<blower type="int">0</blower>
         <prop-auto type="bool">false</prop-auto>
-	<prop-adjust type="float">1.0</prop-adjust>
+	<propeller-adjust type="float">1.0</propeller-adjust>
 	<fueldump-pulled type="bool">false</fueldump-pulled>
         <primer type="double">0.0</primer>
         <primer-pressed type="bool">0.0</primer-pressed>

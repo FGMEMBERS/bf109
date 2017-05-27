@@ -23,6 +23,20 @@ February 2006,  Detlef Faber
     <model type="int">4</model>
     <cockpit type="int">5</cockpit>
   </rating>
+  <tags>
+    <tag>fighter</tag>
+    <tag>messerschmitt</tag>
+    <tag>1930s</tag>
+    <tag>1940s</tag>
+    <tag>1950s</tag>
+    <tag>ww2</tag>
+    <tag>tail-dragger</tag>
+    <tag>retractable-gear</tag>
+    <tag>propeller</tag>
+    <tag>piston</tag>
+    <tag>single-engine</tag>
+    <tag>variable-pitch</tag>
+  </tags>
   <startup>
     <splash-texture>Aircraft/bf109/Splash/bf109-splash.png</splash-texture>
     <splash-texture>Aircraft/bf109/Splash/splash1.png</splash-texture>

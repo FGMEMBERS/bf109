@@ -6,7 +6,7 @@
  <animation>
   <type>translate</type>
   <object-name>button</object-name>
-  <property>/controls/engines/engine/primer-pressed</property>
+  <property>controls/engines/engine/primer-pressed</property>
   <interpolation>
    <entry>
     <ind>0</ind>
@@ -37,7 +37,7 @@
     <repeatable>false</repeatable>
    <binding>
     <command>property-adjust</command>
-    <property>/controls/engines/engine[0]/primer</property>
+    <property>controls/engines/engine[0]/primer</property>
     <step>0.2</step>
     <min>0</min>
     <max>1.0</max>

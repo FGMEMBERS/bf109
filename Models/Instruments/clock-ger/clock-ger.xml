@@ -13,7 +13,7 @@
   <object-name>Clock.ring</object-name>
   <object-name>Clock.face</object-name>
   <emission>
-    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
     <red>0.25</red>
     <green>0.25</green>
     <blue>0.8</blue>

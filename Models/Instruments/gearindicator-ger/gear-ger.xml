@@ -6,7 +6,7 @@
   <type>material</type>
   <object-name>Face</object-name>
   <emission>
-    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
     <red>0.25</red>
     <green>0.25</green>
     <blue>0.8</blue>
@@ -18,7 +18,7 @@
     <object-name>red.R</object-name>
     <condition>
      <less-than>
-      <property>/gear/gear[1]/position-norm</property>
+      <property>gear/gear[1]/position-norm</property>
       <value>0.2</value>
      </less-than>
     </condition>
@@ -28,7 +28,7 @@
     <object-name>green.R</object-name>
     <condition>
      <greater-than>
-      <property>/gear/gear[1]/position-norm</property>
+      <property>gear/gear[1]/position-norm</property>
       <value>0.9</value>
      </greater-than>
     </condition>
@@ -39,7 +39,7 @@
     <object-name>red.L</object-name>
     <condition>
      <less-than>
-      <property>/gear/gear[0]/position-norm</property>
+      <property>gear/gear[0]/position-norm</property>
       <value>0.2</value>
      </less-than>
     </condition>
@@ -49,7 +49,7 @@
     <object-name>green.L</object-name>
     <condition>
      <greater-than>
-      <property>/gear/gear[0]/position-norm</property>
+      <property>gear/gear[0]/position-norm</property>
       <value>0.9</value>
      </greater-than>
     </condition>

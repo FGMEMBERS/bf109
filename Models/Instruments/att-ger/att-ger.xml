@@ -10,7 +10,7 @@
   <object-name>markings</object-name>
   <object-name>ball</object-name>
   <emission>
-    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
     <red>0.25</red>
     <green>0.25</green>
     <blue>0.8</blue>
@@ -20,7 +20,7 @@
  <animation>
   <type>rotate</type>
   <object-name>Sphere</object-name>
-  <property>/instrumentation/attitude-indicator/indicated-roll-deg</property>
+  <property>instrumentation/attitude-indicator/indicated-roll-deg</property>
   <center>
      <x-m>0.00</x-m>
      <y-m>0.00</y-m>
@@ -36,7 +36,7 @@
 <animation>
   <type>rotate</type>
   <object-name>Sphere</object-name>
-  <property>/instrumentation/attitude-indicator/indicated-pitch-deg</property>
+  <property>instrumentation/attitude-indicator/indicated-pitch-deg</property>
   <center>
      <x-m>-0.019</x-m>
      <y-m>0.0</y-m>
@@ -52,7 +52,7 @@
  <animation>
   <type>rotate</type>
   <object-name>ball</object-name>
-  <property>/instrumentation/slip-skid-ball/indicated-slip-skid</property>
+  <property>instrumentation/slip-skid-ball/indicated-slip-skid</property>
   <min>-1.1</min>
   <max>1.1</max>
   <interpolation>

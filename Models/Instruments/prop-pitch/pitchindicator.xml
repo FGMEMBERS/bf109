@@ -10,7 +10,7 @@
   <object-name>MinuteHand</object-name>
   <object-name>HourHand</object-name>
   <emission>
-    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
     <red>0.25</red>
     <green>0.25</green>
     <blue>0.8</blue>
@@ -20,7 +20,7 @@
  <animation>
   <type>rotate</type>
   <object-name>HourHand</object-name>
-  <property>/controls/engines/engine[0]/propeller-adjust</property>
+  <property>controls/engines/engine[0]/propeller-adjust</property>
   <factor>120.0</factor>
   <axis>
    <x>-1</x>
@@ -32,7 +32,7 @@
  <animation>
   <type>rotate</type>
   <object-name>MinuteHand</object-name>
-  <property>/controls/engines/engine[0]/propeller-adjust</property>
+  <property>controls/engines/engine[0]/propeller-adjust</property>
   <factor>1440.0</factor>
   <axis>
    <x>-1</x>

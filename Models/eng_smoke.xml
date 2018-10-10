@@ -12,7 +12,7 @@
   <object-name>puff.w</object-name>
   <condition>
    <equals>
-    <property>/engines/engine[0]/overheat</property>
+    <property>engines/engine[0]/overheat</property>
     <value>1.0</value>
    </equals>
   </condition>
@@ -22,7 +22,7 @@
   <object-name>puff.b</object-name>
   <condition>
    <equals>
-    <property>/engines/engine[0]/overrev</property>
+    <property>engines/engine[0]/overrev</property>
     <value>1.0</value>
    </equals>
   </condition>

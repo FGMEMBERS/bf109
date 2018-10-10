@@ -6,7 +6,7 @@
  <animation>
   <type>rotate</type>
   <object-name>throttle</object-name>
-  <property>/controls/engines/engine[0]/throttle</property>
+  <property>controls/engines/engine[0]/throttle</property>
   <interpolation>
    <entry>
     <ind>0.0</ind>
@@ -31,7 +31,7 @@
  <animation>
   <type>rotate</type>
   <object-name>propauto</object-name>
-  <property>/controls/engines/engine[0]/prop-auto</property>
+  <property>controls/engines/engine[0]/prop-auto</property>
   <interpolation>
    <entry>
     <ind>0.0</ind>
@@ -56,7 +56,7 @@
  <animation>
   <type>rotate</type>
   <object-name>cutoff</object-name>
-  <property>/controls/fuel/switch-position</property>
+  <property>controls/fuel/switch-position</property>
   <interpolation>
    <entry>
     <ind>-1.0</ind>
@@ -136,7 +136,7 @@
     <repeatable>false</repeatable>
    <binding>
     <command>property-adjust</command>
-    <property>/controls/fuel/switch-position</property>
+    <property>controls/fuel/switch-position</property>
     <step>1.0</step>
     <min>-1.0</min>
     <max>1.0</max>

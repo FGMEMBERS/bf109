@@ -16,7 +16,7 @@
 <!--
 	    <condition>
         <equals>
-          <property>/sim/ai/control/A4/ignition</property>
+          <property>sim/ai/control/A4/ignition</property>
           <value>1</value>
         </equals>
 			</condition>

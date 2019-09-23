@@ -6,7 +6,7 @@
  <animation>
   <type>rotate</type>
   <object-name>knob</object-name>
-  <property>/controls/engines/engine[0]/magnetos</property>
+  <property>controls/engines/engine[0]/magnetos</property>
   <interpolation>
    <entry>
     <ind>0</ind>
@@ -46,7 +46,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-  <property>/controls/engines/engine[0]/magnetos</property>
+  <property>controls/engines/engine[0]/magnetos</property>
         <step>1</step>
         <min>0</min>
         <max>3</max>
@@ -63,7 +63,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-  <property>/controls/engines/engine[0]/magnetos</property>
+  <property>controls/engines/engine[0]/magnetos</property>
         <step>-1</step>
         <min>0</min>
         <max>3</max>

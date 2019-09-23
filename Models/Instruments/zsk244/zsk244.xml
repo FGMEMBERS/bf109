@@ -9,7 +9,7 @@
   <object-name>face</object-name>
   <object-name>selector</object-name>
   <emission>
-    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
     <red>0.1</red>
     <green>0.1</green>
     <blue>0.5</blue>

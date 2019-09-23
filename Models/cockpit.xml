@@ -394,7 +394,7 @@
   <type>material</type>
 
   <emission>
-    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
     <red>0.01</red>
     <green>0.01</green>
     <blue>0.025</blue>

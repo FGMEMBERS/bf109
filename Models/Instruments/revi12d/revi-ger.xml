@@ -16,7 +16,7 @@
   <object-name>sunshade</object-name>
   <object-name>lens2</object-name>
   <object-name>crosshair</object-name>
-  <property>/controls/armament/revi/position-norm</property>
+  <property>controls/armament/revi/position-norm</property>
 
   <interpolation>
    <entry>
@@ -55,7 +55,7 @@
   <object-name>sunshade</object-name>
   <object-name>lens2</object-name>
   <object-name>crosshair</object-name>
-  <property>/controls/armament/revi/position-norm</property>
+  <property>controls/armament/revi/position-norm</property>
   <interpolation>
    <entry>
     <ind>0.0</ind>
@@ -80,7 +80,7 @@
   <type>rotate</type>
   <object-name>shadeholder</object-name>
   <object-name>sunshade</object-name>
-  <property>/controls/armament/revi/shadeup</property>
+  <property>controls/armament/revi/shadeup</property>
   <factor>65.0</factor>
 
   <center>
